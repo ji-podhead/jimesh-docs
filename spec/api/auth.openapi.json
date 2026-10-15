@@ -1,0 +1,82 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "jimesh.io nest-auth-api (PUBLIC, allowlist-only)",
+    "version": "0.1.0",
+    "description": "ES-1 scaffold. Payment-first: signup -> Stripe card-verify (Setup-Intent) -> OTP -> x-auth mint. All other routes 404 (allowlist, A9)."
+  },
+  "paths": {
+    "/signup": {
+      "post": {
+        "summary": "Email-only signup (stub-log)",
+        "responses": {
+          "200": {
+            "description": "accepted; next: card-verify checkout"
+          }
+        }
+      }
+    },
+    "/otp/request": {
+      "post": {
+        "summary": "Send email OTP via Postmark (503 if POSTMARK_TOKEN unset; hard throttle 3/24h/email in ES-2)",
+        "responses": {
+          "200": {
+            "description": "sent"
+          },
+          "503": {
+            "description": "otp transport unavailable"
+          }
+        }
+      }
+    },
+    "/otp/verify": {
+      "post": {
+        "summary": "Verify email OTP (store stub; 503 without transport)",
+        "responses": {
+          "200": {
+            "description": "verified or rejected"
+          },
+          "503": {
+            "description": "otp transport unavailable"
+          }
+        }
+      }
+    },
+    "/checkout/session": {
+      "post": {
+        "summary": "Stripe Checkout Setup-Intent session (card-verify-first DEFAULT per sprint). Live-mode fails closed; mock mode returns stub URL.",
+        "responses": {
+          "200": {
+            "description": "checkout_url"
+          },
+          "503": {
+            "description": "stripe unavailable"
+          }
+        }
+      }
+    },
+    "/webhooks/stripe": {
+      "post": {
+        "summary": "Stripe webhook (signature verify via STRIPE_WEBHOOK_SECRET; mock mode parses unsigned)",
+        "responses": {
+          "200": {
+            "description": "received"
+          },
+          "400": {
+            "description": "invalid signature"
+          }
+        }
+      }
+    },
+    "/.well-known/jwks.json": {
+      "get": {
+        "summary": "Ed25519 public JWK for x-auth verification (ES-4 basis)",
+        "responses": {
+          "200": {
+            "description": "JWK Set"
+          }
+        }
+      }
+    }
+  }
+}

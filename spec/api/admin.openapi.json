@@ -1,0 +1,97 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "jimesh.io nest-admin-api (INTERNAL ONLY, never public)",
+    "version": "0.1.0",
+    "description": "ES-1 scaffold. All routes require x-auth JWT (EdDSA) + X-Internal-Auth header; missing/invalid -> 404 stealth (A9)."
+  },
+  "paths": {
+    "/api/admin/billing/portal-mint": {
+      "post": {
+        "summary": "Stripe billing portal session for customer (ES-8 partial)",
+        "responses": {
+          "201": {
+            "description": "portal url"
+          },
+          "404": {
+            "description": "missing/invalid creds (stealth)"
+          }
+        }
+      }
+    },
+    "/api/admin/devices": {
+      "get": {
+        "summary": "list devices (stub)",
+        "responses": {
+          "200": {
+            "description": "ok"
+          },
+          "404": {
+            "description": "stealth"
+          }
+        }
+      },
+      "post": {
+        "summary": "add device (stub)",
+        "responses": {
+          "201": {
+            "description": "ok"
+          },
+          "404": {
+            "description": "stealth"
+          }
+        }
+      }
+    },
+    "/api/admin/devices/{id}": {
+      "delete": {
+        "summary": "remove device (stub)",
+        "responses": {
+          "200": {
+            "description": "ok"
+          },
+          "404": {
+            "description": "stealth"
+          }
+        }
+      }
+    },
+    "/api/admin/tenants": {
+      "get": {
+        "summary": "list tenants (stub)",
+        "responses": {
+          "200": {
+            "description": "ok"
+          },
+          "404": {
+            "description": "stealth"
+          }
+        }
+      },
+      "post": {
+        "summary": "add tenant (stub)",
+        "responses": {
+          "201": {
+            "description": "ok"
+          },
+          "404": {
+            "description": "stealth"
+          }
+        }
+      }
+    },
+    "/api/admin/tenants/{id}": {
+      "delete": {
+        "summary": "remove tenant (stub)",
+        "responses": {
+          "200": {
+            "description": "ok"
+          },
+          "404": {
+            "description": "stealth"
+          }
+        }
+      }
+    }
+  }
+}
