@@ -15,8 +15,19 @@ Shared API documentation package for JiMesh. It bundles the audited operator-fac
 | `spec/api/auth.openapi.json` | `jimeshIO/enterprise/api-spec/auth.openapi.json` (public, allowlist-only) | Copied when the enterprise spec changes |
 | `spec/api/admin.openapi.json` | `jimeshIO/enterprise/api-spec/admin.openapi.json` (internal only — never publish this site publicly) | Copied when the enterprise spec changes |
 | Gateway OpenAPI 3.0.3 spec | **Live only:** `GET /openapi.json` on the Go gateway (HTTP port 19091, unauthenticated). Not bundled here — Scalar fetches it from the running gateway at render time. | Generated server-side by the gateway (`gateway/openapi.go`) |
+| `articles/` (git submodule → [`ji-podhead/articles`](https://github.com/ji-podhead/articles)) | **This repo itself is the source of truth for the blog articles.** | Pinned by commit; update with `git submodule update --remote` + commit the new gitlink |
 
 The copies in this repo are **1:1 snapshots**. The source repos stay the source of truth; this package only re-publishes them. Update workflow: re-run/review the TASK-017 drift audit, copy the refreshed files into `content/` / `spec/`, commit.
+
+## Blog content pass-through (`articles/` → jimesh2)
+
+The `articles/` submodule is the canonical content source for the jimesh2 blog. The flow is a one-way pass-through:
+
+1. **articles (submodule)** — plain markdown articles per folder (`<slug>/<slug>-blogpost.md`, no frontmatter), operational state (draft status, hashtags) in the articles `README.md` tables. Not shipped itself.
+2. **import script** — `jimesh2`'s `src/frontend/scripts/import-blog.mjs` reads from this submodule (default: the relative piggyback path `../../../jimesh-docs/articles` next to the jimesh2 checkout — no absolute paths in code; `ARTICLES_DIR` env var overrides). It scans the folders, resolves draft flags/tags from the articles README, rewrites figure links, and exports into `src/content/blog/<slug>.md` + `public/blog/<slug>/` figures.
+3. **jimesh2 content (committed build artifact)** — the exported markdown/images in `src/content/blog` and `public/blog` are committed in the jimesh2 repo and consumed by Next.js SSG at build time.
+
+So: articles (submodule here) → `import-blog.mjs` scan → `jimesh2/src/content/blog` → Next SSG. Re-running the import is idempotent; nothing in jimesh2 imports this repo's npm side (`content/api/`, `spec/api/`) — those are API-docs consumers only.
 
 ## Build & dev
 
