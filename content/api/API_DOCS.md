@@ -362,7 +362,7 @@ been deleted — they only ever talked to the legacy FreeLLMAPI SQLite
 tier that no longer exists.
 
 ```bash
-HOST=http://100.113.144.81:19091
+HOST=http://<INTERNAL_HOST>:19091
 ./examples/jimeshctl $HOST health
 ./examples/jimeshctl $HOST chains
 ./examples/jimeshctl $HOST chain-create smart:nemotron "Nemotron Test" 17 nvidia/llama-3.1-nemotron-70b-instruct
@@ -381,7 +381,7 @@ HOST=http://100.113.144.81:19091
 Raw curl, when you don't want the wrapper:
 
 ```bash
-HOST=http://100.113.144.81:19091
+HOST=http://<INTERNAL_HOST>:19091
 curl -s $HOST/v1/chains | jq .
 curl -s -X POST $HOST/v1/chains -H 'Content-Type: application/json' \
   -d '{"id":"smart:nemotron","name":"Nemotron Test","tier":"S","type":"MAIN","entries":[{"modelId":"nvidia/llama-3.1-nemotron-70b-instruct","platform":"nvidia","priority":1,"enabled":true,"isPaidModel":false,"keyId":17}]}'

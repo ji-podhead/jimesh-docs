@@ -162,6 +162,13 @@ async function main() {
     console.log("rendered", name);
   }
 
+  // 2b. render docs/*.md -> dist/docs/ (same renderer)
+  const curDocs = (await walk(join(root, "docs"))).filter((p) => p.endsWith(".md"));
+  for (const f of curDocs) {
+    const name = await renderMarkdown(f);
+    console.log("rendered docs/", name);
+  }
+
   // 3. index.html from template (scalar loads specs via url — no inline spec JSON)
   const template = await readFile(join(root, "src", "index.html"), "utf8");
   await writeFile(join(dist, "index.html"), template);
@@ -213,7 +220,12 @@ Point the reference at a running gateway:</p>
 <li><a href="index.html?spec=admin">Admin API reference</a> — <a href="../spec/admin.openapi.json">raw spec</a></li>
 </ul>
 <h2>Markdown reference</h2>
-<ul><li><a href="../docs/API_DOCS.html">API_DOCS.html</a></li></ul>
+<ul>
+<li><a href="../docs/API_DOCS.html">API_DOCS.html</a></li>
+<li><a href="../docs/overview.html">Overview</a></li>
+<li><a href="../docs/getting-started.html">Getting started</a></li>
+<li><a href="../docs/architecture.html">Architecture</a></li>
+</ul>
 </main></body></html>`;
 }
 
