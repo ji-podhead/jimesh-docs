@@ -1,0 +1,4738 @@
+[
+ {
+  "key": "nav.models",
+  "en": "Config"
+ },
+ {
+  "key": "nav.playground",
+  "en": "Projects"
+ },
+ {
+  "key": "nav.keys",
+  "en": "Providers"
+ },
+ {
+  "key": "nav.analytics",
+  "en": "Analytics"
+ },
+ {
+  "key": "nav.premium",
+  "en": "Premium"
+ },
+ {
+  "key": "nav.upgrade",
+  "en": "Upgrade"
+ },
+ {
+  "key": "nav.settings",
+  "en": "Settings"
+ },
+ {
+  "key": "nav.signOut",
+  "en": "Sign out"
+ },
+ {
+  "key": "nav.openMenu",
+  "en": "Open navigation menu"
+ },
+ {
+  "key": "nav.switchLight",
+  "en": "Switch to light theme"
+ },
+ {
+  "key": "nav.switchDark",
+  "en": "Switch to dark theme"
+ },
+ {
+  "key": "nav.switchToChinese",
+  "en": "Switch to Chinese"
+ },
+ {
+  "key": "nav.switchToEnglish",
+  "en": "Switch to English"
+ },
+ {
+  "key": "nav.logs",
+  "en": "Logs"
+ },
+ {
+  "key": "nav.sdkLogs",
+  "en": "Logs"
+ },
+ {
+  "key": "nav.workspaces",
+  "en": "Workspaces"
+ },
+ {
+  "key": "nav.agents",
+  "en": "Integrations"
+ },
+ {
+  "key": "nav.analyticsMenu",
+  "en": "Analytics pages"
+ },
+ {
+  "key": "nav.exposure",
+  "en": "Exposure"
+ },
+ {
+  "key": "nav.vault",
+  "en": "Vault"
+ },
+ {
+  "key": "nav.teams",
+  "en": "Teams & Budgets"
+ },
+ {
+  "key": "nav.securityEvents",
+  "en": "Security Events"
+ },
+ {
+  "key": "nav.proxy",
+  "en": "Proxy"
+ },
+ {
+  "key": "nav.dbs",
+  "en": "DBs"
+ },
+ {
+  "key": "nav.chat",
+  "en": "Chat"
+ },
+ {
+  "key": "nav.backups",
+  "en": "Backups"
+ },
+ {
+  "key": "nav.discovery",
+  "en": "Discovery"
+ },
+ {
+  "key": "nav.admin",
+  "en": "Admin"
+ },
+ {
+  "key": "nav.workspaceApps",
+  "en": "Apps"
+ },
+ {
+  "key": "nav.controlPlanes",
+  "en": "Control Planes"
+ },
+ {
+  "key": "nav.workspaceDeployments",
+  "en": "Deployments"
+ },
+ {
+  "key": "nav.securityScans",
+  "en": "SAST / IaC / DAST"
+ },
+ {
+  "key": "common.save",
+  "en": "Save"
+ },
+ {
+  "key": "common.dismiss",
+  "en": "Dismiss"
+ },
+ {
+  "key": "common.saving",
+  "en": "Saving…"
+ },
+ {
+  "key": "common.cancel",
+  "en": "Cancel"
+ },
+ {
+  "key": "common.discard",
+  "en": "Discard"
+ },
+ {
+  "key": "common.delete",
+  "en": "Delete"
+ },
+ {
+  "key": "common.confirm",
+  "en": "Confirm"
+ },
+ {
+  "key": "common.copy",
+  "en": "Copy"
+ },
+ {
+  "key": "common.copied",
+  "en": "Copied"
+ },
+ {
+  "key": "common.copyFailed",
+  "en": "Couldn't copy — select the text and copy it manually"
+ },
+ {
+  "key": "common.show",
+  "en": "Show"
+ },
+ {
+  "key": "common.hide",
+  "en": "Hide"
+ },
+ {
+  "key": "common.apply",
+  "en": "Apply"
+ },
+ {
+  "key": "common.applied",
+  "en": "Applied"
+ },
+ {
+  "key": "common.applying",
+  "en": "Applying…"
+ },
+ {
+  "key": "common.active",
+  "en": "Active"
+ },
+ {
+  "key": "common.inactive",
+  "en": "Inactive"
+ },
+ {
+  "key": "common.never",
+  "en": "never"
+ },
+ {
+  "key": "common.loading",
+  "en": "Loading…"
+ },
+ {
+  "key": "common.error",
+  "en": "Error"
+ },
+ {
+  "key": "common.noData",
+  "en": "No data yet"
+ },
+ {
+  "key": "common.unsavedChanges",
+  "en": "Unsaved changes"
+ },
+ {
+  "key": "common.saveChanges",
+  "en": "Save changes"
+ },
+ {
+  "key": "common.remove",
+  "en": "Remove"
+ },
+ {
+  "key": "common.unknownError",
+  "en": "Unknown error"
+ },
+ {
+  "key": "common.model",
+  "en": "Model"
+ },
+ {
+  "key": "common.provider",
+  "en": "Provider"
+ },
+ {
+  "key": "common.success",
+  "en": "Success"
+ },
+ {
+  "key": "common.failures",
+  "en": "Failures"
+ },
+ {
+  "key": "common.status",
+  "en": "Status"
+ },
+ {
+  "key": "models.embeddingsTab",
+  "en": "Embeddings"
+ },
+ {
+  "key": "models.videoTab",
+  "en": "Video"
+ },
+ {
+  "key": "models.remaining",
+  "en": "remaining"
+ },
+ {
+  "key": "models.used",
+  "en": "used"
+ },
+ {
+  "key": "models.title",
+  "en": "Models"
+ },
+ {
+  "key": "models.imageDesc",
+  "en": "Text-to-image generation models."
+ },
+ {
+  "key": "models.videoDesc",
+  "en": "Text-to-video generation models."
+ },
+ {
+  "key": "models.audioDesc",
+  "en": "Text-to-speech and speech-to-text models."
+ },
+ {
+  "key": "models.mediaHint",
+  "en": "Generate via"
+ },
+ {
+  "key": "models.mediaEmpty",
+  "en": "No models yet. They sync from the catalog."
+ },
+ {
+  "key": "models.ttsHeading",
+  "en": "Text to speech"
+ },
+ {
+  "key": "models.sttHeading",
+  "en": "Speech to text"
+ },
+ {
+  "key": "models.sttHint",
+  "en": "Transcribe via"
+ },
+ {
+  "key": "models.sttEmpty",
+  "en": "No speech-to-text models yet. They sync from the catalog."
+ },
+ {
+  "key": "models.newBadge",
+  "en": "New"
+ },
+ {
+  "key": "models.monthlyTokenBudget",
+  "en": "Monthly token budget"
+ },
+ {
+  "key": "models.usedScopeHint",
+  "en": "Chat requests only, since the start of this calendar month, summed over every model in the active chain — custom endpoints included. Traffic you send to a provider outside JiMesh is not counted."
+ },
+ {
+  "key": "models.legendRemainingTitle",
+  "en": "Remaining / monthly budget for {name} ({platform})"
+ },
+ {
+  "key": "models.noPublishedQuota",
+  "en": "+{count} with no published quota"
+ },
+ {
+  "key": "models.noPublishedQuotaTitle",
+  "en": "These models have no documented monthly token budget, so there is no remaining figure to show."
+ },
+ {
+  "key": "models.of",
+  "en": "of"
+ },
+ {
+  "key": "models.showAllModels",
+  "en": "Show all {count} models"
+ },
+ {
+  "key": "models.showLess",
+  "en": "Show less"
+ },
+ {
+  "key": "models.vision",
+  "en": "Vision"
+ },
+ {
+  "key": "models.visionTitle",
+  "en": "Accepts image input"
+ },
+ {
+  "key": "models.tools",
+  "en": "Tools"
+ },
+ {
+  "key": "models.toolsTitle",
+  "en": "Emits structured tool calls, so it is eligible for tool-bearing requests"
+ },
+ {
+  "key": "models.retired",
+  "en": "Retired"
+ },
+ {
+  "key": "models.penalty",
+  "en": "−{value} penalty"
+ },
+ {
+  "key": "models.obs",
+  "en": "{count} obs"
+ },
+ {
+  "key": "models.tokPerMonth",
+  "en": "{count} tok/mo"
+ },
+ {
+  "key": "models.rpmLimit",
+  "en": "{count} rpm"
+ },
+ {
+  "key": "models.rpdLimit",
+  "en": "{count} rpd"
+ },
+ {
+  "key": "models.noKey",
+  "en": "no key"
+ },
+ {
+  "key": "models.dragToReorder",
+  "en": "Drag to reorder"
+ },
+ {
+  "key": "models.dragToReorderGroup",
+  "en": "Drag to reorder model"
+ },
+ {
+  "key": "models.providerCount",
+  "en": "{count} providers"
+ },
+ {
+  "key": "models.servedBy",
+  "en": "Served by {providers}"
+ },
+ {
+  "key": "models.viewProviders",
+  "en": "View providers"
+ },
+ {
+  "key": "models.backToModels",
+  "en": "Back to models"
+ },
+ {
+  "key": "models.providersHeading",
+  "en": "Providers serving this model"
+ },
+ {
+  "key": "models.codeSnippetHeading",
+  "en": "Use this model"
+ },
+ {
+  "key": "models.modelNotFound",
+  "en": "This model is not available, or it has no configured providers."
+ },
+ {
+  "key": "models.providerIdsHeading",
+  "en": "Provider model ids"
+ },
+ {
+  "key": "models.providerIdsHint",
+  "en": "Send the unified model id to fail over across every provider, or a provider-specific id to pin one provider."
+ },
+ {
+  "key": "models.copyModelName",
+  "en": "Copy model name"
+ },
+ {
+  "key": "models.settingsHeading",
+  "en": "Provider settings"
+ },
+ {
+  "key": "models.settingsHint",
+  "en": "Local edits to catalog models are kept across catalog syncs. Deleted catalog models stay deleted until you add them again through config."
+ },
+ {
+  "key": "models.catalogModel",
+  "en": "catalog"
+ },
+ {
+  "key": "models.customModel",
+  "en": "custom"
+ },
+ {
+  "key": "models.localOverride",
+  "en": "local override"
+ },
+ {
+  "key": "models.displayName",
+  "en": "Display name"
+ },
+ {
+  "key": "models.sizeLabel",
+  "en": "Capability tier"
+ },
+ {
+  "key": "models.contextWindow",
+  "en": "Context"
+ },
+ {
+  "key": "models.inFallback",
+  "en": "In chain"
+ },
+ {
+  "key": "models.saveModelSettings",
+  "en": "Save model settings"
+ },
+ {
+  "key": "models.aggregateBudget",
+  "en": "{count}/mo"
+ },
+ {
+  "key": "models.aggregateBudgetTitle",
+  "en": "Total free tokens per month across this model's providers"
+ },
+ {
+  "key": "models.rateRpm",
+  "en": "{count} RPM"
+ },
+ {
+  "key": "models.rateRpd",
+  "en": "{count} RPD"
+ },
+ {
+  "key": "models.rateTitle",
+  "en": "Rate-limited — no fixed monthly token budget"
+ },
+ {
+  "key": "models.rateLimitUsage",
+  "en": "{kind} {used}/{limit}"
+ },
+ {
+  "key": "models.rateLimitUsageTitle",
+  "en": "Time-window rate-limit usage (used / limit) for the provider with the most headroom"
+ },
+ {
+  "key": "models.splitOut",
+  "en": "Don't merge this copy"
+ },
+ {
+  "key": "models.splitOutHint",
+  "en": "Give this provider's copy its own separate entry instead of merging it into the unified model. You can merge it back from the copy's own page."
+ },
+ {
+  "key": "models.splitUndo",
+  "en": "Merge back"
+ },
+ {
+  "key": "models.splitUndoHint",
+  "en": "This copy is kept separate from its unified model. Merge it back to fail over across all of its providers again."
+ },
+ {
+  "key": "models.splitBadge",
+  "en": "kept separate"
+ },
+ {
+  "key": "models.noData",
+  "en": "no data"
+ },
+ {
+  "key": "models.noDataTitle",
+  "en": "No requests recorded yet — reliability and speed are unmeasured for this provider."
+ },
+ {
+  "key": "models.bestOfN",
+  "en": "best of {count}"
+ },
+ {
+  "key": "models.perProviderScores",
+  "en": "Per-provider scores: {list}"
+ },
+ {
+  "key": "models.columnModel",
+  "en": "Model"
+ },
+ {
+  "key": "models.columnOn",
+  "en": "On"
+ },
+ {
+  "key": "models.noModelsBefore",
+  "en": "No models available. Add API keys on the "
+ },
+ {
+  "key": "models.keysPageLink",
+  "en": "Keys page"
+ },
+ {
+  "key": "models.noModelsAfter",
+  "en": " first."
+ },
+ {
+  "key": "models.hiddenNoKeys",
+  "en": "Hidden (no keys): {platforms}"
+ },
+ {
+  "key": "models.searchPlaceholder",
+  "en": "Search models or providers…"
+ },
+ {
+  "key": "models.clearSearch",
+  "en": "Clear search"
+ },
+ {
+  "key": "models.ctxAny",
+  "en": "Any context"
+ },
+ {
+  "key": "models.ctxBadge",
+  "en": "{size} ctx"
+ },
+ {
+  "key": "models.ctxTitle",
+  "en": "Context window"
+ },
+ {
+  "key": "models.copyModelId",
+  "en": "Copy model id"
+ },
+ {
+  "key": "models.showingCount",
+  "en": "{shown} of {total} models"
+ },
+ {
+  "key": "models.clearFilters",
+  "en": "Clear filters"
+ },
+ {
+  "key": "models.noMatches",
+  "en": "No models match your filters."
+ },
+ {
+  "key": "models.noModelsTitle",
+  "en": "No models configured"
+ },
+ {
+  "key": "models.intelligenceRank",
+  "en": "Intelligence"
+ },
+ {
+  "key": "models.speedRank",
+  "en": "Speed"
+ },
+ {
+  "key": "models.rankHint",
+  "en": "Rank across the catalog — 1 is best."
+ },
+ {
+  "key": "models.limitRpm",
+  "en": "RPM"
+ },
+ {
+  "key": "models.limitRpd",
+  "en": "RPD"
+ },
+ {
+  "key": "models.limitTpm",
+  "en": "TPM"
+ },
+ {
+  "key": "models.limitTpd",
+  "en": "TPD"
+ },
+ {
+  "key": "models.limitRpmHint",
+  "en": "Requests per minute. Leave blank for no limit."
+ },
+ {
+  "key": "models.limitRpdHint",
+  "en": "Requests per day. Leave blank for no limit."
+ },
+ {
+  "key": "models.limitTpmHint",
+  "en": "Tokens per minute. Leave blank for no limit."
+ },
+ {
+  "key": "models.limitTpdHint",
+  "en": "Tokens per day. Leave blank for no limit."
+ },
+ {
+  "key": "models.usageThisMonth",
+  "en": "Monthly usage"
+ },
+ {
+  "key": "models.usageEmpty",
+  "en": "No requests yet this month."
+ },
+ {
+  "key": "models.usageRequestsMonth",
+  "en": "{count} req this month"
+ },
+ {
+  "key": "models.aliasMergeHeading",
+  "en": "Merge model aliases"
+ },
+ {
+  "key": "models.aliasMergeHint",
+  "en": "Requests for the unified model id are also served through these custom-provider aliases (e.g. custom:my-alias)."
+ },
+ {
+  "key": "models.aliasMergeAdd",
+  "en": "Add"
+ },
+ {
+  "key": "models.aliasMergeRemove",
+  "en": "Remove"
+ },
+ {
+  "key": "models.bulkToggle",
+  "en": "Enable or disable every shown model"
+ },
+ {
+  "key": "models.enableAll",
+  "en": "Enable all"
+ },
+ {
+  "key": "models.disableAll",
+  "en": "Disable all"
+ },
+ {
+  "key": "models.enableAllHint",
+  "en": "Turn on every model shown, then Save"
+ },
+ {
+  "key": "models.disableAllHint",
+  "en": "Turn off every model shown, then Save"
+ },
+ {
+  "key": "models.enabledOfShown",
+  "en": "{enabled} of {shown} shown models are in the chain"
+ },
+ {
+  "key": "playground.send",
+  "en": "Send"
+ },
+ {
+  "key": "playground.temperature",
+  "en": "Temperature"
+ },
+ {
+  "key": "playground.maxTokens",
+  "en": "Max tokens"
+ },
+ {
+  "key": "playground.autoModel",
+  "en": "Auto (fallback chain)"
+ },
+ {
+  "key": "playground.fusionModel",
+  "en": "Fusion (multi-model synthesis)"
+ },
+ {
+  "key": "playground.selectModel",
+  "en": "Select model"
+ },
+ {
+  "key": "playground.searchModels",
+  "en": "Search models…"
+ },
+ {
+  "key": "playground.noModelsFound",
+  "en": "No models found"
+ },
+ {
+  "key": "playground.sending",
+  "en": "Sending…"
+ },
+ {
+  "key": "playground.inputPlaceholder",
+  "en": "Type a message… (⏎ to send, ⇧⏎ for newline)"
+ },
+ {
+  "key": "playground.emptyTitle",
+  "en": "Send a message to get started."
+ },
+ {
+  "key": "playground.emptyDescription",
+  "en": "Using {model}. Switch models in the selector above."
+ },
+ {
+  "key": "playground.copyReply",
+  "en": "Copy reply"
+ },
+ {
+  "key": "playground.fallback",
+  "en": "fallback"
+ },
+ {
+  "key": "playground.fallbacks",
+  "en": "fallbacks"
+ },
+ {
+  "key": "playground.fusionPanel",
+  "en": "Panel"
+ },
+ {
+  "key": "playground.fusionJudge",
+  "en": "Judge"
+ },
+ {
+  "key": "playground.fusionTrace",
+  "en": "{count} model responses"
+ },
+ {
+  "key": "playground.fusionFailed",
+  "en": "no response"
+ },
+ {
+  "key": "playground.fusionJudgeSynth",
+  "en": "synthesized the final answer"
+ },
+ {
+  "key": "playground.errorPrefix",
+  "en": "Error:"
+ },
+ {
+  "key": "playground.systemPromptLabel",
+  "en": "System prompt"
+ },
+ {
+  "key": "playground.showSettings",
+  "en": "Show settings"
+ },
+ {
+  "key": "playground.hideSettings",
+  "en": "Hide settings"
+ },
+ {
+  "key": "playground.samplingHeading",
+  "en": "Sampling"
+ },
+ {
+  "key": "playground.samplingDefault",
+  "en": "Default"
+ },
+ {
+  "key": "playground.topP",
+  "en": "Top P"
+ },
+ {
+  "key": "playground.errorTitle",
+  "en": "Request failed"
+ },
+ {
+  "key": "playground.attach",
+  "en": "Attach files"
+ },
+ {
+  "key": "playground.attachTooMany",
+  "en": "You can attach up to {count} files per message."
+ },
+ {
+  "key": "playground.attachTooLarge",
+  "en": "{name} is too large. The limit is {max}."
+ },
+ {
+  "key": "playground.attachUnsupported",
+  "en": "{name} is not supported. Attach images (PNG, JPEG, WebP, GIF) or text files (TXT, MD, CSV, JSON, LOG)."
+ },
+ {
+  "key": "playground.attachFailed",
+  "en": "Could not read {name}."
+ },
+ {
+  "key": "playground.noVisionBadge",
+  "en": "No images"
+ },
+ {
+  "key": "playground.visionWarning",
+  "en": "{model} does not accept images. Choose a vision model or Auto."
+ },
+ {
+  "key": "settings.title",
+  "en": "Settings"
+ },
+ {
+  "key": "settings.language",
+  "en": "Language"
+ },
+ {
+  "key": "settings.theme",
+  "en": "Theme"
+ },
+ {
+  "key": "settings.themeLight",
+  "en": "Light"
+ },
+ {
+  "key": "settings.themeDark",
+  "en": "Dark"
+ },
+ {
+  "key": "settings.themeSystem",
+  "en": "System"
+ },
+ {
+  "key": "settings.searchLanguage",
+  "en": "Search languages…"
+ },
+ {
+  "key": "settings.sections",
+  "en": "Settings sections"
+ },
+ {
+  "key": "settings.sectionGeneral",
+  "en": "General"
+ },
+ {
+  "key": "settings.sectionCompression",
+  "en": "Compression"
+ },
+ {
+  "key": "settings.sectionAdvanced",
+  "en": "Advanced"
+ },
+ {
+  "key": "settings.sectionPreview",
+  "en": "Preview"
+ },
+ {
+  "key": "settings.generalDescription",
+  "en": "Language and appearance of this dashboard."
+ },
+ {
+  "key": "settings.advancedDescription",
+  "en": "Thresholds and safety switches for the compression pipeline."
+ },
+ {
+  "key": "settings.compressionTitle",
+  "en": "Prompt compression"
+ },
+ {
+  "key": "settings.compressionDescription",
+  "en": "Reduce request size before routing while preserving code, errors, paths, numbers, and tool definitions."
+ },
+ {
+  "key": "settings.compressionHelp",
+  "en": "Rewrites each request before it is sent to a provider so it uses fewer tokens. Code, errors, file paths and numbers are protected, and any rewrite that damages them is discarded."
+ },
+ {
+  "key": "settings.compressionMode",
+  "en": "Mode"
+ },
+ {
+  "key": "settings.compressionModeHelp",
+  "en": "Off sends requests untouched. Lossless only removes duplicated and wasted text. Standard also shortens tool output. Aggressive additionally condenses older turns."
+ },
+ {
+  "key": "settings.compressionOff",
+  "en": "Off"
+ },
+ {
+  "key": "settings.compressionLossless",
+  "en": "Lossless"
+ },
+ {
+  "key": "settings.compressionStandard",
+  "en": "Standard"
+ },
+ {
+  "key": "settings.compressionAggressive",
+  "en": "Aggressive"
+ },
+ {
+  "key": "settings.compressionLossy",
+  "en": "Lossy"
+ },
+ {
+  "key": "settings.engineDedup",
+  "en": "Repeated blocks"
+ },
+ {
+  "key": "settings.engineDedupHelp",
+  "en": "Replaces a block of text that already appeared earlier in the conversation with a short reference to it."
+ },
+ {
+  "key": "settings.engineLite",
+  "en": "Whitespace cleanup"
+ },
+ {
+  "key": "settings.engineLiteHelp",
+  "en": "Trims trailing spaces, collapses repeated blank lines and drops duplicated system messages."
+ },
+ {
+  "key": "settings.engineReadLifecycle",
+  "en": "Superseded file reads"
+ },
+ {
+  "key": "settings.engineReadLifecycleHelp",
+  "en": "Replaces an earlier file read with a note once the same file is read or edited again later."
+ },
+ {
+  "key": "settings.engineToolfilter",
+  "en": "Tool output filter"
+ },
+ {
+  "key": "settings.engineToolfilterHelp",
+  "en": "Shortens command and tool output such as builds, tests and installs. Error and stack-trace lines always survive."
+ },
+ {
+  "key": "settings.engineJsoncompact",
+  "en": "JSON tables"
+ },
+ {
+  "key": "settings.engineJsoncompactHelp",
+  "en": "Re-encodes long JSON arrays that share the same fields as a compact table. Reversible, so nothing is lost."
+ },
+ {
+  "key": "settings.engineRelevance",
+  "en": "Relevance filter"
+ },
+ {
+  "key": "settings.engineRelevanceHelp",
+  "en": "Drops the sentences least related to the latest message once a message exceeds its size budget."
+ },
+ {
+  "key": "settings.engineAging",
+  "en": "Older turns"
+ },
+ {
+  "key": "settings.engineAgingHelp",
+  "en": "Condenses turns beyond the most recent few into a short summary that keeps paths, errors and decisions."
+ },
+ {
+  "key": "settings.engineHardBudget",
+  "en": "Token ceiling"
+ },
+ {
+  "key": "settings.engineHardBudgetHelp",
+  "en": "Removes the least valuable lines until the request fits the token target."
+ },
+ {
+  "key": "settings.compressionAutoTrigger",
+  "en": "Auto-trigger above estimated tokens"
+ },
+ {
+  "key": "settings.compressionAutoTriggerHelp",
+  "en": "Requests estimated above this many tokens switch to Aggressive automatically. Leave empty to disable."
+ },
+ {
+  "key": "settings.compressionPrefixFreeze",
+  "en": "Freeze recurring prompt prefixes"
+ },
+ {
+  "key": "settings.compressionPrefixFreezeHelp",
+  "en": "Leaves a system prompt untouched once the same text has been seen three times, so provider-side prompt caching keeps working."
+ },
+ {
+  "key": "settings.compressionTrustProjectFilters",
+  "en": "Trust project filter files"
+ },
+ {
+  "key": "settings.compressionTrustProjectFiltersHelp",
+  "en": "Also loads tool-output filters from the working directory. Off by default, because a repository could use it to hide output from the model."
+ },
+ {
+  "key": "settings.compressionStats",
+  "en": "Size saved"
+ },
+ {
+  "key": "settings.compressionEstimatedTokensSaved",
+  "en": "Estimated tokens saved"
+ },
+ {
+  "key": "settings.compressionPreview",
+  "en": "Live preview"
+ },
+ {
+  "key": "settings.compressionPreviewDescription",
+  "en": "Send a request body through the pipeline to see what a provider would receive."
+ },
+ {
+  "key": "settings.compressionPreviewPlaceholder",
+  "en": "Paste request JSON or plain text"
+ },
+ {
+  "key": "settings.compressionRunPreview",
+  "en": "Run preview"
+ },
+ {
+  "key": "settings.checkForUpdates",
+  "en": "Check for updates"
+ },
+ {
+  "key": "settings.lastChecked",
+  "en": "Last checked: {when}"
+ },
+ {
+  "key": "settings.currentVersion",
+  "en": "Current build:"
+ },
+ {
+  "key": "settings.changelog",
+  "en": "What's changed"
+ },
+ {
+  "key": "settings.upToDate",
+  "en": "Up to date"
+ },
+ {
+  "key": "settings.buildAhead",
+  "en": "This build is ahead of official main."
+ },
+ {
+  "key": "settings.buildDiverged",
+  "en": "This build has diverged from official main."
+ },
+ {
+  "key": "settings.buildUnknown",
+  "en": "This custom build cannot be compared with official main."
+ },
+ {
+  "key": "settings.notGitInstall",
+  "en": "This installation does not include commit information."
+ },
+ {
+  "key": "settings.checkFailed",
+  "en": "Could not check for updates."
+ },
+ {
+  "key": "settings.contactsGithub",
+  "en": "Checks are manual and contact GitHub."
+ },
+ {
+  "key": "settings.autoUpdateCheck",
+  "en": "Automatic update check"
+ },
+ {
+  "key": "settings.autoUpdateCheckHelp",
+  "en": "Checks GitHub once a day for a new release and shows a reminder. Off by default."
+ },
+ {
+  "key": "settings.openReleases",
+  "en": "Open GitHub Releases"
+ },
+ {
+  "key": "settings.restartAfterUpdate",
+  "en": "Restart JiMesh after the build completes."
+ },
+ {
+  "key": "strategies.balanced",
+  "en": "Balanced"
+ },
+ {
+  "key": "strategies.smartest",
+  "en": "Smartest"
+ },
+ {
+  "key": "strategies.fastest",
+  "en": "Fastest"
+ },
+ {
+  "key": "strategies.reliable",
+  "en": "Most reliable"
+ },
+ {
+  "key": "strategies.custom",
+  "en": "Custom"
+ },
+ {
+  "key": "strategies.guardrails",
+  "en": "Guardrails"
+ },
+ {
+  "key": "strategies.explore",
+  "en": "Explore unmeasured models"
+ },
+ {
+  "key": "strategies.exploreHint",
+  "en": "Give models with no reliability or speed data a 10% chance to go first so they build a track record. Your real request is what gets sent, so it may be answered by an untested model. For a custom endpoint, use Probe endpoint on the Keys page to test it without live traffic."
+ },
+ {
+  "key": "strategies.keySelection",
+  "en": "Key selection"
+ },
+ {
+  "key": "strategies.keySelectionAuto",
+  "en": "Auto"
+ },
+ {
+  "key": "strategies.keySelectionLeastRemaining",
+  "en": "Least remaining"
+ },
+ {
+  "key": "strategies.keySelectionHint",
+  "en": "How to choose between several keys on the same provider. Auto keeps the current rotation; Least remaining ranks keys by observed quota and tries the one with the most left first."
+ },
+ {
+  "key": "strategies.moreOptions",
+  "en": "More options"
+ },
+ {
+  "key": "strategies.peakActive",
+  "en": "(peak hours)"
+ },
+ {
+  "key": "strategies.peakActiveHint",
+  "en": "The peak-hours adjustment is active right now, so these are not the preset's own weights: 60% of the speed weight has moved onto reliability."
+ },
+ {
+  "key": "strategies.peakAdjust",
+  "en": "Peak-hours adjustment"
+ },
+ {
+  "key": "strategies.peakAdjustHint",
+  "en": "Off by default. Inside the window below, move 60% of the speed weight onto reliability — free relays are busiest then, so reliability predicts success better than raw throughput. Fastest and Most reliable are left alone."
+ },
+ {
+  "key": "strategies.peakFrom",
+  "en": "From"
+ },
+ {
+  "key": "strategies.peakTo",
+  "en": "to"
+ },
+ {
+  "key": "strategies.peakTimezoneLabel",
+  "en": "Timezone"
+ },
+ {
+  "key": "strategies.peakUseBrowserTimezone",
+  "en": "Use browser timezone"
+ },
+ {
+  "key": "strategies.peakTimezoneInvalid",
+  "en": "Unknown timezone."
+ },
+ {
+  "key": "strategies.peakExemptNote",
+  "en": "This preset is left alone — it already sits at one end of the speed/reliability trade-off."
+ },
+ {
+  "key": "strategies.title",
+  "en": "Routing strategy"
+ },
+ {
+  "key": "strategies.description",
+  "en": "Pick a routing strategy. In Manual mode you drag to set the order; the other strategies route by live score across reliability, speed and intelligence."
+ },
+ {
+  "key": "strategies.weightsSummary",
+  "en": "reliability {reliability}% · speed {speed}% · intelligence {intelligence}%"
+ },
+ {
+  "key": "strategies.manual",
+  "en": "Manual"
+ },
+ {
+  "key": "strategies.manualBlurb",
+  "en": "Route in the exact order you set below. Drag the handles to reorder. No scoring; the chain is followed top-to-bottom."
+ },
+ {
+  "key": "strategies.balancedBlurb",
+  "en": "Reliability leads (50%), with speed and intelligence weighted equally (25% each). A sensible all-round default."
+ },
+ {
+  "key": "strategies.smartestBlurb",
+  "en": "Prefer the most capable model that still works. Intelligence 55%, reliability 35%, speed 10%."
+ },
+ {
+  "key": "strategies.fastestBlurb",
+  "en": "Prefer the fastest model that still works. Speed 55%, reliability 35%, intelligence 10%."
+ },
+ {
+  "key": "strategies.reliableBlurb",
+  "en": "Maximize success rate above all. Reliability 70%, speed and intelligence 15% each."
+ },
+ {
+  "key": "strategies.customBlurb",
+  "en": "Set your own balance of reliability, speed and intelligence with sliders. Same engine as the presets, just your weights."
+ },
+ {
+  "key": "penaltyInspector.rowCount",
+  "en": "{count} active"
+ },
+ {
+  "key": "penaltyInspector.offChain",
+  "en": "off chain"
+ },
+ {
+  "key": "penaltyInspector.penaltyValue",
+  "en": "Penalty {value}"
+ },
+ {
+  "key": "penaltyInspector.factor",
+  "en": "score x{factor}"
+ },
+ {
+  "key": "penaltyInspector.cooldownChip",
+  "en": "{key} - {time}"
+ },
+ {
+  "key": "penaltyInspector.resetCooldown",
+  "en": "Reset cooldown"
+ },
+ {
+  "key": "penaltyInspector.errorsHeading",
+  "en": "{count} recent errors"
+ },
+ {
+  "key": "penaltyInspector.noRecentErrors",
+  "en": "No recent errors"
+ },
+ {
+  "key": "penaltyInspector.noKey",
+  "en": "no key"
+ },
+ {
+  "key": "penaltyInspector.reasons.penalty",
+  "en": "penalized"
+ },
+ {
+  "key": "penaltyInspector.reasons.cooldown",
+  "en": "cooldown"
+ },
+ {
+  "key": "penaltyInspector.reasons.recent_errors",
+  "en": "failing"
+ },
+ {
+  "key": "keys.pageTitle",
+  "en": "Keys"
+ },
+ {
+  "key": "keys.pageDescription",
+  "en": "Provider credentials and the unified API key your apps connect with."
+ },
+ {
+  "key": "keys.tabProviders",
+  "en": "Providers"
+ },
+ {
+  "key": "keys.checklistSummary",
+  "en": "{configured} of {total} providers configured"
+ },
+ {
+  "key": "keys.checklistKeyless",
+  "en": "no key needed"
+ },
+ {
+  "key": "keys.checklistNoKeyTip",
+  "en": "No key added yet. Click to add one."
+ },
+ {
+  "key": "keys.checklistKeylessTip",
+  "en": "Works without a key."
+ },
+ {
+  "key": "keys.tabQuotaSignals",
+  "en": "Quota signals"
+ },
+ {
+  "key": "keys.tabApiKey",
+  "en": "Unified API key"
+ },
+ {
+  "key": "keys.tabAnthropic",
+  "en": "Anthropic"
+ },
+ {
+  "key": "keys.tabAgents",
+  "en": "Agents"
+ },
+ {
+  "key": "keys.unifiedKey",
+  "en": "Your unified API key"
+ },
+ {
+  "key": "keys.regenerate",
+  "en": "Regenerate"
+ },
+ {
+  "key": "keys.showKey",
+  "en": "Show"
+ },
+ {
+  "key": "keys.hideKey",
+  "en": "Hide"
+ },
+ {
+  "key": "keys.copyKey",
+  "en": "Copy"
+ },
+ {
+  "key": "keys.copyFullKey",
+  "en": "Copy full key"
+ },
+ {
+  "key": "keys.copiedKey",
+  "en": "Copied"
+ },
+ {
+  "key": "keys.baseUrl",
+  "en": "Base URL"
+ },
+ {
+  "key": "keys.endpointChat",
+  "en": "Chat"
+ },
+ {
+  "key": "keys.endpointResponses",
+  "en": "Responses"
+ },
+ {
+  "key": "keys.endpointEmbeddings",
+  "en": "Embeddings"
+ },
+ {
+  "key": "keys.endpointEmbeddingsHint",
+  "en": "model: \"auto\" or a family from the Embeddings tab"
+ },
+ {
+  "key": "keys.endpointMessages",
+  "en": "Messages"
+ },
+ {
+  "key": "keys.endpointMessagesHint",
+  "en": "Anthropic-compatible (Claude)"
+ },
+ {
+  "key": "keys.anthropicTitle",
+  "en": "Claude (Anthropic) models"
+ },
+ {
+  "key": "keys.anthropicDesc",
+  "en": "Point a Claude or Anthropic SDK client at this server. Anthropic clients send Claude model names — map each to Auto (the router picks a free model) or pin a specific one."
+ },
+ {
+  "key": "keys.anthropicBaseUrl",
+  "en": "Base URL"
+ },
+ {
+  "key": "keys.anthropicAuth",
+  "en": "Auth header"
+ },
+ {
+  "key": "keys.anthropicAuto",
+  "en": "Auto — router picks the best model"
+ },
+ {
+  "key": "keys.anthropicSave",
+  "en": "Save mapping"
+ },
+ {
+  "key": "keys.anthropicSaved",
+  "en": "Saved"
+ },
+ {
+  "key": "keys.anthropicNote",
+  "en": "Anthropic clients keep their built-in Claude model names; the mapping above decides how each one routes into your pool."
+ },
+ {
+  "key": "keys.familyDefault",
+  "en": "Default"
+ },
+ {
+  "key": "keys.familyOpus",
+  "en": "Opus"
+ },
+ {
+  "key": "keys.familySonnet",
+  "en": "Sonnet"
+ },
+ {
+  "key": "keys.familyHaiku",
+  "en": "Haiku"
+ },
+ {
+  "key": "keys.familyGeminiPro",
+  "en": "Gemini Pro"
+ },
+ {
+  "key": "keys.familyGeminiFlash",
+  "en": "Gemini Flash"
+ },
+ {
+  "key": "keys.familyGeminiFlashLite",
+  "en": "Gemini Flash-Lite"
+ },
+ {
+  "key": "keys.geminiTitle",
+  "en": "Gemini model mapping"
+ },
+ {
+  "key": "keys.geminiDesc",
+  "en": "Map Gemini Pro, Flash, and Flash-Lite names to Auto or a specific catalog model."
+ },
+ {
+  "key": "keys.compatibilityTitle",
+  "en": "Agent compatibility"
+ },
+ {
+  "key": "keys.compatibilityDesc",
+  "en": "Control opt-in compatibility surfaces and Claude Code model discovery."
+ },
+ {
+  "key": "keys.ollamaMode",
+  "en": "Ollama emulation"
+ },
+ {
+  "key": "keys.ollamaModeHint",
+  "en": "Open-loopback never accepts unauthenticated LAN traffic."
+ },
+ {
+  "key": "keys.ollamaOff",
+  "en": "Off"
+ },
+ {
+  "key": "keys.ollamaLoopback",
+  "en": "Open on loopback"
+ },
+ {
+  "key": "keys.ollamaKeyRequired",
+  "en": "API key required"
+ },
+ {
+  "key": "keys.claudeAliases",
+  "en": "Claude Code discovery aliases"
+ },
+ {
+  "key": "keys.claudeAliasesHint",
+  "en": "Expose claude/<model> aliases so the gateway model picker can list the catalog."
+ },
+ {
+  "key": "keys.urlTokensTitle",
+  "en": "Revocable URL tokens"
+ },
+ {
+  "key": "keys.urlTokensDesc",
+  "en": "For headerless clients only. URL tokens can leak into history and logs, so revoke them when no longer needed."
+ },
+ {
+  "key": "keys.urlTokenLabel",
+  "en": "Token label"
+ },
+ {
+  "key": "keys.createUrlToken",
+  "en": "Create token"
+ },
+ {
+  "key": "keys.urlTokenOnce",
+  "en": "Copy this token now. It will not be shown again."
+ },
+ {
+  "key": "keys.revoked",
+  "en": "Revoked"
+ },
+ {
+  "key": "keys.revoke",
+  "en": "Revoke"
+ },
+ {
+  "key": "keys.selectPlatform",
+  "en": "Select a provider"
+ },
+ {
+  "key": "keys.addKey",
+  "en": "Add key"
+ },
+ {
+  "key": "keys.keyAdded",
+  "en": "Key added"
+ },
+ {
+  "key": "keys.endpointKeysShareModels",
+  "en": "Keys for the same endpoint share its models."
+ },
+ {
+  "key": "keys.export",
+  "en": "Export"
+ },
+ {
+  "key": "keys.exportAll",
+  "en": "All keys"
+ },
+ {
+  "key": "keys.exportHealthy",
+  "en": "Healthy only"
+ },
+ {
+  "key": "keys.exportKeys",
+  "en": "Export API keys"
+ },
+ {
+  "key": "keys.exportFormat",
+  "en": "Format"
+ },
+ {
+  "key": "keys.exportHealthyOnly",
+  "en": "Healthy keys only"
+ },
+ {
+  "key": "keys.exportHealthyOnlyDesc",
+  "en": "Exclude keys that are currently failing health checks"
+ },
+ {
+  "key": "keys.exportWillExport",
+  "en": "Will export"
+ },
+ {
+  "key": "keys.exportKey",
+  "en": "key"
+ },
+ {
+  "key": "keys.exportKeys plural",
+  "en": "keys"
+ },
+ {
+  "key": "keys.exporting",
+  "en": "Exporting…"
+ },
+ {
+  "key": "keys.exportDownload",
+  "en": "Download"
+ },
+ {
+  "key": "keys.exportSuccess",
+  "en": "Exported {count} keys"
+ },
+ {
+  "key": "keys.adding",
+  "en": "Adding…"
+ },
+ {
+  "key": "keys.selectProvider",
+  "en": "Select a provider…"
+ },
+ {
+  "key": "keys.accountId",
+  "en": "Account ID"
+ },
+ {
+  "key": "keys.label",
+  "en": "Label"
+ },
+ {
+  "key": "keys.noKeyNeeded",
+  "en": "(no key needed)"
+ },
+ {
+  "key": "keys.outboundProxy",
+  "en": "Outbound proxy"
+ },
+ {
+  "key": "keys.outboundProxyDescription",
+  "en": "Route outbound LLM requests through a proxy. Supports SOCKS5, HTTP, and HTTPS."
+ },
+ {
+  "key": "keys.proxyUrl",
+  "en": "Proxy URL"
+ },
+ {
+  "key": "keys.saveProxy",
+  "en": "Save"
+ },
+ {
+  "key": "keys.savingProxy",
+  "en": "Saving…"
+ },
+ {
+  "key": "keys.testProxy",
+  "en": "Test"
+ },
+ {
+  "key": "keys.testingProxy",
+  "en": "Testing…"
+ },
+ {
+  "key": "keys.proxyTestOk",
+  "en": "Proxy works — {ms}ms round trip"
+ },
+ {
+  "key": "keys.proxyTestFail",
+  "en": "Proxy failed: {reason}"
+ },
+ {
+  "key": "keys.proxyLoadFailed",
+  "en": "Could not load proxy settings."
+ },
+ {
+  "key": "keys.proxyMode",
+  "en": "Mode"
+ },
+ {
+  "key": "keys.proxyModeForward",
+  "en": "Forward proxy"
+ },
+ {
+  "key": "keys.proxyModeFetchRelay",
+  "en": "Fetch relay"
+ },
+ {
+  "key": "keys.relayToken",
+  "en": "Relay token"
+ },
+ {
+  "key": "keys.relayTokenConfigured",
+  "en": "Configured. Leave unchanged to keep."
+ },
+ {
+  "key": "keys.relayTokenPlaceholder",
+  "en": "Relay bearer token (optional)"
+ },
+ {
+  "key": "keys.relayHeadersHint",
+  "en": "The relay reads the destination and its own credential from"
+ },
+ {
+  "key": "keys.addCustom",
+  "en": "Add a custom OpenAI-compatible model"
+ },
+ {
+  "key": "keys.addCustomDescription",
+  "en": "Point chat, embedding, image, or audio models at any OpenAI-compatible endpoint. The API key is optional for local servers."
+ },
+ {
+  "key": "keys.customType",
+  "en": "Type"
+ },
+ {
+  "key": "keys.customTypeChat",
+  "en": "Chat"
+ },
+ {
+  "key": "keys.customTypeEmbedding",
+  "en": "Embedding"
+ },
+ {
+  "key": "keys.customTypeImage",
+  "en": "Image"
+ },
+ {
+  "key": "keys.customTypeAudio",
+  "en": "Audio"
+ },
+ {
+  "key": "keys.customTypeTranscription",
+  "en": "Transcription"
+ },
+ {
+  "key": "keys.customBaseUrl",
+  "en": "Base URL"
+ },
+ {
+  "key": "keys.customModels",
+  "en": "Models"
+ },
+ {
+  "key": "keys.customModel",
+  "en": "Model"
+ },
+ {
+  "key": "keys.customDisplayName",
+  "en": "Display name"
+ },
+ {
+  "key": "keys.customDisplayNamePerModel",
+  "en": "per-model"
+ },
+ {
+  "key": "keys.customDisplayNameOptional",
+  "en": "optional"
+ },
+ {
+  "key": "keys.customFamily",
+  "en": "Family"
+ },
+ {
+  "key": "keys.customFamilyPlaceholder",
+  "en": "defaults to model id"
+ },
+ {
+  "key": "keys.customApiKey",
+  "en": "API key"
+ },
+ {
+  "key": "keys.customCapabilities",
+  "en": "Capabilities"
+ },
+ {
+  "key": "keys.addModel",
+  "en": "Add model"
+ },
+ {
+  "key": "keys.modelAdded",
+  "en": "Model added"
+ },
+ {
+  "key": "keys.addModels",
+  "en": "Add {count} models"
+ },
+ {
+  "key": "keys.addEmbeddingModel",
+  "en": "Add embedding"
+ },
+ {
+  "key": "keys.addImageModel",
+  "en": "Add image model"
+ },
+ {
+  "key": "keys.addAudioModel",
+  "en": "Add audio model"
+ },
+ {
+  "key": "keys.addTranscriptionModel",
+  "en": "Add transcription model"
+ },
+ {
+  "key": "keys.addingCustom",
+  "en": "Adding…"
+ },
+ {
+  "key": "keys.discoverModels",
+  "en": "Fetch models"
+ },
+ {
+  "key": "keys.probeNow",
+  "en": "Probe endpoint"
+ },
+ {
+  "key": "keys.probeConfirm",
+  "en": "Send up to 3 test requests?"
+ },
+ {
+  "key": "keys.probeCapabilities",
+  "en": "reasoning: {reasoning} · tools: {tools}"
+ },
+ {
+  "key": "keys.probeCapYes",
+  "en": "yes"
+ },
+ {
+  "key": "keys.probeCapNo",
+  "en": "no"
+ },
+ {
+  "key": "keys.probeCapUnknown",
+  "en": "unknown"
+ },
+ {
+  "key": "keys.probeSuccess",
+  "en": "Probed {model} in {latency}ms"
+ },
+ {
+  "key": "keys.probeFailed",
+  "en": "Probe failed: {reason}"
+ },
+ {
+  "key": "keys.discoverTitle",
+  "en": "Models on this endpoint"
+ },
+ {
+  "key": "keys.discoverHint",
+  "en": "Pick the models to register. Ones you already added stay locked."
+ },
+ {
+  "key": "keys.discoverEmpty",
+  "en": "This endpoint returned no models."
+ },
+ {
+  "key": "keys.discoverAlreadyAdded",
+  "en": "Added"
+ },
+ {
+  "key": "keys.discoverSelectAll",
+  "en": "Select all"
+ },
+ {
+  "key": "keys.modelsAdded",
+  "en": "{count} models added"
+ },
+ {
+  "key": "keys.getApiKey",
+  "en": "Get API key"
+ },
+ {
+  "key": "keys.deleteKeyConfirm",
+  "en": "Delete this key? This cannot be undone."
+ },
+ {
+  "key": "keys.checkAll",
+  "en": "Check all"
+ },
+ {
+  "key": "keys.checking",
+  "en": "Checking…"
+ },
+ {
+  "key": "keys.editLabel",
+  "en": "Edit label"
+ },
+ {
+  "key": "keys.saveLabel",
+  "en": "Save label"
+ },
+ {
+  "key": "keys.unifiedKeyDescBefore",
+  "en": "Use this as your OpenAI "
+ },
+ {
+  "key": "keys.unifiedKeyDescAfter",
+  "en": "; it authenticates requests to this proxy."
+ },
+ {
+  "key": "keys.serverUnreachableBefore",
+  "en": "Can't reach the server on "
+ },
+ {
+  "key": "keys.serverUnreachableAfter",
+  "en": ". Make sure the backend is running. npm run dev starts both, and the server logs print under the server prefix."
+ },
+ {
+  "key": "keys.paneProviderKey",
+  "en": "Provider key"
+ },
+ {
+  "key": "keys.paneImportFile",
+  "en": "Import file"
+ },
+ {
+  "key": "keys.paneCustomEndpoint",
+  "en": "Custom endpoint"
+ },
+ {
+  "key": "keys.platform",
+  "en": "Platform"
+ },
+ {
+  "key": "keys.hideAdded",
+  "en": "Hide added providers"
+ },
+ {
+  "key": "keys.apiToken",
+  "en": "API token"
+ },
+ {
+  "key": "keys.noKeyNeededPlaceholder",
+  "en": "No API key needed"
+ },
+ {
+  "key": "keys.bearerTokenPlaceholder",
+  "en": "Bearer token"
+ },
+ {
+  "key": "keys.pasteKeyPlaceholder",
+  "en": "paste key here"
+ },
+ {
+  "key": "keys.pasteSeveral",
+  "en": "Paste several"
+ },
+ {
+  "key": "keys.keylessHint",
+  "en": "No API key needed: this provider's free tier is anonymous (rate-limited per IP)."
+ },
+ {
+  "key": "keys.enable",
+  "en": "Enable"
+ },
+ {
+  "key": "keys.noProviderKeys",
+  "en": "No provider keys yet. Add one above to start routing."
+ },
+ {
+  "key": "keys.filterPlaceholder",
+  "en": "Filter providers or keys"
+ },
+ {
+  "key": "keys.filterAll",
+  "en": "All"
+ },
+ {
+  "key": "keys.filterHealthy",
+  "en": "Healthy"
+ },
+ {
+  "key": "keys.filterIssues",
+  "en": "Issues"
+ },
+ {
+  "key": "keys.filterDisabled",
+  "en": "Disabled"
+ },
+ {
+  "key": "keys.noFilterMatch",
+  "en": "No providers match your filters."
+ },
+ {
+  "key": "keys.providerCountSummary",
+  "en": "{providers} providers · {keys} keys"
+ },
+ {
+  "key": "keys.summaryHealthy",
+  "en": "{count} healthy"
+ },
+ {
+  "key": "keys.summaryIssueOne",
+  "en": "{count} issue"
+ },
+ {
+  "key": "keys.summaryIssueOther",
+  "en": "{count} issues"
+ },
+ {
+  "key": "keys.providerActions",
+  "en": "Provider actions"
+ },
+ {
+  "key": "keys.routeViaProxy",
+  "en": "Route via proxy"
+ },
+ {
+  "key": "keys.checkNow",
+  "en": "Check now"
+ },
+ {
+  "key": "keys.proxyEnvHintBefore",
+  "en": "Also configurable via the "
+ },
+ {
+  "key": "keys.proxyEnvHintAfter",
+  "en": " environment variable (takes precedence). Leave blank to disable. Examples:"
+ },
+ {
+  "key": "keys.importKeys",
+  "en": "Import provider keys"
+ },
+ {
+  "key": "keys.importFiles",
+  "en": "Files"
+ },
+ {
+  "key": "keys.importFileCount",
+  "en": "{count} selected"
+ },
+ {
+  "key": "keys.previewFiles",
+  "en": "Preview"
+ },
+ {
+  "key": "keys.previewing",
+  "en": "Previewing…"
+ },
+ {
+  "key": "keys.selected",
+  "en": "Selected"
+ },
+ {
+  "key": "keys.provider",
+  "en": "Provider"
+ },
+ {
+  "key": "keys.keyName",
+  "en": "Key name"
+ },
+ {
+  "key": "keys.keyValue",
+  "en": "Key value"
+ },
+ {
+  "key": "keys.chooseProvider",
+  "en": "Choose provider"
+ },
+ {
+  "key": "keys.noPreviewKeys",
+  "en": "No keys found in those files."
+ },
+ {
+  "key": "keys.skippedItems",
+  "en": "Skipped:"
+ },
+ {
+  "key": "keys.moreItems",
+  "en": "+{count} more"
+ },
+ {
+  "key": "keys.importSelected",
+  "en": "Import {count}"
+ },
+ {
+  "key": "keys.noImportSelection",
+  "en": "Select at least one row with a provider."
+ },
+ {
+  "key": "keys.duplicate",
+  "en": "Duplicate"
+ },
+ {
+  "key": "keys.duplicatesFound",
+  "en": "{count} duplicate(s) detected — already exist and will be skipped."
+ },
+ {
+  "key": "keys.importResult",
+  "en": "Imported {imported}; failed {failed}."
+ },
+ {
+  "key": "keys.importModelCount",
+  "en": "+{count} models"
+ },
+ {
+  "key": "keys.importResultWithModels",
+  "en": "Imported {imported}; registered {models} models; failed {failed}."
+ },
+ {
+  "key": "keys.confirmRemove",
+  "en": "Confirm?"
+ },
+ {
+  "key": "keys.quotaSignalsTitle",
+  "en": "Quota signals"
+ },
+ {
+  "key": "keys.quotaSignalsEmptyTitle",
+  "en": "No quota observations yet"
+ },
+ {
+  "key": "keys.quotaSignalsEmptyDesc",
+  "en": "This fills in after providers return rate-limit headers, quota errors, or validation signals."
+ },
+ {
+  "key": "keys.quotaKeyRef",
+  "en": "key #{id}"
+ },
+ {
+  "key": "keys.quotaPoolRef",
+  "en": "pool {pool}"
+ },
+ {
+  "key": "keys.quotaLimit",
+  "en": "Limit"
+ },
+ {
+  "key": "keys.quotaRemaining",
+  "en": "Remaining"
+ },
+ {
+  "key": "keys.quotaReset",
+  "en": "Reset"
+ },
+ {
+  "key": "keys.quotaObserved",
+  "en": "Observed"
+ },
+ {
+  "key": "keys.modelScope",
+  "en": "Model scope"
+ },
+ {
+  "key": "keys.modelScopeDesc",
+  "en": "Limit this key to specific model IDs. The router skips this key for any other model."
+ },
+ {
+  "key": "keys.modelScopeAdd",
+  "en": "Add a model ID and press Enter"
+ },
+ {
+  "key": "keys.modelScopeEmpty",
+  "en": "No scope set — this key serves every model of its provider."
+ },
+ {
+  "key": "keys.modelScopeClear",
+  "en": "Clear scope"
+ },
+ {
+  "key": "keys.modelScopeBadgeOne",
+  "en": "scoped · 1 model"
+ },
+ {
+  "key": "keys.modelScopeBadgeOther",
+  "en": "scoped · {count} models"
+ },
+ {
+  "key": "keys.modelPicker.title",
+  "en": "Which models should this key serve?"
+ },
+ {
+  "key": "keys.modelPicker.hint",
+  "en": "Your {provider} key was added and currently serves every model below. Untick any this key isn't allowed to use — the router will skip it for those."
+ },
+ {
+  "key": "keys.modelPicker.count",
+  "en": "{selected} of {total} selected"
+ },
+ {
+  "key": "keys.modelPicker.allNote",
+  "en": "Everything selected — nothing is saved, and models added to the catalog later will use this key too."
+ },
+ {
+  "key": "keys.modelPicker.subsetNote",
+  "en": "This key will be limited to the selected models. You can change this later from the key's row."
+ },
+ {
+  "key": "keys.modelPicker.skip",
+  "en": "Not now"
+ },
+ {
+  "key": "keys.modelPicker.scopedOne",
+  "en": "Key limited to 1 model"
+ },
+ {
+  "key": "keys.modelPicker.scopedOther",
+  "en": "Key limited to {count} models"
+ },
+ {
+  "key": "keys.cpTitle",
+  "en": "Client profiles"
+ },
+ {
+  "key": "keys.cpDesc",
+  "en": "Per-client API keys, each with a system prompt the server always applies."
+ },
+ {
+  "key": "keys.cpEmpty",
+  "en": "No client profiles yet."
+ },
+ {
+  "key": "keys.cpNameLabel",
+  "en": "Name"
+ },
+ {
+  "key": "keys.cpNamePlaceholder",
+  "en": "e.g. Support bot"
+ },
+ {
+  "key": "keys.cpPromptLabel",
+  "en": "System prompt (optional)"
+ },
+ {
+  "key": "keys.cpPromptPlaceholder",
+  "en": "Instructions the server prepends to every request made with this key."
+ },
+ {
+  "key": "keys.cpCreate",
+  "en": "Create profile"
+ },
+ {
+  "key": "keys.cpRotate",
+  "en": "Rotate key"
+ },
+ {
+  "key": "keys.cpKeyOnce",
+  "en": "Copy this key now — it won't be shown again."
+ },
+ {
+  "key": "keys.cpEnabledAria",
+  "en": "Profile enabled"
+ },
+ {
+  "key": "keys.selectKey",
+  "en": "Select this key"
+ },
+ {
+  "key": "keys.bulkSelected",
+  "en": "{count} selected"
+ },
+ {
+  "key": "keys.bulkEnable",
+  "en": "Enable all"
+ },
+ {
+  "key": "keys.bulkDisable",
+  "en": "Disable all"
+ },
+ {
+  "key": "keys.bulkDelete",
+  "en": "Delete all"
+ },
+ {
+  "key": "keys.bulkDeleteConfirm",
+  "en": "Delete {count}?"
+ },
+ {
+  "key": "keys.bulkResult",
+  "en": "Updated {done}; failed {failed}."
+ },
+ {
+  "key": "keys.bulkDeleteResult",
+  "en": "Deleted {done}; failed {failed}."
+ },
+ {
+  "key": "keys.providerName",
+  "en": "Provider name"
+ },
+ {
+  "key": "keys.providerNamePlaceholder",
+  "en": "optional — shown instead of 'custom'"
+ },
+ {
+  "key": "keys.importing",
+  "en": "Importing…"
+ },
+ {
+  "key": "keys.tabBudgetStatus",
+  "en": "Budgets"
+ },
+ {
+  "key": "backups.title",
+  "en": "Backups"
+ },
+ {
+  "key": "backups.description",
+  "en": "Save the routing data to a .sql file beside the database, and restore it later."
+ },
+ {
+  "key": "backups.excludedNote",
+  "en": "A backup carries your providers, models, routing settings and request history. Accounts, sessions and URL tokens are never included, so a dump holds no password hashes or login tokens and restoring one cannot log you out. Provider keys stay encrypted with this server's ENCRYPTION_KEY: a backup can only be restored on a server that still holds that key."
+ },
+ {
+  "key": "backups.selectHint",
+  "en": "Back up everything, or pick the tables you need."
+ },
+ {
+  "key": "backups.selectAll",
+  "en": "Select all"
+ },
+ {
+  "key": "backups.deselectAll",
+  "en": "Clear"
+ },
+ {
+  "key": "backups.fullBackup",
+  "en": "Full backup"
+ },
+ {
+  "key": "backups.backupSelected",
+  "en": "Back up selected ({count})"
+ },
+ {
+  "key": "backups.created",
+  "en": "Backup written to {filename}"
+ },
+ {
+  "key": "backups.list",
+  "en": "Backups on disk"
+ },
+ {
+  "key": "backups.empty",
+  "en": "No backups yet"
+ },
+ {
+  "key": "backups.full",
+  "en": "All tables"
+ },
+ {
+  "key": "backups.tablesCount",
+  "en": "{count} tables"
+ },
+ {
+  "key": "backups.manual",
+  "en": "Manual"
+ },
+ {
+  "key": "backups.scheduled",
+  "en": "Scheduled"
+ },
+ {
+  "key": "backups.preRestore",
+  "en": "Pre-restore"
+ },
+ {
+  "key": "backups.download",
+  "en": "Download"
+ },
+ {
+  "key": "backups.restore",
+  "en": "Restore"
+ },
+ {
+  "key": "backups.confirmRestore",
+  "en": "Replace data?"
+ },
+ {
+  "key": "backups.restored",
+  "en": "Restored. The previous data was saved as {filename}."
+ },
+ {
+  "key": "backups.delete",
+  "en": "Delete backup"
+ },
+ {
+  "key": "backups.prevPage",
+  "en": "Previous"
+ },
+ {
+  "key": "backups.nextPage",
+  "en": "Next"
+ },
+ {
+  "key": "backups.autoTitle",
+  "en": "Automatic backups"
+ },
+ {
+  "key": "backups.autoHint",
+  "en": "The server writes a full backup on this cadence."
+ },
+ {
+  "key": "backups.time",
+  "en": "Time (HH:mm)"
+ },
+ {
+  "key": "backups.intervalDays",
+  "en": "Every N days"
+ },
+ {
+  "key": "backups.path",
+  "en": "Folder"
+ },
+ {
+  "key": "backups.pathPlaceholder",
+  "en": "backups"
+ },
+ {
+  "key": "backups.pathHint",
+  "en": "Relative to the database directory. Backups cannot be written outside it."
+ },
+ {
+  "key": "backups.save",
+  "en": "Save schedule"
+ },
+ {
+  "key": "backups.saved",
+  "en": "Saved"
+ },
+ {
+  "key": "auth.createYourAccount",
+  "en": "Create your account"
+ },
+ {
+  "key": "auth.signIn",
+  "en": "Sign in"
+ },
+ {
+  "key": "auth.email",
+  "en": "Email"
+ },
+ {
+  "key": "auth.password",
+  "en": "Password"
+ },
+ {
+  "key": "auth.emailPlaceholder",
+  "en": "you@example.com"
+ },
+ {
+  "key": "auth.passwordPlaceholderSetup",
+  "en": "at least 8 characters"
+ },
+ {
+  "key": "auth.passwordPlaceholderLogin",
+  "en": "your password"
+ },
+ {
+  "key": "auth.setupDescription",
+  "en": "Set the email and password that will protect this dashboard."
+ },
+ {
+  "key": "auth.loginDescription",
+  "en": "Sign in to manage your keys, routing, and analytics."
+ },
+ {
+  "key": "auth.createAccount",
+  "en": "Create account"
+ },
+ {
+  "key": "auth.creating",
+  "en": "Creating…"
+ },
+ {
+  "key": "auth.signingIn",
+  "en": "Signing in…"
+ },
+ {
+  "key": "auth.loading",
+  "en": "Loading…"
+ },
+ {
+  "key": "auth.newPasswordAutoComplete",
+  "en": "new-password"
+ },
+ {
+  "key": "auth.currentPasswordAutoComplete",
+  "en": "current-password"
+ },
+ {
+  "key": "auth.serverUnreachableBefore",
+  "en": "Can't reach the server. Make sure the backend is running ("
+ },
+ {
+  "key": "auth.serverUnreachableAfter",
+  "en": ")."
+ },
+ {
+  "key": "auth.setupCode",
+  "en": "Setup code"
+ },
+ {
+  "key": "auth.setupCodePlaceholder",
+  "en": "code from the server logs"
+ },
+ {
+  "key": "auth.setupCodeHint",
+  "en": "Setting up from another device needs the one-time code printed in the server logs at startup."
+ },
+ {
+  "key": "auth.changePassword",
+  "en": "Change password"
+ },
+ {
+  "key": "auth.changeEmail",
+  "en": "Change email"
+ },
+ {
+  "key": "auth.forgotPassword",
+  "en": "Forgot password?"
+ },
+ {
+  "key": "auth.currentPassword",
+  "en": "Current password"
+ },
+ {
+  "key": "auth.newPassword",
+  "en": "New password"
+ },
+ {
+  "key": "auth.newEmail",
+  "en": "New email"
+ },
+ {
+  "key": "auth.resetCode",
+  "en": "Reset code"
+ },
+ {
+  "key": "auth.resetCodePlaceholder",
+  "en": "code from the server logs"
+ },
+ {
+  "key": "auth.resetCodeHint",
+  "en": "Check the server logs for the password-reset code."
+ },
+ {
+  "key": "auth.forgotPasswordDescription",
+  "en": "Click the button below to generate a reset code. The code will appear in the server logs — enter it here to set a new password."
+ },
+ {
+  "key": "auth.requestResetCode",
+  "en": "Send reset code"
+ },
+ {
+  "key": "auth.requestingResetCode",
+  "en": "Sending…"
+ },
+ {
+  "key": "auth.resetPassword",
+  "en": "Reset password"
+ },
+ {
+  "key": "auth.resettingPassword",
+  "en": "Resetting…"
+ },
+ {
+  "key": "auth.changingPassword",
+  "en": "Changing…"
+ },
+ {
+  "key": "auth.changingEmail",
+  "en": "Changing…"
+ },
+ {
+  "key": "auth.backToLogin",
+  "en": "Back to sign in"
+ },
+ {
+  "key": "auth.passwordChanged",
+  "en": "Password changed successfully."
+ },
+ {
+  "key": "auth.emailChanged",
+  "en": "Email changed successfully."
+ },
+ {
+  "key": "auth.passwordReset",
+  "en": "Password reset successfully. Please sign in."
+ },
+ {
+  "key": "status.healthy",
+  "en": "healthy"
+ },
+ {
+  "key": "status.rateLimited",
+  "en": "rate-limited"
+ },
+ {
+  "key": "status.invalid",
+  "en": "invalid"
+ },
+ {
+  "key": "status.error",
+  "en": "error"
+ },
+ {
+  "key": "status.unchecked",
+  "en": "unchecked"
+ },
+ {
+  "key": "agents.title",
+  "en": "Coding agents"
+ },
+ {
+  "key": "agents.description",
+  "en": "Connect coding tools to one free-model gateway with generated, backup-safe configuration."
+ },
+ {
+  "key": "agents.apiKey",
+  "en": "API key"
+ },
+ {
+  "key": "agents.quickstartTitle",
+  "en": "Quick start"
+ },
+ {
+  "key": "agents.quickstart",
+  "en": "Fastest path: configure Claude Code from the live catalog."
+ },
+ {
+  "key": "agents.currentKey",
+  "en": "Current unified key:"
+ },
+ {
+  "key": "agents.seenRecently",
+  "en": "Seen recently"
+ },
+ {
+  "key": "agents.setupLabel",
+  "en": "Automatic setup"
+ },
+ {
+  "key": "agents.setupHint",
+  "en": "Writes this tool's config file for you, pointed at this gateway."
+ },
+ {
+  "key": "agents.setupGuideHint",
+  "en": "Prints this tool's setup steps; no files are written."
+ },
+ {
+  "key": "agents.manualLabel",
+  "en": "Manual connection"
+ },
+ {
+  "key": "agents.manualHint",
+  "en": "Base URL and key to enter in the tool's own settings."
+ },
+ {
+  "key": "agents.endpoint",
+  "en": "Endpoint"
+ },
+ {
+  "key": "agents.documentation",
+  "en": "Documentation"
+ },
+ {
+  "key": "agents.descriptions.claude",
+  "en": "Anthropic's terminal agent: it plans, edits files, and runs commands in your repo."
+ },
+ {
+  "key": "agents.descriptions.codex",
+  "en": "OpenAI's terminal agent, which runs your task in a local sandbox first."
+ },
+ {
+  "key": "agents.descriptions.cline",
+  "en": "A VS Code extension that asks you to approve every edit and command."
+ },
+ {
+  "key": "agents.descriptions.continue",
+  "en": "A VS Code and JetBrains extension for inline autocomplete and chat while you type."
+ },
+ {
+  "key": "agents.descriptions.aider",
+  "en": "A command-line pair programmer that turns each change into its own git commit."
+ },
+ {
+  "key": "agents.descriptions.opencode",
+  "en": "A provider-agnostic terminal agent with a full-screen text interface."
+ },
+ {
+  "key": "agents.descriptions.goose",
+  "en": "Block's local agent, extended with MCP servers to reach past your code."
+ },
+ {
+  "key": "agents.descriptions.qwen",
+  "en": "A Gemini CLI fork tuned for Qwen models and large repositories."
+ },
+ {
+  "key": "agents.descriptions.roo",
+  "en": "A VS Code extension with switchable modes: architect, coder, debugger."
+ },
+ {
+  "key": "agents.descriptions.kilo",
+  "en": "A VS Code extension merging Roo and Cline, with an orchestrator that splits up work."
+ },
+ {
+  "key": "agents.descriptions.crush",
+  "en": "Charm's terminal agent, written in Go, with one session per project."
+ },
+ {
+  "key": "agents.descriptions.dsh",
+  "en": "DeepSeek's harness, which keeps every provider as a route you can switch between."
+ },
+ {
+  "key": "agents.descriptions.mimo",
+  "en": "Xiaomi's terminal agent, an OpenCode fork that takes any OpenAI-compatible provider."
+ },
+ {
+  "key": "agents.descriptions.cursor",
+  "en": "The AI-first editor; it calls through Cursor's cloud, so it needs a public URL."
+ },
+ {
+  "key": "agents.descriptions.generic",
+  "en": "Anything else that speaks the OpenAI API, set up by hand from a base URL and key."
+ },
+ {
+  "key": "analytics.title",
+  "en": "Analytics"
+ },
+ {
+  "key": "analytics.description",
+  "en": "Request volume, latency, token usage, and failures."
+ },
+ {
+  "key": "analytics.range24h",
+  "en": "24h"
+ },
+ {
+  "key": "analytics.range7d",
+  "en": "7d"
+ },
+ {
+  "key": "analytics.range30d",
+  "en": "30d"
+ },
+ {
+  "key": "analytics.range90d",
+  "en": "90d"
+ },
+ {
+  "key": "analytics.requests",
+  "en": "Requests"
+ },
+ {
+  "key": "analytics.successRate",
+  "en": "Success rate"
+ },
+ {
+  "key": "analytics.inputTokens",
+  "en": "Input tokens"
+ },
+ {
+  "key": "analytics.outputTokens",
+  "en": "Output tokens"
+ },
+ {
+  "key": "analytics.avgLatency",
+  "en": "Avg latency"
+ },
+ {
+  "key": "analytics.p95Latency",
+  "en": "P95 latency"
+ },
+ {
+  "key": "analytics.avgTtft",
+  "en": "Avg TTFT"
+ },
+ {
+  "key": "analytics.estSavings",
+  "en": "Est. savings"
+ },
+ {
+  "key": "analytics.requestsByProvider",
+  "en": "Requests by provider"
+ },
+ {
+  "key": "analytics.requestsByAgent",
+  "en": "Requests by agent"
+ },
+ {
+  "key": "analytics.avgLatencyByProvider",
+  "en": "Avg latency by provider"
+ },
+ {
+  "key": "analytics.ttftByProvider",
+  "en": "Time to first token by provider"
+ },
+ {
+  "key": "analytics.ttftEmpty",
+  "en": "No time to first token recorded yet."
+ },
+ {
+  "key": "analytics.requestsOverTime",
+  "en": "Requests over time"
+ },
+ {
+  "key": "analytics.tokensOverTime",
+  "en": "Tokens over time"
+ },
+ {
+  "key": "analytics.byModel",
+  "en": "By model"
+ },
+ {
+  "key": "analytics.byPlatform",
+  "en": "By platform"
+ },
+ {
+  "key": "analytics.errors",
+  "en": "Errors"
+ },
+ {
+  "key": "analytics.errorDistribution",
+  "en": "Error distribution"
+ },
+ {
+  "key": "analytics.pinnedRequests",
+  "en": "Pinned requests"
+ },
+ {
+  "key": "analytics.pinnedHonored",
+  "en": "Honored"
+ },
+ {
+  "key": "analytics.fallbackAttempts",
+  "en": "Fallback attempts"
+ },
+ {
+  "key": "analytics.savingsHint",
+  "en": "You actually saved ${actual} over the last {range}. That is what the same tokens would have cost on paid APIs, priced per model. The number shown projects your pace from the last {span} of data to a full 30 days."
+ },
+ {
+  "key": "analytics.savingsHintExact",
+  "en": "You actually saved ${actual} over the last {range}. That is what the same tokens would have cost on paid APIs, priced per model. The number shown is your real 30-day total."
+ },
+ {
+  "key": "analytics.requestsHintPinned",
+  "en": "{pinned} of these requests pinned a specific model by name. {honored} were served by the pinned model; {failed} failed over to a different one. The rest were auto-routed."
+ },
+ {
+  "key": "analytics.requestsHintAuto",
+  "en": "All requests in this period were auto-routed; no client pinned a specific model by name."
+ },
+ {
+  "key": "analytics.requestsHintTypes",
+  "en": "{chat} chat and {embedding} embedding requests."
+ },
+ {
+  "key": "analytics.rangeLabel24h",
+  "en": "24 hours"
+ },
+ {
+  "key": "analytics.rangeLabel7d",
+  "en": "7 days"
+ },
+ {
+  "key": "analytics.rangeLabel30d",
+  "en": "30 days"
+ },
+ {
+  "key": "analytics.rangeLabel90d",
+  "en": "90 days"
+ },
+ {
+  "key": "analytics.spanDays",
+  "en": "{count} days"
+ },
+ {
+  "key": "analytics.spanHours",
+  "en": "{count} hours"
+ },
+ {
+  "key": "analytics.latencyMs",
+  "en": "Latency (ms)"
+ },
+ {
+  "key": "analytics.latency",
+  "en": "Latency"
+ },
+ {
+  "key": "analytics.pinned",
+  "en": "Pinned"
+ },
+ {
+  "key": "analytics.inTokens",
+  "en": "In tokens"
+ },
+ {
+  "key": "analytics.outTokens",
+  "en": "Out tokens"
+ },
+ {
+  "key": "analytics.saved",
+  "en": "Saved"
+ },
+ {
+  "key": "analytics.message",
+  "en": "Message"
+ },
+ {
+  "key": "analytics.time",
+  "en": "Time"
+ },
+ {
+  "key": "analytics.perModelBreakdown",
+  "en": "Per-model breakdown"
+ },
+ {
+  "key": "analytics.usageByKey",
+  "en": "Usage by key"
+ },
+ {
+  "key": "analytics.keyColumn",
+  "en": "Key"
+ },
+ {
+  "key": "analytics.keyLabelFallback",
+  "en": "Key #{id}"
+ },
+ {
+  "key": "analytics.errorsByProvider",
+  "en": "Errors by provider"
+ },
+ {
+  "key": "analytics.recentErrors",
+  "en": "Recent errors"
+ },
+ {
+  "key": "analytics.noErrors",
+  "en": "No errors"
+ },
+ {
+  "key": "analytics.recentCalls",
+  "en": "Recent calls"
+ },
+ {
+  "key": "analytics.clientIp",
+  "en": "Client IP"
+ },
+ {
+  "key": "analytics.clientAgent",
+  "en": "Client app"
+ },
+ {
+  "key": "analytics.requestedModelHint",
+  "en": "Requested {model}, served by fallback"
+ },
+ {
+  "key": "analytics.attempts",
+  "en": "Attempts"
+ },
+ {
+  "key": "analytics.filterAll",
+  "en": "All"
+ },
+ {
+  "key": "analytics.filterCanceled",
+  "en": "Canceled"
+ },
+ {
+  "key": "analytics.providerBreakdown",
+  "en": "Per-provider breakdown"
+ },
+ {
+  "key": "analytics.tokensPerSec",
+  "en": "Tok/s"
+ },
+ {
+  "key": "analytics.allProviders",
+  "en": "All providers"
+ },
+ {
+  "key": "analytics.requestDetailTitle",
+  "en": "Request #{id}"
+ },
+ {
+  "key": "analytics.failoverLadder",
+  "en": "Failover ladder"
+ },
+ {
+  "key": "analytics.failoverLadderHint",
+  "en": "Each hop this request took through the fallback chain, in order."
+ },
+ {
+  "key": "analytics.noAttemptTrace",
+  "en": "No attempt trace was recorded for this request."
+ },
+ {
+  "key": "analytics.keyOrdinal",
+  "en": "key #{n}"
+ },
+ {
+  "key": "analytics.keyBadge",
+  "en": "Key #{n}"
+ },
+ {
+  "key": "analytics.attemptTimingHint",
+  "en": "Start offset from request start · attempt duration"
+ },
+ {
+  "key": "analytics.requestedModel",
+  "en": "Requested model"
+ },
+ {
+  "key": "analytics.ttft",
+  "en": "TTFT"
+ },
+ {
+  "key": "logs.title",
+  "en": "Logs"
+ },
+ {
+  "key": "logs.description",
+  "en": "Live server log. New entries stream in while the page is open."
+ },
+ {
+  "key": "logs.pause",
+  "en": "Pause"
+ },
+ {
+  "key": "logs.resume",
+  "en": "Resume"
+ },
+ {
+  "key": "logs.clear",
+  "en": "Clear logs"
+ },
+ {
+  "key": "logs.cleared",
+  "en": "Server log cleared"
+ },
+ {
+  "key": "logs.levelFilter",
+  "en": "Log levels"
+ },
+ {
+  "key": "logs.levels.debug",
+  "en": "Debug"
+ },
+ {
+  "key": "logs.levels.info",
+  "en": "Info"
+ },
+ {
+  "key": "logs.levels.warn",
+  "en": "Warn"
+ },
+ {
+  "key": "logs.levels.error",
+  "en": "Error"
+ },
+ {
+  "key": "logs.countsHint",
+  "en": "Counts are totals for the whole log buffer on the server, not just the entries matching these filters."
+ },
+ {
+  "key": "logs.searchPlaceholder",
+  "en": "Search log messages…"
+ },
+ {
+  "key": "logs.jumpToLatest",
+  "en": "Jump to latest"
+ },
+ {
+  "key": "logs.showMore",
+  "en": "Show more"
+ },
+ {
+  "key": "logs.showLess",
+  "en": "Show less"
+ },
+ {
+  "key": "logs.buffered",
+  "en": "Showing {count} of up to {max} buffered entries"
+ },
+ {
+  "key": "logs.emptyTitle",
+  "en": "No log entries yet"
+ },
+ {
+  "key": "logs.emptyDescription",
+  "en": "Entries appear here as the server writes them. Widen the level, provider or search filters if you expected output."
+ },
+ {
+  "key": "logs.noLevelsTitle",
+  "en": "No levels selected"
+ },
+ {
+  "key": "logs.noLevelsDescription",
+  "en": "Turn on at least one level to see log output."
+ },
+ {
+  "key": "logs.loadFailed",
+  "en": "Couldn't load the server log."
+ },
+ {
+  "key": "sdkLogs.combinedTitle",
+  "en": "Logs"
+ },
+ {
+  "key": "sdkLogs.sourceTabs.sdk",
+  "en": "SDK / Audit"
+ },
+ {
+  "key": "sdkLogs.tabs.audit",
+  "en": "Audit"
+ },
+ {
+  "key": "sdkLogs.tabs.agent",
+  "en": "Agent"
+ },
+ {
+  "key": "sdkLogs.tabs.app",
+  "en": "App"
+ },
+ {
+  "key": "sdkLogs.live",
+  "en": "Live"
+ },
+ {
+  "key": "sdkLogs.filters.level",
+  "en": "Level"
+ },
+ {
+  "key": "sdkLogs.filters.workspace",
+  "en": "Workspace"
+ },
+ {
+  "key": "sdkLogs.filters.session",
+  "en": "Session"
+ },
+ {
+  "key": "sdkLogs.filters.agent",
+  "en": "App / Agent"
+ },
+ {
+  "key": "sdkLogs.filters.limit",
+  "en": "Limit"
+ },
+ {
+  "key": "sdkLogs.table.level",
+  "en": "Level"
+ },
+ {
+  "key": "sdkLogs.table.workspace",
+  "en": "Workspace"
+ },
+ {
+  "key": "sdkLogs.table.agent",
+  "en": "App / Agent"
+ },
+ {
+  "key": "sdkLogs.table.session",
+  "en": "Session"
+ },
+ {
+  "key": "sdkLogs.table.payload",
+  "en": "Payload"
+ },
+ {
+  "key": "sdkLogs.costs.requests",
+  "en": "Requests"
+ },
+ {
+  "key": "networkPresets.airgap.name",
+  "en": "Airgap"
+ },
+ {
+  "key": "playgroundSessions.heading",
+  "en": "Conversations"
+ },
+ {
+  "key": "playgroundSessions.newConversation",
+  "en": "New conversation"
+ },
+ {
+  "key": "playgroundSessions.showSidebar",
+  "en": "Show conversations"
+ },
+ {
+  "key": "playgroundSessions.hideSidebar",
+  "en": "Hide conversations"
+ },
+ {
+  "key": "playgroundSessions.empty",
+  "en": "No saved conversations yet."
+ },
+ {
+  "key": "playgroundSessions.untitled",
+  "en": "Untitled conversation"
+ },
+ {
+  "key": "playgroundSessions.rename",
+  "en": "Rename"
+ },
+ {
+  "key": "playgroundSessions.renamePlaceholder",
+  "en": "Conversation name"
+ },
+ {
+  "key": "playgroundSessions.messageCount",
+  "en": "{count} messages"
+ },
+ {
+  "key": "playgroundSessions.justNow",
+  "en": "just now"
+ },
+ {
+  "key": "playgroundSessions.minutesAgo",
+  "en": "{count}m ago"
+ },
+ {
+  "key": "playgroundSessions.hoursAgo",
+  "en": "{count}h ago"
+ },
+ {
+  "key": "playgroundSessions.daysAgo",
+  "en": "{count}d ago"
+ },
+ {
+  "key": "playgroundSessions.loadFailed",
+  "en": "Couldn't open that conversation."
+ },
+ {
+  "key": "playgroundSessions.renameFailed",
+  "en": "Couldn't rename that conversation."
+ },
+ {
+  "key": "playgroundSessions.deleteFailed",
+  "en": "Couldn't delete that conversation."
+ },
+ {
+  "key": "embeddings.title",
+  "en": "Models"
+ },
+ {
+  "key": "embeddings.description",
+  "en": "Embeddings fail over within a family only: the same model served by another provider. Vectors from different models are incompatible, so the router never swaps models on you."
+ },
+ {
+  "key": "embeddings.defaultBadge",
+  "en": "Default · auto"
+ },
+ {
+  "key": "embeddings.makeDefault",
+  "en": "Make default"
+ },
+ {
+  "key": "embeddings.moveUp",
+  "en": "Move up"
+ },
+ {
+  "key": "embeddings.moveDown",
+  "en": "Move down"
+ },
+ {
+  "key": "embeddings.usageToday",
+  "en": "{count} req today"
+ },
+ {
+  "key": "embeddings.usageMonth",
+  "en": "{count} tok this month"
+ },
+ {
+  "key": "embeddings.autoDescription",
+  "en": "model: \"auto\" on POST /v1/embeddings routes to the default family. Naming a family (or a provider model id) pins that family; providers inside it are tried in order."
+ },
+ {
+  "key": "embeddings.unsavedChanges",
+  "en": "Unsaved changes"
+ },
+ {
+  "key": "embeddings.saveChanges",
+  "en": "Save changes"
+ },
+ {
+  "key": "embeddings.savingChanges",
+  "en": "Saving…"
+ },
+ {
+  "key": "embeddings.tokMax",
+  "en": "{tokens} tok max"
+ },
+ {
+  "key": "embeddings.emptyTitle",
+  "en": "No embedding models yet"
+ },
+ {
+  "key": "embeddings.emptyDesc",
+  "en": "Embedding families appear here once you add a provider key that supports embeddings."
+ },
+ {
+  "key": "embeddings.dragToReorder",
+  "en": "Drag to reorder provider"
+ },
+ {
+  "key": "embeddings.addCustomProvider",
+  "en": "Add custom provider"
+ },
+ {
+  "key": "embeddings.editCustomProvider",
+  "en": "Edit custom provider"
+ },
+ {
+  "key": "embeddings.customProviderPlatform",
+  "en": "Platform"
+ },
+ {
+  "key": "embeddings.customProviderPlatformPlaceholder",
+  "en": "e.g. custom-provider"
+ },
+ {
+  "key": "embeddings.customProviderModelId",
+  "en": "Model ID"
+ },
+ {
+  "key": "embeddings.customProviderDisplayName",
+  "en": "Display name"
+ },
+ {
+  "key": "embeddings.customProviderDisplayNameOptional",
+  "en": "Display name (optional)"
+ },
+ {
+  "key": "embeddings.customProviderBaseUrl",
+  "en": "Base URL"
+ },
+ {
+  "key": "embeddings.customProviderApiKey",
+  "en": "API key"
+ },
+ {
+  "key": "embeddings.customProviderApiKeyOptional",
+  "en": "API key (leave blank to keep current)"
+ },
+ {
+  "key": "embeddings.saving",
+  "en": "Saving…"
+ },
+ {
+  "key": "embeddings.adding",
+  "en": "Adding…"
+ },
+ {
+  "key": "embeddings.usageHeading",
+  "en": "Usage"
+ },
+ {
+  "key": "embeddings.usageRequests",
+  "en": "Requests"
+ },
+ {
+  "key": "embeddings.usageSuccess",
+  "en": "Success"
+ },
+ {
+  "key": "embeddings.usageAvgLatency",
+  "en": "Avg latency"
+ },
+ {
+  "key": "embeddings.usageLastUsed",
+  "en": "Last used"
+ },
+ {
+  "key": "embeddings.usageNever",
+  "en": "Never"
+ },
+ {
+  "key": "embeddings.readOnlyCatalogHint",
+  "en": "Catalog models are managed via API keys — enable or disable them from the Keys page."
+ },
+ {
+  "key": "embeddings.totalRequestsSummary",
+  "en": "{today} today · {month} this month"
+ },
+ {
+  "key": "embeddings.noUsageYet",
+  "en": "No requests recorded yet."
+ },
+ {
+  "key": "fusion.title",
+  "en": "Fusion"
+ },
+ {
+  "key": "fusion.description",
+  "en": "A panel of models answers in parallel, then a judge synthesizes one stronger answer. Use it by calling the API with model \"fusion\"."
+ },
+ {
+  "key": "fusion.panelSource",
+  "en": "Panel source"
+ },
+ {
+  "key": "fusion.panelSourceHelp",
+  "en": "Where the panel models come from when a request doesn't specify its own."
+ },
+ {
+  "key": "fusion.mode.auto",
+  "en": "Auto (Fallback Chain)"
+ },
+ {
+  "key": "fusion.mode.autoHelp",
+  "en": "Pick a diverse set of models from your Fallback Chain, ranked by your active routing strategy."
+ },
+ {
+  "key": "fusion.mode.explicit",
+  "en": "Explicit panel"
+ },
+ {
+  "key": "fusion.mode.explicitHelp",
+  "en": "Always use the specific models you choose below."
+ },
+ {
+  "key": "fusion.panelModels",
+  "en": "Panel models"
+ },
+ {
+  "key": "fusion.selectedCount",
+  "en": "{count} of {max} selected"
+ },
+ {
+  "key": "fusion.noModels",
+  "en": "No models are connected yet. Add an API key, then enable models in the Fallback Chain."
+ },
+ {
+  "key": "fusion.panelSize",
+  "en": "Panel size"
+ },
+ {
+  "key": "fusion.panelSizeHelp",
+  "en": "How many diverse models to pick automatically (1–{max})."
+ },
+ {
+  "key": "fusion.judge",
+  "en": "Judge model"
+ },
+ {
+  "key": "fusion.judgeHelp",
+  "en": "The model that synthesizes the panel's answers into one. Auto uses your top-ranked available model."
+ },
+ {
+  "key": "fusion.judgeAuto",
+  "en": "Auto (top-ranked available)"
+ },
+ {
+  "key": "fusion.strategy",
+  "en": "Strategy"
+ },
+ {
+  "key": "fusion.strategySynthesize",
+  "en": "Synthesize — blend the panel into one answer"
+ },
+ {
+  "key": "fusion.strategyBestOf",
+  "en": "Best of — return the single strongest answer (no judge call)"
+ },
+ {
+  "key": "fusion.strategySynthesizeShort",
+  "en": "Synthesize"
+ },
+ {
+  "key": "fusion.strategyBestOfShort",
+  "en": "Best of"
+ },
+ {
+  "key": "fusion.exposePanel",
+  "en": "Expose panel details"
+ },
+ {
+  "key": "fusion.exposePanelHelp",
+  "en": "Attach each model's answer and the judge metadata under an x_fusion field in the response."
+ },
+ {
+  "key": "fusion.howToUse",
+  "en": "How to use"
+ },
+ {
+  "key": "fusion.howToUseHelp",
+  "en": "Send a normal chat request with model \"fusion\". These settings are the default; any request can override them with a \"fusion\" field."
+ },
+ {
+  "key": "fusion.unsavedChanges",
+  "en": "Unsaved changes"
+ },
+ {
+  "key": "fusion.save",
+  "en": "Save"
+ },
+ {
+  "key": "fusion.searchPlaceholder",
+  "en": "Search models…"
+ },
+ {
+  "key": "fusion.providerFilterLabel",
+  "en": "Filter by provider"
+ },
+ {
+  "key": "fusion.providerAll",
+  "en": "All providers"
+ },
+ {
+  "key": "fusion.noMatch",
+  "en": "No models match your search."
+ },
+ {
+  "key": "premium.title",
+  "en": "Premium"
+ },
+ {
+  "key": "premium.description",
+  "en": "The live model catalog, on every device."
+ },
+ {
+  "key": "premium.loading",
+  "en": "Loading…"
+ },
+ {
+  "key": "premium.checkForUpdates",
+  "en": "Check for updates"
+ },
+ {
+  "key": "premium.syncing",
+  "en": "Syncing…"
+ },
+ {
+  "key": "premium.catalogFeed",
+  "en": "Catalog feed"
+ },
+ {
+  "key": "premium.liveFeed",
+  "en": "Live feed"
+ },
+ {
+  "key": "premium.monthlySnapshot",
+  "en": "Monthly snapshot"
+ },
+ {
+  "key": "premium.lastChecked",
+  "en": "Last checked: {when}"
+ },
+ {
+  "key": "premium.liveDescription",
+  "en": "New free models, quota changes, and quirk fixes land here within hours of being shipped. The app checks automatically twice a day; nothing to do."
+ },
+ {
+  "key": "premium.snapshotDescription",
+  "en": "Free tier: the catalog refreshes from a monthly snapshot, checked automatically twice a day. Premium switches this to the live feed, updated every 2-3 days."
+ },
+ {
+  "key": "premium.lastSyncProblem",
+  "en": "Last sync problem: {error}"
+ },
+ {
+  "key": "premium.license",
+  "en": "License"
+ },
+ {
+  "key": "premium.planAnnual",
+  "en": "Premium Annual"
+ },
+ {
+  "key": "premium.planLifetime",
+  "en": "Premium Lifetime"
+ },
+ {
+  "key": "premium.expired",
+  "en": "Expired"
+ },
+ {
+  "key": "premium.inactive",
+  "en": "Inactive"
+ },
+ {
+  "key": "premium.lifetimeNote",
+  "en": "Lifetime license: never expires."
+ },
+ {
+  "key": "premium.renewsOn",
+  "en": "Renews on {date}."
+ },
+ {
+  "key": "premium.willNotRenew",
+  "en": "Will not renew. Premium until {date}, then this install falls back to the free monthly catalog."
+ },
+ {
+  "key": "premium.keyInactive",
+  "en": "This key is no longer active. The app keeps working on the free monthly catalog."
+ },
+ {
+  "key": "premium.manageSubscription",
+  "en": "Manage subscription"
+ },
+ {
+  "key": "premium.openingPortal",
+  "en": "Opening…"
+ },
+ {
+  "key": "premium.removeKey",
+  "en": "Remove key from this device"
+ },
+ {
+  "key": "premium.manageHint",
+  "en": "Manage subscription opens Stripe's billing portal: cancel, update your card, or download invoices. Removing the key only deactivates this device; your purchase is untouched."
+ },
+ {
+  "key": "premium.licenseKey",
+  "en": "License key"
+ },
+ {
+  "key": "premium.licenseKeyPlaceholder",
+  "en": "fla_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ },
+ {
+  "key": "premium.activate",
+  "en": "Activate"
+ },
+ {
+  "key": "premium.activating",
+  "en": "Activating…"
+ },
+ {
+  "key": "premium.keyHint",
+  "en": "Your key is in your purchase email and on the post-checkout page. Lost it?"
+ },
+ {
+  "key": "premium.recoverKey",
+  "en": "Recover it on the website"
+ },
+ {
+  "key": "premium.upsellTitle",
+  "en": "Go live for $19 a year"
+ },
+ {
+  "key": "premium.upsellDescription",
+  "en": "New free models the moment they exist, instead of 30 days later. One key, every device. Cancel anytime; the router stays free forever."
+ },
+ {
+  "key": "premium.goPremium",
+  "en": "Go Premium"
+ },
+ {
+  "key": "premium.bundled",
+  "en": "bundled"
+ },
+ {
+  "key": "premium.planGeneric",
+  "en": "Premium"
+ },
+ {
+  "key": "languages.en",
+  "en": "English"
+ },
+ {
+  "key": "languages.zh-CN",
+  "en": "中文 (简体)"
+ },
+ {
+  "key": "languages.es",
+  "en": "Español"
+ },
+ {
+  "key": "languages.fr",
+  "en": "Français"
+ },
+ {
+  "key": "languages.pt-BR",
+  "en": "Português (Brasil)"
+ },
+ {
+  "key": "languages.it",
+  "en": "Italiano"
+ },
+ {
+  "key": "languages.hi",
+  "en": "हिन्दी"
+ },
+ {
+  "key": "languages.ar",
+  "en": "العربية"
+ },
+ {
+  "key": "languages.bn",
+  "en": "বাংলা"
+ },
+ {
+  "key": "languages.ru",
+  "en": "Русский"
+ },
+ {
+  "key": "languages.ur",
+  "en": "اردو"
+ },
+ {
+  "key": "languages.id",
+  "en": "Bahasa Indonesia"
+ },
+ {
+  "key": "languages.de",
+  "en": "Deutsch"
+ },
+ {
+  "key": "languages.ja",
+  "en": "日本語"
+ },
+ {
+  "key": "languages.sw",
+  "en": "Kiswahili"
+ },
+ {
+  "key": "languages.mr",
+  "en": "मराठी"
+ },
+ {
+  "key": "languages.te",
+  "en": "తెలుగు"
+ },
+ {
+  "key": "languages.tr",
+  "en": "Türkçe"
+ },
+ {
+  "key": "languages.ta",
+  "en": "தமிழ்"
+ },
+ {
+  "key": "languages.vi",
+  "en": "Tiếng Việt"
+ },
+ {
+  "key": "languages.ko",
+  "en": "한국어"
+ },
+ {
+  "key": "languages.fa",
+  "en": "فارسی"
+ },
+ {
+  "key": "languages.th",
+  "en": "ไทย"
+ },
+ {
+  "key": "languages.gu",
+  "en": "ગુજરાતી"
+ },
+ {
+  "key": "languages.pl",
+  "en": "Polski"
+ },
+ {
+  "key": "languages.uk",
+  "en": "Українська"
+ },
+ {
+  "key": "languages.kn",
+  "en": "ಕನ್ನಡ"
+ },
+ {
+  "key": "languages.ml",
+  "en": "മലയാളം"
+ },
+ {
+  "key": "languages.or",
+  "en": "ଓଡ଼ିଆ"
+ },
+ {
+  "key": "languages.my",
+  "en": "မြန်မာဘာသာ"
+ },
+ {
+  "key": "languages.pa",
+  "en": "ਪੰਜਾਬੀ"
+ },
+ {
+  "key": "languages.ro",
+  "en": "Română"
+ },
+ {
+  "key": "languages.nl",
+  "en": "Nederlands"
+ },
+ {
+  "key": "languages.ms",
+  "en": "Bahasa Melayu"
+ },
+ {
+  "key": "languages.tl",
+  "en": "Filipino"
+ },
+ {
+  "key": "languages.ha",
+  "en": "Hausa"
+ },
+ {
+  "key": "languages.yo",
+  "en": "Yorùbá"
+ },
+ {
+  "key": "languages.ig",
+  "en": "Igbo"
+ },
+ {
+  "key": "languages.am",
+  "en": "አማርኛ"
+ },
+ {
+  "key": "languages.uz",
+  "en": "Oʻzbekcha"
+ },
+ {
+  "key": "languages.az",
+  "en": "Azərbaycanca"
+ },
+ {
+  "key": "languages.si",
+  "en": "සිංහල"
+ },
+ {
+  "key": "languages.ne",
+  "en": "नेपाली"
+ },
+ {
+  "key": "languages.km",
+  "en": "ខ្មែរ"
+ },
+ {
+  "key": "languages.el",
+  "en": "Ελληνικά"
+ },
+ {
+  "key": "languages.cs",
+  "en": "Čeština"
+ },
+ {
+  "key": "languages.hu",
+  "en": "Magyar"
+ },
+ {
+  "key": "languages.sv",
+  "en": "Svenska"
+ },
+ {
+  "key": "languages.he",
+  "en": "עברית"
+ },
+ {
+  "key": "languages.da",
+  "en": "Dansk"
+ },
+ {
+  "key": "languages.fi",
+  "en": "Suomi"
+ },
+ {
+  "key": "languages.no",
+  "en": "Norsk"
+ },
+ {
+  "key": "languages.sk",
+  "en": "Slovenčina"
+ },
+ {
+  "key": "languages.bg",
+  "en": "Български"
+ },
+ {
+  "key": "languages.hr",
+  "en": "Hrvatski"
+ },
+ {
+  "key": "languages.sr",
+  "en": "Српски"
+ },
+ {
+  "key": "languages.lt",
+  "en": "Lietuvių"
+ },
+ {
+  "key": "languages.zh-TW",
+  "en": "中文 (繁體)"
+ },
+ {
+  "key": "languages.pt-PT",
+  "en": "Português (Portugal)"
+ },
+ {
+  "key": "languages.ka",
+  "en": "ქართული"
+ },
+ {
+  "key": "errors.boundaryTitle",
+  "en": "Something went wrong"
+ },
+ {
+  "key": "errors.boundaryDescription",
+  "en": "The dashboard hit an unexpected error. Your data is safe. Try again or go back to the models page."
+ },
+ {
+  "key": "errors.tryAgain",
+  "en": "Try again"
+ },
+ {
+  "key": "errors.goHome",
+  "en": "Back to models"
+ },
+ {
+  "key": "notFound.title",
+  "en": "Page not found"
+ },
+ {
+  "key": "notFound.description",
+  "en": "This page does not exist or may have moved."
+ },
+ {
+  "key": "setup.title",
+  "en": "Getting started"
+ },
+ {
+  "key": "setup.subtitle",
+  "en": "Three steps to route your first request."
+ },
+ {
+  "key": "setup.progress",
+  "en": "{done} of {total}"
+ },
+ {
+  "key": "setup.step1Title",
+  "en": "Add a provider key"
+ },
+ {
+  "key": "setup.step1Desc",
+  "en": "Connect at least one provider account. Free keys work."
+ },
+ {
+  "key": "setup.step1Cta",
+  "en": "Add keys"
+ },
+ {
+  "key": "setup.step2Title",
+  "en": "Send a test request"
+ },
+ {
+  "key": "setup.step2Desc",
+  "en": "Pick any model in the Playground and say hello."
+ },
+ {
+  "key": "setup.step2Cta",
+  "en": "Open Playground"
+ },
+ {
+  "key": "setup.step3Title",
+  "en": "Connect your app"
+ },
+ {
+  "key": "setup.step3Desc",
+  "en": "Use your unified API key with any OpenAI-compatible client."
+ },
+ {
+  "key": "setup.copyKey",
+  "en": "Copy API key"
+ },
+ {
+  "key": "setup.copyUrl",
+  "en": "Copy base URL"
+ },
+ {
+  "key": "setup.copiedKey",
+  "en": "API key copied to clipboard"
+ },
+ {
+  "key": "setup.copiedUrl",
+  "en": "Base URL copied to clipboard"
+ },
+ {
+  "key": "palette.title",
+  "en": "Command palette"
+ },
+ {
+  "key": "palette.placeholder",
+  "en": "Search pages, models, actions…"
+ },
+ {
+  "key": "palette.empty",
+  "en": "No results"
+ },
+ {
+  "key": "palette.groupPages",
+  "en": "Pages"
+ },
+ {
+  "key": "palette.groupActions",
+  "en": "Actions"
+ },
+ {
+  "key": "palette.groupModels",
+  "en": "Models"
+ },
+ {
+  "key": "palette.toggleTheme",
+  "en": "Toggle dark mode"
+ },
+ {
+  "key": "validation.required",
+  "en": "Required"
+ },
+ {
+  "key": "validation.url",
+  "en": "Enter a valid URL starting with http:// or https://"
+ },
+ {
+  "key": "validation.email",
+  "en": "Enter a valid email address"
+ },
+ {
+  "key": "validation.passwordMin",
+  "en": "At least {min} characters"
+ },
+ {
+  "key": "update.available",
+  "en": "New version available"
+ },
+ {
+  "key": "update.whatsNew",
+  "en": "What's new in v{version}"
+ },
+ {
+  "key": "update.publishedOn",
+  "en": "Published {date}"
+ },
+ {
+  "key": "update.noNotes",
+  "en": "No release notes were published for this version."
+ },
+ {
+  "key": "update.openRelease",
+  "en": "Open release page"
+ },
+ {
+  "key": "update.dismissVersion",
+  "en": "Dismiss this version"
+ },
+ {
+  "key": "update.dismiss",
+  "en": "Dismiss"
+ },
+ {
+  "key": "freeTier.poolsToggle",
+  "en": "Free-tier pools ({count})"
+ },
+ {
+  "key": "freeTier.poolsToggleBare",
+  "en": "Free-tier pools"
+ },
+ {
+  "key": "freeTier.summary",
+  "en": "{pools} pools · {budget} tokens/mo counted once per pool · {credits} credits-based · {unpublished} unpublished"
+ },
+ {
+  "key": "freeTier.pool",
+  "en": "Pool"
+ },
+ {
+  "key": "freeTier.models",
+  "en": "Models"
+ },
+ {
+  "key": "freeTier.budget",
+  "en": "Monthly budget"
+ },
+ {
+  "key": "freeTier.kind",
+  "en": "Kind"
+ },
+ {
+  "key": "freeTier.kindDocumented",
+  "en": "Documented"
+ },
+ {
+  "key": "freeTier.kindCredits",
+  "en": "Credits"
+ },
+ {
+  "key": "freeTier.kindUnpublished",
+  "en": "Unpublished"
+ },
+ {
+  "key": "freeTier.remaining",
+  "en": "Remaining"
+ },
+ {
+  "key": "freeTier.resetAt",
+  "en": "Resets at"
+ },
+ {
+  "key": "freeTier.disabledModels",
+  "en": "({count} off)"
+ },
+ {
+  "key": "freeTier.metricTokens",
+  "en": "tokens"
+ },
+ {
+  "key": "freeTier.metricRequests",
+  "en": "requests"
+ },
+ {
+  "key": "freeTier.metricCredits",
+  "en": "credits"
+ },
+ {
+  "key": "freeTier.metricNeurons",
+  "en": "neurons"
+ },
+ {
+  "key": "freeTier.metricOther",
+  "en": "units"
+ },
+ {
+  "key": "freeTier.empty",
+  "en": "No enabled models with free-tier budget data."
+ },
+ {
+  "key": "freeTier.poolLabel",
+  "en": "{platform} · shared {scope} pool"
+ },
+ {
+  "key": "freeTier.poolLabelBare",
+  "en": "{platform} · shared pool"
+ },
+ {
+  "key": "freeTier.poolModels",
+  "en": "{count} models"
+ },
+ {
+  "key": "freeTier.poolBudget",
+  "en": "{budget}/mo"
+ },
+ {
+  "key": "freeTier.poolBudgetTitle",
+  "en": "One monthly allowance for the whole pool, scaled by the {count} usable keys on this platform. Every model listed under it draws from the same budget."
+ },
+ {
+  "key": "freeTier.poolNoQuota",
+  "en": "no published quota"
+ },
+ {
+  "key": "freeTier.poolResets",
+  "en": "resets {time}"
+ },
+ {
+  "key": "freeTier.independentBudgets",
+  "en": "independent budgets"
+ },
+ {
+  "key": "chains.title",
+  "en": "Fallback chains"
+ },
+ {
+  "key": "chains.description",
+  "en": "Named chains, each callable as auto:<name> in /v1/models."
+ },
+ {
+  "key": "chains.count",
+  "en": "{count} chains"
+ },
+ {
+  "key": "chains.active",
+  "en": "Active"
+ },
+ {
+  "key": "chains.default",
+  "en": "Default"
+ },
+ {
+  "key": "chains.activate",
+  "en": "Activate"
+ },
+ {
+  "key": "chains.activateHint",
+  "en": "Make this the chain the table below edits and the one auto routes through"
+ },
+ {
+  "key": "chains.deleteHint",
+  "en": "Delete this chain"
+ },
+ {
+  "key": "chains.deleteConfirm",
+  "en": "Delete chain \"{name}\"?"
+ },
+ {
+  "key": "chains.create",
+  "en": "Create"
+ },
+ {
+  "key": "chains.createPlaceholder",
+  "en": "Chain name"
+ },
+ {
+  "key": "chains.createFailed",
+  "en": "Could not create the chain."
+ },
+ {
+  "key": "chains.nameRules",
+  "en": "Up to 20 characters: letters, digits, hyphens and underscores."
+ },
+ {
+  "key": "chains.startEmpty",
+  "en": "Start empty"
+ },
+ {
+  "key": "chains.startEmptyHint",
+  "en": "Create the chain with no models in it, and keep new catalog models out of it. Unchecked, it starts as a copy of the default chain."
+ },
+ {
+  "key": "chains.curated",
+  "en": "Curated"
+ },
+ {
+  "key": "chains.curatedHint",
+  "en": "New catalog models are not added to this chain automatically."
+ },
+ {
+  "key": "exposure.col.port",
+  "en": "Port"
+ },
+ {
+  "key": "exposure.risk.ok",
+  "en": "OK"
+ },
+ {
+  "key": "exposure.hierarchy.endpoint",
+  "en": "Endpoint"
+ },
+ {
+  "key": "exposure.hierarchy.appDeployment",
+  "en": "App/Deployment"
+ },
+ {
+  "key": "exposure.hierarchy.port",
+  "en": "Port"
+ },
+ {
+  "key": "vault.secrets.heading",
+  "en": "Secrets"
+ },
+ {
+  "key": "vault.secrets.col.name",
+  "en": "Name"
+ },
+ {
+  "key": "vault.form.name",
+  "en": "Name"
+ },
+ {
+  "key": "vault.tokens.agentIdPlaceholder",
+  "en": "optional"
+ },
+ {
+  "key": "vault.audit.col.secret",
+  "en": "Secret"
+ },
+ {
+  "key": "teams.pageTitle",
+  "en": "Teams & Budgets"
+ },
+ {
+  "key": "teams.sectionTeams",
+  "en": "Teams"
+ },
+ {
+  "key": "teams.teamName",
+  "en": "Name"
+ },
+ {
+  "key": "teams.roles.owner",
+  "en": "Owner"
+ },
+ {
+  "key": "teams.roles.manager",
+  "en": "Manager"
+ },
+ {
+  "key": "teams.roles.admin",
+  "en": "Admin"
+ },
+ {
+  "key": "teams.roles.viewer",
+  "en": "Viewer"
+ },
+ {
+  "key": "consumerKeys.name",
+  "en": "Name"
+ },
+ {
+  "key": "consumerKeys.namePlaceholder",
+  "en": "Cursor – Alice"
+ },
+ {
+  "key": "consumerKeys.colPrefix",
+  "en": "Prefix"
+ },
+ {
+  "key": "consumerKeys.colName",
+  "en": "Name"
+ },
+ {
+  "key": "consumerKeys.unscoped",
+  "en": "—"
+ },
+ {
+  "key": "consumerKeys.colChains",
+  "en": "Chains"
+ },
+ {
+  "key": "consumerKeys.colRpm",
+  "en": "RPM"
+ },
+ {
+  "key": "consumerKeys.colStatus",
+  "en": "Status"
+ },
+ {
+  "key": "securityEvents.col.eventType",
+  "en": "Event"
+ },
+ {
+  "key": "securityEvents.col.status",
+  "en": "Status"
+ },
+ {
+  "key": "securityEvents.col.session",
+  "en": "Session"
+ },
+ {
+  "key": "securityEvents.col.detail",
+  "en": "Detail"
+ },
+ {
+  "key": "securityEvents.noSession",
+  "en": "—"
+ },
+ {
+  "key": "securityReport.field.scanner",
+  "en": "Scanner"
+ },
+ {
+  "key": "securityReport.field.status",
+  "en": "Status"
+ },
+ {
+  "key": "securityReport.eventCard.title",
+  "en": "Event #{id}"
+ },
+ {
+  "key": "securityReport.sessionCard.title",
+  "en": "Session"
+ },
+ {
+  "key": "securityReport.container.cpu",
+  "en": "CPU"
+ },
+ {
+  "key": "securityReport.container.pids",
+  "en": "PIDs"
+ },
+ {
+  "key": "securityReport.requestLog.col.status",
+  "en": "Status"
+ },
+ {
+  "key": "firewallStatus.backend",
+  "en": "Backend"
+ },
+ {
+  "key": "firewallStatus.version",
+  "en": "Version"
+ },
+ {
+  "key": "admin.pageTitle",
+  "en": "Admin"
+ },
+ {
+  "key": "admin.tabUsers",
+  "en": "Users"
+ },
+ {
+  "key": "admin.tabTeams",
+  "en": "Teams"
+ },
+ {
+  "key": "admin.tabBudgets",
+  "en": "Budgets"
+ },
+ {
+  "key": "admin.usersTitle",
+  "en": "Users"
+ },
+ {
+  "key": "admin.budgetsTitle",
+  "en": "Budgets"
+ },
+ {
+  "key": "admin.backupsTitle",
+  "en": "Backups"
+ },
+ {
+  "key": "admin.discoveryTitle",
+  "en": "Discovery"
+ },
+ {
+  "key": "network.statusOnline",
+  "en": "Online"
+ },
+ {
+  "key": "network.statusOffline",
+  "en": "Offline"
+ },
+ {
+  "key": "network.statusEphemeral",
+  "en": "Ephemeral"
+ },
+ {
+  "key": "network.colName",
+  "en": "Name"
+ },
+ {
+  "key": "network.colTags",
+  "en": "Tags"
+ },
+ {
+  "key": "network.colStatus",
+  "en": "Status"
+ },
+ {
+  "key": "network.ephemeral",
+  "en": "Ephemeral"
+ },
+ {
+  "key": "network.attrKey",
+  "en": "Key"
+ },
+ {
+  "key": "network.attrEphemeral",
+  "en": "Ephemeral"
+ },
+ {
+  "key": "network.aclTitle",
+  "en": "ACL & Tagging"
+ },
+ {
+  "key": "controlPlanes.pageTitle",
+  "en": "Control Planes"
+ },
+ {
+  "key": "controlPlanes.nameLabel",
+  "en": "Name"
+ },
+ {
+  "key": "controlPlanes.namePlaceholder",
+  "en": "hetzner-prod-1"
+ },
+ {
+  "key": "controlPlanes.endpointLabel",
+  "en": "Endpoint"
+ },
+ {
+  "key": "controlPlanes.configLabel",
+  "en": "Config (JSON)"
+ },
+ {
+  "key": "controlPlanes.colName",
+  "en": "Name"
+ },
+ {
+  "key": "controlPlanes.colEndpoint",
+  "en": "Endpoint"
+ },
+ {
+  "key": "controlPlanes.colStatus",
+  "en": "Status"
+ },
+ {
+  "key": "controlPlanes.provisionAction",
+  "en": "Provision"
+ },
+ {
+  "key": "controlPlanes.statusAction",
+  "en": "Status"
+ },
+ {
+  "key": "controlPlanes.deployAction",
+  "en": "Deploy"
+ },
+ {
+  "key": "controlPlanes.detail.kernel",
+  "en": "Kernel"
+ },
+ {
+  "key": "controlPlanes.detail.docker",
+  "en": "Docker"
+ },
+ {
+  "key": "controlPlanes.deployFrameworkLabel",
+  "en": "Framework"
+ },
+ {
+  "key": "vaultDashboard.pageTitle",
+  "en": "Vault"
+ },
+ {
+  "key": "vaultDashboard.nameLabel",
+  "en": "Name"
+ },
+ {
+  "key": "vaultDashboard.scopeKindLabel",
+  "en": "Scope"
+ },
+ {
+  "key": "vaultDashboard.colName",
+  "en": "Name"
+ },
+ {
+  "key": "vaultDashboard.colScope",
+  "en": "Scope"
+ },
+ {
+  "key": "vaultDashboard.colDefault",
+  "en": "Default"
+ },
+ {
+  "key": "vaultDashboard.colKey",
+  "en": "Key"
+ },
+ {
+  "key": "vaultDashboard.engineLabel",
+  "en": "Engine"
+ },
+ {
+  "key": "vaultDashboard.newKeyLabel",
+  "en": "Key"
+ },
+ {
+  "key": "vaultDashboard.importFromEngineButton",
+  "en": "Import from Engine"
+ },
+ {
+  "key": "vaultDashboard.importDialogTitle",
+  "en": "Import from Engine"
+ },
+ {
+  "key": "vaultDashboard.importKeysLabel",
+  "en": "Keys (optional)"
+ },
+ {
+  "key": "vaultDashboard.importButton",
+  "en": "Import"
+ },
+ {
+  "key": "workspaces.pageTitle",
+  "en": "Workspaces"
+ },
+ {
+  "key": "workspaces.selectOwner",
+  "en": "Owner"
+ },
+ {
+  "key": "workspaces.colId",
+  "en": "ID"
+ },
+ {
+  "key": "workspaces.colOwner",
+  "en": "Owner"
+ },
+ {
+  "key": "workspaces.colPreset",
+  "en": "Preset"
+ },
+ {
+  "key": "workspaces.colNode",
+  "en": "Node"
+ },
+ {
+  "key": "workspaces.colWorktree",
+  "en": "Worktree"
+ },
+ {
+  "key": "workspaces.colStatus",
+  "en": "Status"
+ },
+ {
+  "key": "workspaces.status.deployed",
+  "en": "Deployed"
+ },
+ {
+  "key": "workspaces.frameworkLabel",
+  "en": "Framework"
+ },
+ {
+  "key": "workspaces.appsLabel",
+  "en": "Apps"
+ },
+ {
+  "key": "workspaces.fwAliasLabel",
+  "en": "Alias"
+ },
+ {
+  "key": "workspaces.fwPortLabel",
+  "en": "Port"
+ },
+ {
+  "key": "workspaces.fwColAlias",
+  "en": "Alias"
+ },
+ {
+  "key": "workspaces.fwColPort",
+  "en": "Port"
+ },
+ {
+  "key": "workspaces.fwColProto",
+  "en": "Proto"
+ },
+ {
+  "key": "workspaces.secrets.sectionTitle",
+  "en": "Secrets (optional)"
+ },
+ {
+  "key": "wsEndpoints.nameLabel",
+  "en": "Name"
+ },
+ {
+  "key": "wsEndpoints.hostLabel",
+  "en": "Host / IP"
+ },
+ {
+  "key": "wsEndpoints.gvisorLabel",
+  "en": "gVisor"
+ },
+ {
+  "key": "wsEndpoints.colName",
+  "en": "Name"
+ },
+ {
+  "key": "wsEndpoints.colHost",
+  "en": "Host"
+ },
+ {
+  "key": "wsEndpoints.colAuth",
+  "en": "Auth"
+ },
+ {
+  "key": "wsEndpoints.colGvisor",
+  "en": "gVisor"
+ },
+ {
+  "key": "wsApps.pageTitle",
+  "en": "Apps"
+ },
+ {
+  "key": "wsApps.colWorkspace",
+  "en": "Workspace"
+ },
+ {
+  "key": "wsApps.colOwner",
+  "en": "Owner"
+ },
+ {
+  "key": "wsApps.colContainer",
+  "en": "Container"
+ },
+ {
+  "key": "wsApps.colContainerId",
+  "en": "Container-ID"
+ },
+ {
+  "key": "wsApps.colStatus",
+  "en": "Status"
+ },
+ {
+  "key": "wsApps.colPorts",
+  "en": "Ports"
+ },
+ {
+  "key": "wsApps.noContainer",
+  "en": "—"
+ },
+ {
+  "key": "wsDeployments.pageTitle",
+  "en": "Deployments"
+ },
+ {
+  "key": "wsDeployments.redeploy",
+  "en": "Redeploy"
+ },
+ {
+  "key": "wsDeployments.colName",
+  "en": "Name"
+ },
+ {
+  "key": "wsDeployments.colPort",
+  "en": "Port"
+ },
+ {
+  "key": "wsDeployments.colStatus",
+  "en": "Status"
+ },
+ {
+  "key": "wsSettings.selectWorkspace",
+  "en": "Workspace"
+ },
+ {
+  "key": "securityOverview.stat.info",
+  "en": "Info"
+ },
+ {
+  "key": "securityOverview.severity.info",
+  "en": "Info"
+ },
+ {
+  "key": "securityOverview.filters.scanner",
+  "en": "Scanner"
+ },
+ {
+  "key": "securityOverview.targetPicker.workspace",
+  "en": "Workspace"
+ },
+ {
+  "key": "securityOverview.targetPicker.container",
+  "en": "Container"
+ },
+ {
+  "key": "securityOverview.col.scanner",
+  "en": "Scanner"
+ },
+ {
+  "key": "securityScans.title",
+  "en": "SAST / IaC / DAST"
+ },
+ {
+  "key": "securityScans.tab.iac",
+  "en": "IaC (Checkov)"
+ },
+ {
+  "key": "securityScans.tab.sast",
+  "en": "SAST"
+ },
+ {
+  "key": "securityScans.tab.dast",
+  "en": "DAST"
+ },
+ {
+  "key": "securityScans.col.eventType",
+  "en": "Event"
+ },
+ {
+  "key": "securityScans.col.detail",
+  "en": "Detail"
+ },
+ {
+  "key": "securityScans.iac.col.session",
+  "en": "Session"
+ },
+ {
+  "key": "securityScans.iac.col.container",
+  "en": "Container"
+ },
+ {
+  "key": "createAccess.budgetLabel",
+  "en": "Budget (USD)"
+ }
+]

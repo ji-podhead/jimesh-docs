@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 660" width="100%" height="100%">
+  <defs>
+    <filter id="sh5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="1050" height="660" fill="#f8fafc" rx="12"/>
+  <text x="525" y="28" fill="#334155" font-family="sans-serif" font-weight="bold" font-size="15" text-anchor="middle">Browser agents: a real CVE, and the mitigation that actually works</text>
+  <text x="525" y="46" fill="#64748b" font-family="sans-serif" font-size="10" text-anchor="middle">"The Hidden Dangers of Browsing AI Agents" — Mudryi, Chaklosh, Wójcik (ARIMLABS.AI), arXiv 2505.13076</text>
+
+  <!-- CVE mechanism -->
+  <rect x="40" y="65" width="970" height="180" rx="10" fill="#fef2f2" stroke="#fca5a5" filter="url(#sh5)"/>
+  <text x="60" y="90" fill="#991b1b" font-family="sans-serif" font-weight="bold" font-size="13">CVE-2025-47241 (CVSS 9.3, Critical) — a domain allowlist that trusts its own URL parsing</text>
+  <text x="60" y="112" fill="#7f1d1d" font-family="sans-serif" font-size="10">Browser Use's allowlist check split a URL on ":" and compared the result against an operator-configured allowlist — it never accounted for HTTP Basic Auth syntax.</text>
+
+  <rect x="60" y="128" width="450" height="48" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="75" y="148" fill="#0f172a" font-family="monospace" font-size="11" font-weight="bold">https://example.com:pass@localhost:8080</text>
+  <text x="75" y="166" fill="#64748b" font-family="sans-serif" font-size="9">"example.com" is a USERNAME here, not the hostname</text>
+
+  <text x="530" y="152" fill="#334155" font-family="sans-serif" font-size="20" font-weight="bold">→</text>
+
+  <rect x="565" y="128" width="425" height="48" rx="6" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="580" y="148" fill="#9a3412" font-family="sans-serif" font-size="10" font-weight="bold">Agent believes: "example.com" (allowed) ✓</text>
+  <text x="580" y="166" fill="#9a3412" font-family="sans-serif" font-size="10" font-weight="bold">Real destination: localhost:8080 (never allowed)</text>
+
+  <text x="60" y="200" fill="#334155" font-family="sans-serif" font-size="10">The agent's own belief about its boundary was wrong — and it had no way to know. A textbook SSRF enabler, combined with the prompt-injection bug</text>
+  <text x="60" y="216" fill="#334155" font-family="sans-serif" font-size="10">below, a path to full agent hijacking. Fixed upstream in v0.1.45. This is application-level trust in the agent's own URL parsing — exactly the</text>
+  <text x="60" y="232" fill="#991b1b" font-family="sans-serif" font-size="10" font-weight="bold">class of check that a network-layer, default-deny egress firewall makes irrelevant regardless of any parsing bug inside the container.</text>
+
+  <!-- Mitigation effectiveness bar chart -->
+  <text x="525" y="278" fill="#334155" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Mitigation effectiveness, as reported in the paper's own benchmarks</text>
+
+  <g font-family="sans-serif" font-size="11">
+    <text x="60" y="315" fill="#334155">No defense (base rate)</text>
+    <rect x="320" y="300" width="670" height="24" fill="#fee2e2" rx="4"/>
+    <rect x="320" y="300" width="167" height="24" fill="#ef4444" rx="4"/>
+    <text x="500" y="317" fill="#7f1d1d" font-weight="bold">~25% attack success</text>
+
+    <text x="60" y="360" fill="#334155">LLM-based injection detector</text>
+    <rect x="320" y="345" width="670" height="24" fill="#fef3c7" rx="4"/>
+    <rect x="320" y="345" width="54" height="24" fill="#f59e0b" rx="4"/>
+    <text x="386" y="362" fill="#78350f" font-weight="bold">~8% attack success — better, not solved</text>
+
+    <text x="60" y="405" fill="#334155">Planner/executor isolation</text>
+    <rect x="320" y="390" width="670" height="24" fill="#dcfce7" rx="4"/>
+    <rect x="320" y="390" width="4" height="24" fill="#16a34a" rx="4"/>
+    <text x="336" y="407" fill="#14532d" font-weight="bold">0% attack success — the only mitigation that reaches this</text>
+  </g>
+
+  <rect x="40" y="440" width="970" height="200" rx="10" fill="#0f172a"/>
+  <text x="525" y="466" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Why planner/executor isolation wins — and the direct line to JiMesh</text>
+  <text x="60" y="492" fill="#e2e8f0" font-family="sans-serif" font-size="10">A PLANNER component only ever sees trusted, pre-vetted input and makes decisions. A separate EXECUTOR component is the only one that touches</text>
+  <text x="60" y="510" fill="#e2e8f0" font-family="sans-serif" font-size="10">untrusted content (the raw page HTML) and holds actual tool/browser privilege. A security monitor enforces that untrusted data can never flow</text>
+  <text x="60" y="528" fill="#e2e8f0" font-family="sans-serif" font-size="10">back into the planner's own reasoning — the decision-maker never sees what the attacker controls.</text>
+  <text x="60" y="558" fill="#a78bfa" font-family="sans-serif" font-size="10" font-weight="bold">This is architecturally the same shape as JiMesh's own tool-call flow: the OPA capability decision happens BEFORE the subagent's container</text>
+  <text x="60" y="576" fill="#a78bfa" font-family="sans-serif" font-size="10" font-weight="bold">executes anything, evaluated against server-side policy the agent's own output cannot influence — the planner/executor split, just for tool calls</text>
+  <text x="60" y="594" fill="#a78bfa" font-family="sans-serif" font-size="10" font-weight="bold">instead of a DOM.</text>
+  <text x="525" y="620" fill="#94a3b8" font-family="sans-serif" font-size="10" text-anchor="middle" font-style="italic">The field is still building this out — but the best-known answer is an architecture choice, not a bolt-on filter, and JiMesh already has that shape.</text>
+</svg>

@@ -1,0 +1,27 @@
+id: "jules"
+name: "Google Jules"
+version: "1.0.0"
+description: "Google Jules AI coding agent integration for JiMesh"
+icon: "bot"
+surfaces:
+  - "native"
+  - "mcp"
+  - "chat"
+authSupported:
+  - "api_key"
+  - "service_account"
+requiredSecretScopes:
+  - "secrets:read:jules_api_key"
+security:
+  egress:
+    - "https://jules.googleapis.com"
+  capabilities:
+    - "plugins:read"
+    - "plugins:write"
+healthCheck:
+  path: "/api/plugins/jules/health"
+  interval: "30s"
+  timeout: "5s"
+i18nKeys:
+  - "plugins.jules.title"
+  - "plugins.jules.description"

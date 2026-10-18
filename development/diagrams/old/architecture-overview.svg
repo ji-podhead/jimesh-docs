@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 980" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <style>
+      .box { fill:#ffffff; stroke:#334155; stroke-width:1.5; rx:10; }
+      .zone { fill:#f8fafc; stroke:url(#brand); stroke-width:2; stroke-dasharray:6 4; rx:14; }
+      .title { font-size:22px; font-weight:800; fill:#0f172a; }
+      .label { font-size:13px; fill:#0f172a; font-weight:600; }
+      .sub { font-size:11px; fill:#475569; }
+      .zonelabel { font-size:14px; font-weight:700; fill:#6d28d9; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="980" fill="#ffffff"/>
+  <image href="../../assets/icons/brand/svg/jimesh-mesh-cube-flat-small.svg" x="24" y="14" width="48" height="48"/>
+  <text x="82" y="38" class="title">JiMesh — System Architecture Overview</text>
+  <text x="82" y="58" class="sub">(as of internal engineering reference)</text>
+  <text x="24" y="78" class="sub">solid green = VPN-only path · dashed red = deliberately blocked (never public) · grey = normal data flow</text>
+
+  <!-- Operator zone -->
+  <rect x="24" y="98" width="260" height="220" class="zone"/>
+  <text x="40" y="120" class="zonelabel">Operator Desktop (podhead)</text>
+  <rect x="44" y="138" width="220" height="60" class="box"/>
+  <text x="56" y="160" class="label">Primary connection</text>
+  <text x="56" y="176" class="sub">Company Tailscale — NEVER touched</text>
+
+  <rect x="44" y="208" width="220" height="90" class="box"/>
+  <text x="56" y="230" class="label">Isolated container</text>
+  <text x="56" y="246" class="sub">its own Headscale identity</text>
+  <text x="56" y="260" class="sub">client-join.sh, --network bridge</text>
+  <text x="56" y="274" class="sub">+ socat forward → localhost:8090</text>
+
+  <!-- Headscale mesh zone -->
+  <rect x="320" y="98" width="1056" height="220" class="zone"/>
+  <text x="336" y="120" class="zonelabel">Headscale Mesh (100.64.0.0/10, self-hosted on example-node)</text>
+  <image href="../../assets/icons/dev_logos/headscale.svg" x="340" y="138" width="36" height="36"/>
+  <text x="384" y="160" class="label">Headscale server (TLS, self-signed)</text>
+  <text x="384" y="176" class="sub">DERP relay + direct P2P connections</text>
+
+  <rect x="340" y="198" width="220" height="90" class="box"/>
+  <text x="352" y="220" class="label">example-node-1 (host)</text>
+  <text x="352" y="236" class="sub">100.64.0.x — the real node identity</text>
+  <text x="352" y="252" class="sub">deploy/headscale-client (host-level)</text>
+  <text x="352" y="268" class="sub">for dedicated servers, no conflict</text>
+
+  <rect x="590" y="198" width="220" height="90" class="box"/>
+  <text x="602" y="220" class="label">jimesh-client (sidecar)</text>
+  <text x="602" y="236" class="sub">100.64.0.y — shares backend's netns</text>
+  <text x="602" y="252" class="sub">deploy/headscale-client-container</text>
+  <text x="602" y="268" class="sub">--network container:jimesh-backend</text>
+
+  <rect x="840" y="198" width="220" height="90" class="box"/>
+  <text x="852" y="220" class="label">Future nodes</text>
+  <text x="852" y="236" class="sub">workers / additional control planes</text>
+  <text x="852" y="252" class="sub">same pattern: host-level join</text>
+  <text x="852" y="268" class="sub">reachable via 100.64.0.x</text>
+
+  <rect x="1090" y="198" width="270" height="90" class="box"/>
+  <text x="1102" y="220" class="label">No second tailnet assumed</text>
+  <text x="1102" y="236" class="sub">standing assumption: a node either has</text>
+  <text x="1102" y="252" class="sub">no overlay network at all, or already</text>
+  <text x="1102" y="268" class="sub">has ours — example-node was a special case</text>
+
+  <!-- example-node host zone -->
+  <rect x="24" y="348" width="1352" height="440" class="zone"/>
+  <text x="40" y="370" class="zonelabel">example-node (control_plane, Docker network jimesh-net)</text>
+
+  <!-- public IP box -->
+  <rect x="44" y="390" width="280" height="130" class="box" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="56" y="412" class="label">Public IP &lt;example-node-public-ip&gt;</text>
+  <text x="56" y="430" class="sub">Port 443: Headscale (must be public so</text>
+  <text x="56" y="444" class="sub">new clients can join)</text>
+  <text x="56" y="462" class="sub">Port 22: SSH — additive allowlist</text>
+  <text x="56" y="476" class="sub">(deploy/ssh-allowlist) + tailscale0</text>
+  <text x="56" y="494" class="sub" fill="#dc2626">Dashboard/backend: NOT reachable</text>
+
+  <!-- Traefik -->
+  <rect x="360" y="390" width="240" height="110" class="box" fill="#ecfdf5" stroke="#059669"/>
+  <image href="../../assets/icons/dev_logos/traefik.svg" x="372" y="402" width="30" height="30"/>
+  <text x="410" y="422" class="label">Traefik (gateway)</text>
+  <text x="372" y="444" class="sub">bind: jimesh_vpn_ip:8090 (VPN-only)</text>
+  <text x="372" y="458" class="sub">Docker label routing, exposedByDefault=false</text>
+  <text x="372" y="472" class="sub">NEVER bound to ansible_host/public_ip</text>
+
+  <!-- jimesh-router (planned) -->
+  <rect x="630" y="390" width="260" height="110" class="box" fill="#fffbeb" stroke="#d97706" stroke-dasharray="5 3"/>
+  <text x="642" y="412" class="label">jimesh-router (planned)</text>
+  <text x="642" y="430" class="sub">nftables firewall enforcement per container</text>
+  <text x="642" y="444" class="sub">report-only mode planned first</text>
+  <text x="642" y="458" class="sub">project-scoped alias/grant system</text>
+  <text x="642" y="472" class="sub">NOT deployed yet</text>
+
+  <!-- backend/frontend -->
+  <rect x="920" y="390" width="200" height="110" class="box"/>
+  <image href="../../assets/icons/dev_logos/go.svg" x="932" y="402" width="26" height="26"/>
+  <text x="966" y="420" class="label">jimesh-backend</text>
+  <text x="932" y="440" class="sub">API + gRPC, Go/pgx</text>
+  <image href="../../assets/icons/dev_logos/nextjs.svg" x="932" y="454" width="20" height="20" />
+  <text x="960" y="468" class="sub">jimesh-frontend (Next.js)</text>
+
+  <rect x="1150" y="390" width="226" height="110" class="box"/>
+  <text x="1162" y="412" class="label">Redis Stream</text>
+  <text x="1162" y="428" class="sub">jimesh:events — feedback loop</text>
+  <text x="1162" y="446" class="sub">bandit routing weights</text>
+
+  <!-- data layer -->
+  <rect x="44" y="538" width="200" height="100" class="box"/>
+  <image href="../../assets/icons/dev_logos/postgresql.svg" x="56" y="550" width="28" height="28"/>
+  <text x="94" y="570" class="label">Postgres</text>
+  <text x="56" y="592" class="sub">pgx v5/stdlib, CGO_ENABLED=0</text>
+  <text x="56" y="608" class="sub">the only persistence layer (Mandate 7)</text>
+
+  <rect x="264" y="538" width="200" height="100" class="box"/>
+  <image href="../../assets/icons/dev_logos/redis.svg" x="276" y="550" width="26" height="26"/>
+  <text x="312" y="570" class="label">Redis</text>
+  <text x="276" y="592" class="sub">cache + pub/sub SSE</text>
+
+  <rect x="484" y="538" width="200" height="100" class="box"/>
+  <image href="../../assets/icons/dev_logos/vault.svg" x="496" y="550" width="26" height="26"/>
+  <text x="532" y="570" class="label">Vault</text>
+  <text x="496" y="592" class="sub">secrets, own port (8280)</text>
+
+  <rect x="704" y="538" width="200" height="100" class="box"/>
+  <image href="../../assets/icons/dev_logos/keycloak.svg" x="712" y="550" width="60" height="26"/>
+  <text x="716" y="592" class="sub">OIDC — dashboard login</text>
+  <text x="716" y="608" class="sub">HEADSCALE_OIDC_ISSUER (still empty)</text>
+
+  <rect x="924" y="538" width="220" height="100" class="box" fill="#fffbeb" stroke="#d97706" stroke-dasharray="5 3"/>
+  <image href="../../assets/icons/dev_logos/gvisor.svg" x="936" y="550" width="26" height="26"/>
+  <text x="972" y="570" class="label">gVisor (optional)</text>
+  <text x="936" y="592" class="sub">sandboxing for worker nodes</text>
+  <text x="936" y="608" class="sub">install_gvisor: config.yml flag</text>
+
+  <image href="../../assets/icons/dev_logos/docker.svg" x="1170" y="548" width="34" height="34"/>
+  <text x="1214" y="570" class="label">jimesh-net</text>
+  <text x="1170" y="592" class="sub">Docker bridge — connects every</text>
+  <text x="1170" y="608" class="sub">container by its real name (no DNS for bare service names)</text>
+
+  <!-- Ansible controller note -->
+  <rect x="44" y="670" width="1300" height="98" class="box" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="60" y="694" class="label">Ansible controller (podhead) — never a node itself</text>
+  <text x="60" y="712" class="sub">config.yml (node names/roles, tracked, no literals) + .env (real values, gitignored) → render-inventory.py → .rendered.ini</text>
+  <text x="60" y="728" class="sub">make redeploy SERVICE=&lt;name&gt; NODE=&lt;name&gt; → docker run (Ansible image) → SSH to example-node → deploy/&lt;service&gt;/ansible-task.yml</text>
+  <text x="60" y="746" class="sub">Details: docs/diagrams/deployment-pipeline.svg</text>
+
+  <!-- legend -->
+  <rect x="44" y="808" width="1300" height="150" class="box" fill="#f8fafc"/>
+  <text x="60" y="832" class="label">Honest open items (2026-09-16)</text>
+  <text x="60" y="852" class="sub">• jimesh-router is not yet running on example-node (planned) — firewall enforcement for the backend container isn't live yet</text>
+  <text x="60" y="870" class="sub">• Only ONE node (example-node) is actually registered — node-to-node connectivity between two JiMesh servers hasn't been live-tested</text>
+  <text x="60" y="888" class="sub">• A redundant, independent real-Tailscale fallback container (discussed) — not yet built</text>
+  <text x="60" y="906" class="sub">• Network monitoring / anomaly detection / AI-assisted threat detection — completely open, its own initiative</text>
+  <text x="60" y="924" class="sub">• The preauth key (10-year, reusable) has not yet been rotated/scoped</text>
+</svg>

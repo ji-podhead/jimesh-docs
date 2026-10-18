@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 640" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <style>
+      .box { fill:#ffffff; stroke:#334155; stroke-width:1.5; rx:10; }
+      .zone { fill:#f8fafc; stroke:url(#brand); stroke-width:2; stroke-dasharray:6 4; rx:14; }
+      .title { font-size:22px; font-weight:800; fill:#0f172a; }
+      .label { font-size:13px; fill:#0f172a; font-weight:600; }
+      .sub { font-size:11px; fill:#475569; }
+      .zonelabel { font-size:14px; font-weight:700; fill:#6d28d9; }
+    </style>
+  </defs>
+  <rect width="1300" height="640" fill="#ffffff"/>
+  <image href="../../assets/icons/brand/svg/jimesh-mesh-cube-flat-small.svg" x="24" y="10" width="44" height="44"/>
+  <text x="78" y="34" class="title">JiMesh — Filesystem &amp; Volumes (example-node, per node)</text>
+  <text x="24" y="66" class="sub">Persistence survives restarts (mandate) — startup never purges volumes.</text>
+
+  <rect x="24" y="86" width="1252" height="80" class="box" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="40" y="110" class="label">jimesh_deploy_root (config.yml `deploy_root:`, default /opt/jimesh)</text>
+  <text x="40" y="130" class="sub">Where staged files land (pg-init SQL, the Keycloak realm import, Headscale TLS) — a real host directory, not a Docker volume</text>
+  <text x="40" y="146" class="sub">/opt/jimesh/deploy/headscale/tls/{cert.pem,key.pem} — the private key NEVER leaves the node</text>
+
+  <!-- volumes -->
+  <rect x="24" y="186" width="1252" height="200" class="zone"/>
+  <text x="40" y="208" class="zonelabel">Named Docker volumes (persistent, survive `make down`)</text>
+
+  <rect x="44" y="226" width="230" height="140" class="box"/>
+  <image href="../../assets/icons/dev_logos/postgresql.svg" x="56" y="238" width="26" height="26"/>
+  <text x="92" y="256" class="label">jimesh-postgres-data</text>
+  <text x="56" y="278" class="sub">POSTGRES_DB=jimesh</text>
+  <text x="56" y="294" class="sub">the only persistence layer (Mandate 7)</text>
+  <text x="56" y="310" class="sub">pg-init SQL mounted from deploy_root</text>
+  <text x="56" y="326" class="sub">only on first start, ignored after</text>
+  <text x="56" y="346" class="sub">jimesh_test DB is separate, throwaway</text>
+
+  <rect x="294" y="226" width="230" height="140" class="box"/>
+  <image href="../../assets/icons/dev_logos/vault.svg" x="306" y="238" width="24" height="24"/>
+  <text x="340" y="256" class="label">jimesh-vault-data</text>
+  <text x="306" y="278" class="sub">secrets, own port 8280</text>
+  <text x="306" y="294" class="sub">(collision with an unrelated Vault avoided</text>
+  <text x="306" y="310" class="sub">via overrides.local.yml, gitignored)</text>
+
+  <rect x="544" y="226" width="230" height="140" class="box"/>
+  <image href="../../assets/icons/dev_logos/keycloak.svg" x="556" y="238" width="60" height="24"/>
+  <text x="556" y="278" class="sub">realm import from deploy_root</text>
+  <text x="556" y="294" class="sub">DB: jimesh-postgres (real container name,</text>
+  <text x="556" y="310" class="sub">not "postgres" — Docker DNS bug, 2026-09-16)</text>
+
+  <rect x="794" y="226" width="230" height="140" class="box"/>
+  <text x="806" y="248" class="label">headscale-data</text>
+  <text x="806" y="268" class="sub">SQLite volume (Headscale's own DB)</text>
+  <text x="806" y="284" class="sub">fresh volume since 2026-09-15 — old</text>
+  <text x="806" y="300" class="sub">preauth keys from before don't exist here</text>
+
+  <rect x="1044" y="226" width="212" height="140" class="box"/>
+  <text x="1056" y="248" class="label">TLS state (bind mount)</text>
+  <text x="1056" y="268" class="sub">deploy/headscale/tls/ — self-signed</text>
+  <text x="1056" y="284" class="sub">public cert committed</text>
+  <text x="1056" y="300" class="sub">(deploy/headscale/tls-ca/*.crt)</text>
+  <text x="1056" y="316" class="sub">private key NEVER committed, stays on the node</text>
+
+  <!-- desktop / controller side -->
+  <rect x="24" y="406" width="1252" height="220" class="zone"/>
+  <text x="40" y="428" class="zonelabel">Controller side (podhead) — not the target node</text>
+
+  <rect x="44" y="446" width="280" height="160" class="box"/>
+  <text x="56" y="468" class="label">.env (gitignored, NEVER committed)</text>
+  <text x="56" y="488" class="sub">real IPs/users/keys/preauth tokens</text>
+  <text x="56" y="504" class="sub">Docker --env-file: NO ${VAR} expansion</text>
+  <text x="56" y="520" class="sub">(unlike config.yml / bash source)</text>
+  <text x="56" y="540" class="sub">now also mounted RW into the container</text>
+  <text x="56" y="556" class="sub">(/ansible/env-file) — tasks write minted</text>
+  <text x="56" y="572" class="sub">secrets straight in, no more manual</text>
+  <text x="56" y="588" class="sub">copy-paste</text>
+
+  <rect x="344" y="446" width="280" height="160" class="box"/>
+  <text x="356" y="468" class="label">.ansible-run/ (gitignored)</text>
+  <text x="356" y="488" class="sub">client-tailscale-state/ — the isolated</text>
+  <text x="356" y="504" class="sub">desktop client's Tailscale state</text>
+  <text x="356" y="520" class="sub">survives container restarts</text>
+
+  <rect x="644" y="446" width="280" height="160" class="box"/>
+  <text x="656" y="468" class="label">~/.ssh/</text>
+  <text x="656" y="488" class="sub">id_rsa (0600!) — the operator-user key</text>
+  <text x="656" y="504" class="sub">known_hosts — mounted read-only</text>
+  <text x="656" y="520" class="sub">into the container</text>
+
+  <rect x="944" y="446" width="308" height="160" class="box"/>
+  <text x="956" y="468" class="label">deploy/headscale/tls-ca/*.crt</text>
+  <text x="956" y="488" class="sub">public certificate, TRACKED</text>
+  <text x="956" y="504" class="sub">(safe to commit — public key only)</text>
+  <text x="956" y="520" class="sub">distributed to every client so it can</text>
+  <text x="956" y="536" class="sub">trust the self-signed Headscale CA</text>
+</svg>

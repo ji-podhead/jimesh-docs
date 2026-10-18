@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="JiMesh Technical Architecture">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="cpGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="#090d16"/>
+
+  <!-- Title -->
+  <text x="60" y="50" fill="url(#brandGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800">JiMesh Technical Architecture</text>
+  <text x="60" y="75" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="15">Control Plane, Zero-Trust LLM Gateway, WireGuard Overlay, and Sandboxed Workloads</text>
+
+  <!-- Central Control Plane Box -->
+  <rect x="60" y="100" width="1080" height="230" rx="16" fill="url(#cpGrad)" stroke="#6366f1" stroke-width="2" filter="url(#shadow)"/>
+
+  <rect x="80" y="115" width="220" height="30" rx="6" fill="#312e81"/>
+  <text x="95" y="135" fill="#e0e7ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">JiMesh Control Plane (Go Core)</text>
+
+  <!-- Control Plane Components Grid -->
+  <!-- 1. LLM Gateway & Fallback Chains -->
+  <g transform="translate(80, 160)">
+    <rect width="240" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="16" y="30" fill="#22d3ee" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">LLM Proxy &amp; Gateway</text>
+    <text x="16" y="55" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Multi-Provider Failover Chains</text>
+    <text x="16" y="75" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Budget Circuit Breaker ($/req)</text>
+    <text x="16" y="95" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Real-Time Stream Scanner</text>
+    <text x="16" y="115" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Model Context Protocol (MCP)</text>
+  </g>
+
+  <!-- 2. Zero-Trust Secrets Engine -->
+  <g transform="translate(340, 160)">
+    <rect width="240" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="16" y="30" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Zero-Trust Secrets Engine</text>
+    <text x="16" y="55" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Embedded Vault / AES-256</text>
+    <text x="16" y="75" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Just-In-Time Injection</text>
+    <text x="16" y="95" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• No Plaintext .env Files</text>
+    <text x="16" y="115" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Scope Inheritance (App/Proj)</text>
+  </g>
+
+  <!-- 3. Security, Guardrails & Audit -->
+  <g transform="translate(600, 160)">
+    <rect width="240" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="16" y="30" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Guardrails &amp; Security</text>
+    <text x="16" y="55" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Regex &amp; ONNX DLP Scanners</text>
+    <text x="16" y="75" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Real-Time Threat Monitoring</text>
+    <text x="16" y="95" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Cascading RBAC &amp; IAM</text>
+    <text x="16" y="115" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Immutable Audit Trails</text>
+  </g>
+
+  <!-- 4. Orchestration & Mesh Controller -->
+  <g transform="translate(860, 160)">
+    <rect width="260" height="150" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="16" y="30" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700">Mesh &amp; Orchestration</text>
+    <text x="16" y="55" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Headscale/WireGuard Controller</text>
+    <text x="16" y="75" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Ansible IaC Auto-Provisioning</text>
+    <text x="16" y="95" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• Port Allocation Engine</text>
+    <text x="16" y="115" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">• PostgreSQL &amp; Redis Streams</text>
+  </g>
+
+  <!-- Connecting Overlay Mesh Lines -->
+  <path d="M 300 330 L 300 400 M 600 330 L 600 400 M 900 330 L 900 400" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="220" y="380" width="760" height="30" rx="15" fill="#0369a1" opacity="0.3" stroke="#0284c7" stroke-width="1.5"/>
+  <text x="600" y="400" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">ENCRYPTED WIREGUARD / OVERLAY MESH NETWORK (PEER-TO-PEER TUNNELS)</text>
+
+  <!-- Target Hosts / Infrastructure Tier -->
+  <!-- Host 1: On-Prem / Bare Metal -->
+  <g transform="translate(60, 440)">
+    <rect width="340" height="220" rx="14" fill="url(#nodeGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="20" y="18" width="140" height="24" rx="4" fill="#1e293b"/>
+    <text x="30" y="34" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">SSH Target: On-Prem Host</text>
+
+    <!-- gVisor Sandbox 1 -->
+    <rect x="20" y="55" width="300" height="145" rx="8" fill="#0284c7" fill-opacity="0.1" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="32" y="75" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">gVisor Sandbox (runsc)</text>
+
+    <rect x="32" y="88" width="276" height="40" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="44" y="112" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="12">App Container A (API Service)</text>
+
+    <rect x="32" y="136" width="276" height="50" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="44" y="156" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="12">Socket Guard &amp; Egress Proxy</text>
+    <text x="44" y="174" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Bound strictly to 127.0.0.1 loopback</text>
+  </g>
+
+  <!-- Host 2: AWS / Cloud VM -->
+  <g transform="translate(430, 440)">
+    <rect width="340" height="220" rx="14" fill="url(#nodeGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect x="20" y="18" width="140" height="24" rx="4" fill="#1e293b"/>
+    <text x="30" y="34" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">SSH Target: Cloud VM (AWS/GCP)</text>
+
+    <!-- gVisor Sandbox 2 -->
+    <rect x="20" y="55" width="300" height="145" rx="8" fill="#7c3aed" fill-opacity="0.1" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="32" y="75" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">gVisor Sandbox (runsc)</text>
+
+    <rect x="32" y="88" width="276" height="40" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="44" y="112" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="12">AI Agent Harness Container</text>
+
+    <rect x="32" y="136" width="276" height="50" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="44" y="156" fill="#e2e8f0" font-family="system-ui, -apple-system, sans-serif" font-size="12">Jules / DeepSeek Worker</text>
+    <text x="44" y="174" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11">Isolated workspace volume</text>
+  </g>
+
+  <!-- External AI Providers Tier -->
+  <g transform="translate(800, 440)">
+    <rect width="340" height="220" rx="14" fill="url(#nodeGrad)" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="20" y="34" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">Upstream Provider Routing</text>
+
+    <rect x="20" y="55" width="300" height="42" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">OpenAI / Anthropic / Gemini APIs</text>
+
+    <rect x="20" y="107" width="300" height="42" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="32" y="132" fill="#a78bfa" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">DeepSeek / Groq / Local vLLM</text>
+
+    <rect x="20" y="159" width="300" height="42" rx="6" fill="#0f172a" stroke="#334155"/>
+    <text x="32" y="184" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600">PostgreSQL Data Lake CDC Sinks</text>
+  </g>
+</svg>

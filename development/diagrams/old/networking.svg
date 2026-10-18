@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 900" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <style>
+      .box { fill:#ffffff; stroke:#334155; stroke-width:1.5; rx:10; }
+      .zone { fill:#f8fafc; stroke:url(#brand); stroke-width:2; stroke-dasharray:6 4; rx:14; }
+      .title { font-size:22px; font-weight:800; fill:#0f172a; }
+      .label { font-size:13px; fill:#0f172a; font-weight:600; }
+      .sub { font-size:11px; fill:#475569; }
+      .zonelabel { font-size:14px; font-weight:700; fill:#6d28d9; }
+    </style>
+  </defs>
+  <rect width="1300" height="900" fill="#ffffff"/>
+  <image href="../../assets/icons/brand/svg/jimesh-mesh-cube-flat-small.svg" x="24" y="10" width="44" height="44"/>
+  <text x="78" y="34" class="title">JiMesh — Networking &amp; Firewall (example-node)</text>
+  <text x="24" y="66" class="sub">Core principle: VPN-first, minimal + additively-secured public surface. No destructive iptables edits — INSERT/ACCEPT only.</text>
+
+  <!-- eth0 public -->
+  <rect x="24" y="86" width="600" height="330" class="zone"/>
+  <text x="40" y="108" class="zonelabel">eth0 — public IP &lt;example-node-public-ip&gt;</text>
+
+  <rect x="44" y="126" width="560" height="70" class="box" fill="#ecfdf5" stroke="#059669"/>
+  <text x="56" y="148" class="label">Port 443 → Headscale (public, by design)</text>
+  <text x="56" y="166" class="sub">coordination server + DERP relay — TLS (self-signed); must stay open so new clients can join</text>
+
+  <rect x="44" y="206" width="560" height="120" class="box">
+  </rect>
+  <text x="56" y="228" class="label">Port 22 → SSH (INPUT chain, in order)</text>
+  <text x="56" y="246" class="sub">1. ACCEPT src &lt;operator-ip-1&gt; (operator, pre-existing)</text>
+  <text x="56" y="260" class="sub">2. ACCEPT src &lt;operator-ip-2&gt; (operator, pre-existing)</text>
+  <text x="56" y="274" class="sub">3. ACCEPT src &lt;current operator IP&gt; (deploy/ssh-allowlist, additive)</text>
+  <text x="56" y="288" class="sub">4. ACCEPT iifname tailscale0 (any source inside the mesh)</text>
+  <text x="56" y="304" class="sub" fill="#dc2626">5. DROP everything else on eth0 (2026-09-16 incident: this used to come BEFORE the ACCEPTs — fixed)</text>
+
+  <rect x="44" y="338" width="560" height="60" class="box" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="56" y="360" class="label" fill="#dc2626">Every other port on eth0: DROP</text>
+  <text x="56" y="378" class="sub">Dashboard/backend/Vault/Postgres — NEVER publicly reachable</text>
+
+  <!-- tailscale0 zone -->
+  <rect x="660" y="86" width="616" height="330" class="zone"/>
+  <text x="676" y="108" class="zonelabel">tailscale0 — Headscale mesh interface (100.64.0.x, example-node-1)</text>
+
+  <rect x="680" y="126" width="576" height="70" class="box" fill="#ecfdf5" stroke="#059669"/>
+  <text x="692" y="148" class="label">Port 8090 → Traefik (dashboard/gateway)</text>
+  <text x="692" y="166" class="sub">traefik_host_bind = jimesh_vpn_ip (NEVER ansible_host/public_ip)</text>
+
+  <rect x="680" y="206" width="576" height="70" class="box">
+  </rect>
+  <text x="692" y="228" class="label">Port 22 → SSH (also reachable here)</text>
+  <text x="692" y="246" class="sub">sshd binds 0.0.0.0 — automatically usable via the mesh IP too</text>
+
+  <rect x="680" y="286" width="576" height="70" class="box" fill="#fffbeb" stroke="#d97706" stroke-dasharray="5 3"/>
+  <text x="692" y="308" class="label">Port 80/443 on jimesh-net containers (internal)</text>
+  <text x="692" y="326" class="sub">routed by Traefik via Docker labels — no dedicated host port needed</text>
+
+  <!-- variable coupling explanation -->
+  <rect x="24" y="436" width="1252" height="140" class="box" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="40" y="460" class="label">Important decoupling (2026-09-16 incident, found live)</text>
+  <text x="40" y="480" class="sub">ansible_host (config.yml `host:`) = how the controller REACHES the node (can change, e.g. to the public IP during recovery)</text>
+  <text x="40" y="496" class="sub">jimesh_vpn_ip (config.yml `vpn_ip:`) = what Traefik BINDS to — a deliberately separate variable, so a recovery-driven ansible_host</text>
+  <text x="40" y="512" class="sub">change can NEVER accidentally expose the dashboard publicly. Both used to be wired to the same value — that was the bug.</text>
+  <text x="40" y="532" class="sub">public_ip (`public_ip:`) = separately again, the real address for services that MUST be public (currently only Headscale itself).</text>
+  <text x="40" y="550" class="sub">Three variables, three purposes — never collapse them back into one.</text>
+
+  <!-- operator desktop isolation -->
+  <rect x="24" y="596" width="1252" height="190" class="zone"/>
+  <text x="40" y="618" class="zonelabel">Operator desktop isolation (client-join.sh) — primary connection NEVER touched</text>
+
+  <rect x="44" y="636" width="380" height="130" class="box"/>
+  <text x="56" y="658" class="label">Primary connection (tailscale0, real)</text>
+  <text x="56" y="676" class="sub">company Tailscale, 100.65.123.65</text>
+  <text x="56" y="692" class="sub">lives in the DEFAULT network namespace</text>
+  <text x="56" y="708" class="sub">never modified by any JiMesh task</text>
+  <text x="56" y="728" class="sub" fill="#dc2626">HARD GATE: deploy/headscale-client* refuses</text>
+  <text x="56" y="742" class="sub" fill="#dc2626">when ansible_connection=local (role: client)</text>
+
+  <rect x="450" y="636" width="380" height="130" class="box" fill="#ecfdf5" stroke="#059669"/>
+  <text x="462" y="658" class="label">Isolated container (own netns)</text>
+  <text x="462" y="676" class="sub">jimesh-client-tailscaled, --cap-add NET_ADMIN/NET_RAW</text>
+  <text x="462" y="692" class="sub">+ /dev/net/tun — a real TUN, not --network host</text>
+  <text x="462" y="708" class="sub">own Headscale identity (jimesh-client)</text>
+  <text x="462" y="728" class="sub">socat forward: 127.0.0.1:8090 → 100.64.0.x:8090</text>
+  <text x="462" y="744" class="sub">Docker bridge makes host→container work without -p</text>
+
+  <rect x="856" y="636" width="380" height="130" class="box" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="868" y="658" class="label">Near-miss (caught live, 2026-09-16)</text>
+  <text x="868" y="676" class="sub">--network host for the isolated client</text>
+  <text x="868" y="692" class="sub">→ tailscaled deleted/rewrote ip-rules</text>
+  <text x="868" y="708" class="sub">of the PRIMARY connection in the same netns</text>
+  <text x="868" y="728" class="sub">caught immediately, verified, switched</text>
+  <text x="868" y="744" class="sub">to bridge mode — never --network host for clients again</text>
+
+  <rect x="24" y="806" width="1252" height="80" class="box" fill="#f8fafc"/>
+  <text x="40" y="830" class="label">Open: redundant independent fallback</text>
+  <text x="40" y="850" class="sub">Concept (discussed, not built): a second, fully independent container running REAL Tailscale (official coordination servers)</text>
+  <text x="40" y="866" class="sub">as a fallback if Headscale itself ever fails — would allow closing port 22 on eth0 by default, toggled open only via the dashboard.</text>
+</svg>

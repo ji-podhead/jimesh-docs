@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JiMeshPluginManifest",
+  "description": "JSON Schema for JiMesh plugin.yaml manifest specification v1",
+  "type": "object",
+  "required": ["id", "name", "version", "surfaces", "authSupported", "security"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$",
+      "description": "Unique plugin identifier slug"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable plugin name"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+.*$",
+      "description": "Semantic version string"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short plugin description"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Lucide icon name or image URL"
+    },
+    "surfaces": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["iframe", "native", "widget", "mcp", "api", "chat"]
+      },
+      "description": "Render/integration surfaces provided by the plugin"
+    },
+    "authSupported": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["api_key", "service_account", "both", "github_app", "oauth_code_exchange"]
+      },
+      "description": "Authentication modes supported by the plugin"
+    },
+    "requiredSecretScopes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Secret scope permissions requested from Secrets Engine"
+    },
+    "security": {
+      "type": "object",
+      "required": ["egress", "capabilities"],
+      "properties": {
+        "egress": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Allowed egress hostnames or URLs for network isolation"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Required capability grants"
+        }
+      },
+      "additionalProperties": false
+    },
+    "healthCheck": {
+      "type": "object",
+      "properties": {
+        "path": { "type": "string" },
+        "endpoint": { "type": "string" },
+        "interval": { "type": "string" },
+        "timeout": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "i18nKeys": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Registered i18n translation key namespaces"
+    }
+  },
+  "additionalProperties": false
+}

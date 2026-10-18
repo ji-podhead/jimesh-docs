@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 760" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <style>
+      .box { fill:#ffffff; stroke:#334155; stroke-width:1.5; rx:10; }
+      .zone { fill:#f8fafc; stroke:url(#brand); stroke-width:2; stroke-dasharray:6 4; rx:14; }
+      .title { font-size:22px; font-weight:800; fill:#0f172a; }
+      .label { font-size:13px; fill:#0f172a; font-weight:600; }
+      .sub { font-size:11px; fill:#475569; }
+      .zonelabel { font-size:14px; font-weight:700; fill:#6d28d9; }
+      .edge { stroke:#64748b; stroke-width:2; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1300" height="760" fill="#ffffff"/>
+  <image href="../../assets/icons/brand/svg/jimesh-mesh-cube-flat-small.svg" x="24" y="10" width="44" height="44"/>
+  <text x="78" y="34" class="title">JiMesh — Deployment Pipeline (Ansible-based)</text>
+  <text x="24" y="66" class="sub">One playbook, many services: never ansible-playbook directly, always through make.</text>
+
+  <rect x="24" y="86" width="280" height="180" class="box"/>
+  <text x="40" y="110" class="label">config.yml (tracked)</text>
+  <text x="40" y="130" class="sub">node names/roles, NO literals</text>
+  <text x="40" y="146" class="sub">host/user/public_ip/vpn_ip as</text>
+  <text x="40" y="160" class="sub">${VAR} or ${VAR:-default}</text>
+  <text x="40" y="182" class="sub">role: control_plane | worker | client</text>
+  <text x="40" y="198" class="sub">headscale: true → singleton VPN host</text>
+  <text x="40" y="222" class="sub">+ .env (gitignored, real values)</text>
+  <text x="40" y="238" class="sub">TRADING_HOST, HEADSCALE_URL, …</text>
+
+  <line x1="304" y1="146" x2="356" y2="146" class="edge"/>
+  <rect x="360" y="86" width="260" height="120" class="box"/>
+  <text x="376" y="110" class="label">render-inventory.py</text>
+  <text x="376" y="130" class="sub">resolves ${VAR} against .env</text>
+  <text x="376" y="146" class="sub">fails loudly on a missing var</text>
+  <text x="376" y="162" class="sub">role:client → ansible_connection=local</text>
+  <text x="376" y="178" class="sub">writes .rendered.ini + .control-planes</text>
+
+  <line x1="620" y1="146" x2="672" y2="146" class="edge"/>
+  <rect x="676" y="86" width="280" height="120" class="box"/>
+  <text x="692" y="110" class="label">make redeploy SERVICE=&lt;n&gt; NODE=&lt;n&gt;</text>
+  <text x="692" y="130" class="sub">docker run (jimesh-ansible-runner:local)</text>
+  <text x="692" y="146" class="sub">mounts: deploy/:ro, inventory, SSH_AUTH_SOCK,</text>
+  <text x="692" y="162" class="sub">known_hosts, .env:/ansible/env-file:rw</text>
+  <text x="692" y="178" class="sub">optional SSH_KEY=, NET=host (emergency)</text>
+
+  <line x1="960" y1="146" x2="1012" y2="146" class="edge"/>
+  <rect x="1016" y="86" width="260" height="120" class="box" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="1032" y="110" class="label">SSH → target node</text>
+  <text x="1032" y="130" class="sub">never ad-hoc SSH from chat —</text>
+  <text x="1032" y="146" class="sub">the classifier consistently blocks that;</text>
+  <text x="1032" y="162" class="sub">the Ansible task is the only path</text>
+  <text x="1032" y="178" class="sub">for system mutations</text>
+
+  <!-- deploy-service.yml detail -->
+  <rect x="24" y="276" width="1252" height="220" class="zone"/>
+  <text x="40" y="298" class="zonelabel">deploy/ansible/playbooks/deploy-service.yml (generic playbook)</text>
+
+  <rect x="44" y="316" width="280" height="80" class="box"/>
+  <text x="56" y="338" class="label">pre_tasks</text>
+  <text x="56" y="356" class="sub">load defaults.yml + overrides.local.yml</text>
+  <text x="56" y="372" class="sub">ensure jimesh-net (except no-docker services)</text>
+
+  <rect x="344" y="316" width="280" height="80" class="box"/>
+  <text x="356" y="338" class="label">jimesh_no_docker_services</text>
+  <text x="356" y="356" class="sub">headscale-client(-reinstall/-secure-ssh),</text>
+  <text x="356" y="372" class="sub">operator-user, ssh-allowlist, router-bootstrap</text>
+
+  <rect x="644" y="316" width="280" height="80" class="box"/>
+  <text x="656" y="338" class="label">derived variables</text>
+  <text x="656" y="356" class="sub">jimesh_deploy_root, jimesh_public_ip,</text>
+  <text x="656" y="372" class="sub">jimesh_headscale_port, jimesh_vpn_ip</text>
+
+  <rect x="944" y="316" width="308" height="80" class="box"/>
+  <text x="956" y="338" class="label">tasks</text>
+  <text x="956" y="356" class="sub">include_tasks: deploy/&lt;service&gt;/ansible-task.yml</text>
+  <text x="956" y="372" class="sub">— the only place service logic lives</text>
+
+  <rect x="44" y="416" width="1208" height="60" class="box" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="56" y="438" class="label">HARD GATE in headscale-client(-reinstall)</text>
+  <text x="56" y="456" class="sub">fails when ansible_connection == 'local' — prevents replacing an operator desktop's own primary connection</text>
+
+  <!-- services list -->
+  <rect x="24" y="516" width="1252" height="220" class="zone"/>
+  <text x="40" y="538" class="zonelabel">Registered services (deploy/&lt;name&gt;/{defaults.yml,ansible-task.yml})</text>
+
+  <rect x="44" y="556" width="180" height="150" class="box"/>
+  <text x="56" y="578" class="label">Platform (deploy-all)</text>
+  <text x="56" y="598" class="sub">postgres</text>
+  <text x="56" y="614" class="sub">redis</text>
+  <text x="56" y="630" class="sub">vault</text>
+  <text x="56" y="646" class="sub">keycloak</text>
+  <text x="56" y="662" class="sub">backend</text>
+  <text x="56" y="678" class="sub">frontend</text>
+
+  <rect x="244" y="556" width="200" height="150" class="box"/>
+  <text x="256" y="578" class="label">Networking (manual, one-at-a-time)</text>
+  <text x="256" y="598" class="sub">headscale</text>
+  <text x="256" y="614" class="sub">headscale-client-secure-ssh</text>
+  <text x="256" y="630" class="sub">headscale-client</text>
+  <text x="256" y="646" class="sub">headscale-client-reinstall</text>
+  <text x="256" y="662" class="sub">headscale-client-container</text>
+  <text x="256" y="678" class="sub">traefik</text>
+
+  <rect x="464" y="556" width="200" height="150" class="box"/>
+  <text x="476" y="578" class="label">Access / security</text>
+  <text x="476" y="598" class="sub">ssh-allowlist</text>
+  <text x="476" y="614" class="sub">operator-user</text>
+  <text x="476" y="630" class="sub">router-bootstrap</text>
+
+  <rect x="684" y="556" width="260" height="150" class="box" fill="#fffbeb" stroke="#d97706" stroke-dasharray="5 3"/>
+  <text x="696" y="578" class="label">planned, not deployed</text>
+  <text x="696" y="598" class="sub">jimesh-router (planned)</text>
+  <text x="696" y="614" class="sub">firewall enforcement, report-only first</text>
+
+  <rect x="964" y="556" width="288" height="150" class="box"/>
+  <text x="976" y="578" class="label">Provisioning (one-time)</text>
+  <text x="976" y="598" class="sub">make provision-node — Docker + jimesh-net</text>
+  <text x="976" y="614" class="sub">+ optional gVisor, before any</text>
+  <text x="976" y="630" class="sub">service is deployed</text>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 900" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="brand" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="brandSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="100%" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <style>
+      .tile { fill:url(#brandSoft); stroke:url(#brand); stroke-width:2; rx:16; }
+      .h1 { font-size:34px; font-weight:800; fill:#0f172a; }
+      .h2 { font-size:16px; fill:#475569; }
+      .tiletitle { font-size:17px; font-weight:800; fill:#0f172a; }
+      .tilebody { font-size:12.5px; fill:#475569; }
+      .badge { font-size:11px; font-weight:700; fill:#ffffff; }
+    </style>
+  </defs>
+  <rect width="1300" height="900" fill="#ffffff"/>
+
+  <image href="../../assets/icons/brand/svg/jimesh-mesh-cube-flat-small.svg" x="40" y="36" width="64" height="64"/>
+  <text x="118" y="72" class="h1">What is JiMesh?</text>
+  <text x="118" y="98" class="h2">Deploy secure AI &amp; app infrastructure in seconds — one dashboard, one private network, zero network config.</text>
+
+  <!-- tile grid: 4 columns x 2 rows -->
+  <!-- Tile 1 -->
+  <rect x="40" y="150" width="290" height="200" class="tile"/>
+  <circle cx="76" cy="188" r="20" fill="url(#brand)"/>
+  <text x="76" y="194" text-anchor="middle" class="badge">⚡</text>
+  <text x="106" y="196" class="tiletitle">Deploy in Seconds</text>
+  <text x="60" y="222" class="tilebody">Spin up secure AI and app deployments fast — no infrastructure</text>
+  <text x="60" y="238" class="tilebody">expertise required to get something real running.</text>
+
+  <!-- Tile 2 -->
+  <rect x="350" y="150" width="290" height="200" class="tile"/>
+  <circle cx="386" cy="188" r="20" fill="url(#brand)"/>
+  <text x="386" y="194" text-anchor="middle" class="badge">▦</text>
+  <text x="416" y="196" class="tiletitle">One Dashboard</text>
+  <text x="370" y="222" class="tilebody">Control every server, project, and deployment from a</text>
+  <text x="370" y="238" class="tilebody">single place — once you deploy your first control plane.</text>
+
+  <!-- Tile 3 -->
+  <rect x="660" y="150" width="290" height="200" class="tile"/>
+  <circle cx="696" cy="188" r="20" fill="url(#brand)"/>
+  <text x="696" y="194" text-anchor="middle" class="badge">🔒</text>
+  <text x="726" y="196" class="tiletitle">Private Network, Zero Setup</text>
+  <text x="680" y="222" class="tilebody">JiMesh connects all your servers into one secure shared</text>
+  <text x="680" y="238" class="tilebody">network automatically — you never touch network config.</text>
+
+  <!-- Tile 4 -->
+  <rect x="970" y="150" width="290" height="200" class="tile"/>
+  <circle cx="1006" cy="188" r="20" fill="url(#brand)"/>
+  <text x="1006" y="194" text-anchor="middle" class="badge">🛡</text>
+  <text x="1036" y="196" class="tiletitle">Shielded From the Internet</text>
+  <text x="990" y="222" class="tilebody">Deployments are reachable only by you and your team —</text>
+  <text x="990" y="238" class="tilebody">never exposed to the public internet by accident.</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="370" width="290" height="200" class="tile"/>
+  <circle cx="76" cy="408" r="20" fill="url(#brand)"/>
+  <text x="76" y="414" text-anchor="middle" class="badge">☁</text>
+  <text x="106" y="416" class="tiletitle">Run Anywhere</text>
+  <text x="60" y="442" class="tilebody">On-prem, GCP, AWS, or any VPS — you choose where your</text>
+  <text x="60" y="458" class="tilebody">infrastructure actually lives.</text>
+
+  <rect x="350" y="370" width="290" height="200" class="tile"/>
+  <circle cx="386" cy="408" r="20" fill="url(#brand)"/>
+  <text x="386" y="414" text-anchor="middle" class="badge">🔑</text>
+  <text x="416" y="416" class="tiletitle">No More .env Files</text>
+  <text x="370" y="442" class="tilebody">A built-in secrets engine plus user management and IAM —</text>
+  <text x="370" y="458" class="tilebody">real access control, not scattered plaintext secrets.</text>
+
+  <rect x="660" y="370" width="290" height="200" class="tile"/>
+  <circle cx="696" cy="408" r="20" fill="url(#brand)"/>
+  <text x="696" y="414" text-anchor="middle" class="badge">🧠</text>
+  <text x="726" y="416" class="tiletitle">One LLM Gateway</text>
+  <text x="680" y="442" class="tilebody">Manage every model API key and fallback chain in one</text>
+  <text x="680" y="458" class="tilebody">place, with guardrails you set per project.</text>
+
+  <rect x="970" y="370" width="290" height="200" class="tile"/>
+  <circle cx="1006" cy="408" r="20" fill="url(#brand)"/>
+  <text x="1006" y="414" text-anchor="middle" class="badge">📊</text>
+  <text x="1036" y="416" class="tiletitle">Real Observability</text>
+  <text x="990" y="442" class="tilebody">Audit logs, automatic code quality checks, and real-time</text>
+  <text x="990" y="458" class="tilebody">threat monitoring — out of the box.</text>
+
+  <!-- Footer -->
+  <rect x="40" y="600" width="1220" height="240" rx="18" fill="#0f172a"/>
+  <text x="72" y="644" font-size="20" font-weight="800" fill="#ffffff">Who is this for?</text>
+  <text x="72" y="676" font-size="13.5" fill="#cbd5e1">Advanced teams get a full IaC-based deployment pipeline they can edit directly before every rollout.</text>
+  <text x="72" y="698" font-size="13.5" fill="#cbd5e1">Vibe coders get the same power through a dashboard — deploy, connect, and secure your stack without</text>
+  <text x="72" y="720" font-size="13.5" fill="#cbd5e1">ever needing to understand networking, firewalls, or VPNs yourself.</text>
+
+  <text x="72" y="764" font-size="13.5" fill="#cbd5e1">Coming soon: a VS Code extension and the ability to manage and deploy your projects directly from your editor.</text>
+  <text x="72" y="796" font-size="13.5" fill="#cbd5e1">See "How JiMesh Works" for the technical picture underneath the dashboard.</text>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 620" width="100%" height="100%">
+  <defs>
+    <filter id="sh3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <rect width="1080" height="620" fill="#f8fafc" rx="12"/>
+  <text x="540" y="30" fill="#334155" font-family="sans-serif" font-weight="bold" font-size="16" text-anchor="middle">The real open-source landscape (every one of these independently verified, not taken on an AI summary's word)</text>
+
+  <!-- header row -->
+  <rect x="30" y="50" width="220" height="30" fill="#1e293b"/>
+  <text x="140" y="70" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">Tool</text>
+  <rect x="250" y="50" width="160" height="30" fill="#1e293b"/>
+  <text x="330" y="70" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">Layer</text>
+  <rect x="410" y="50" width="640" height="30" fill="#1e293b"/>
+  <text x="730" y="70" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">What it actually does</text>
+
+  <!-- rows -->
+  <g font-family="sans-serif" font-size="10">
+    <!-- Pipelock -->
+    <rect x="30" y="80" width="220" height="66" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="42" y="102" fill="#0f172a" font-weight="bold">Pipelock</text>
+    <text x="42" y="118" fill="#64748b" font-size="8">github.com/luckyPipewrench/pipelock</text>
+    <text x="42" y="132" fill="#64748b" font-size="8">Apache 2.0 core, Go</text>
+    <rect x="250" y="80" width="160" height="66" fill="#ecfdf5" stroke="#e2e8f0"/>
+    <text x="330" y="106" fill="#065f46" text-anchor="middle" font-weight="bold">Network mediation</text>
+    <text x="410" y="102" width="640" fill="#334155">Agent holds secrets but no direct network access; Pipelock holds network access but no</text>
+    <text x="410" y="118" fill="#334155">agent secrets. Emits mediator-signed action receipts per call — offline-verifiable proof</text>
+    <text x="410" y="134" fill="#334155">of which agent/thread did what, without a shared credential ever being trusted.</text>
+
+    <!-- Agent Wall -->
+    <rect x="30" y="146" width="220" height="66" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="42" y="168" fill="#0f172a" font-weight="bold">Agent Wall</text>
+    <text x="42" y="184" fill="#64748b" font-size="8">github.com/agent-wall/agent-wall</text>
+    <text x="42" y="198" fill="#64748b" font-size="8">MIT</text>
+    <rect x="250" y="146" width="160" height="66" fill="#eff6ff" stroke="#e2e8f0"/>
+    <text x="330" y="172" fill="#1e3a8a" text-anchor="middle" font-weight="bold">MCP reverse proxy</text>
+    <text x="410" y="168" fill="#334155">"Cloudflare for AI agents" — wraps an MCP server transparently. Inbound: kill switches,</text>
+    <text x="410" y="184" fill="#334155">injection detection. Outbound: scans responses for 14 secret + 5 PII patterns before they</text>
+    <text x="410" y="200" fill="#334155">reach the LLM. YAML policy, allow/deny/prompt per rule.</text>
+
+    <!-- LlamaFirewall -->
+    <rect x="30" y="212" width="220" height="66" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="42" y="234" fill="#0f172a" font-weight="bold">LlamaFirewall</text>
+    <text x="42" y="250" fill="#64748b" font-size="8">arxiv.org/abs/2505.03574 (Meta)</text>
+    <text x="42" y="264" fill="#64748b" font-size="8">Purple Llama, open source</text>
+    <rect x="250" y="212" width="160" height="66" fill="#fdf4ff" stroke="#e2e8f0"/>
+    <text x="330" y="238" fill="#701a75" text-anchor="middle" font-weight="bold">Content safety</text>
+    <text x="410" y="234" fill="#334155">PromptGuard 2 + Agent Alignment Checks (chain-of-thought auditor) + CodeShield.</text>
+    <text x="410" y="250" fill="#b91c1c" font-weight="bold">Not authorization — see the Big Tech diagram for why this is a separate layer.</text>
+
+    <!-- Cedar/OPA -->
+    <rect x="30" y="278" width="220" height="66" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="42" y="300" fill="#0f172a" font-weight="bold">Cedar / Open Policy Agent</text>
+    <text x="42" y="316" fill="#64748b" font-size="8">cedarpolicy.com/en · openpolicyagent.org</text>
+    <text x="42" y="330" fill="#64748b" font-size="8">Cedar: AWS. OPA: CNCF-graduated.</text>
+    <rect x="250" y="278" width="160" height="66" fill="#fff7ed" stroke="#e2e8f0"/>
+    <text x="330" y="304" fill="#9a3412" text-anchor="middle" font-weight="bold">Policy-as-code</text>
+    <text x="410" y="300" fill="#334155">Deterministic, formally-checkable allow/deny languages. The decision is plain code — an</text>
+    <text x="410" y="316" fill="#334155">LLM cannot argue its way past a Rego or Cedar policy. JiMesh already uses OPA/Rego</text>
+    <text x="410" y="332" fill="#334155">for its own capability gate (§3.3 of the full research).</text>
+
+    <!-- SPIFFE/SPIRE -->
+    <rect x="30" y="344" width="220" height="66" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="42" y="366" fill="#0f172a" font-weight="bold">SPIFFE / SPIRE</text>
+    <text x="42" y="382" fill="#64748b" font-size="8">spiffe.io</text>
+    <text x="42" y="396" fill="#64748b" font-size="8">CNCF standard</text>
+    <rect x="250" y="344" width="160" height="66" fill="#f5f3ff" stroke="#e2e8f0"/>
+    <text x="330" y="370" fill="#4c1d95" text-anchor="middle" font-weight="bold">Workload identity</text>
+    <text x="410" y="366" fill="#334155">Short-lived X.509 (X.509-SVID) or JWT (JWT-SVID) issued after a local attestor verifies</text>
+    <text x="410" y="382" fill="#334155">HOW a process launched — distinguishes process A from process B on the same host,</text>
+    <text x="410" y="398" fill="#334155">even sharing one container image and one IAM role.</text>
+
+    <!-- Coder -->
+    <rect x="30" y="410" width="220" height="66" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="42" y="432" fill="#0f172a" font-weight="bold">Coder</text>
+    <text x="42" y="448" fill="#64748b" font-size="8">coder.com/docs</text>
+    <text x="42" y="462" fill="#64748b" font-size="8">verified via own docs</text>
+    <rect x="250" y="410" width="160" height="66" fill="#f0fdfa" stroke="#e2e8f0"/>
+    <text x="330" y="436" fill="#134e4a" text-anchor="middle" font-weight="bold">Control-plane isolation</text>
+    <text x="410" y="432" fill="#334155">The agent LOOP runs in Coder's control plane, never inside the workspace — so a</text>
+    <text x="410" y="448" fill="#334155">workspace never holds an LLM-calling credential at all, by construction. No dedicated</text>
+    <text x="410" y="464" fill="#334155">agent firewall or per-project RBAC described in their own docs, though.</text>
+  </g>
+
+  <rect x="30" y="490" width="1020" height="112" rx="10" fill="#0f172a"/>
+  <text x="540" y="514" fill="#38bdf8" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">None of these is a substitute for the others — and none of them is "infrastructure"</text>
+  <text x="55" y="540" fill="#e2e8f0" font-family="sans-serif" font-size="10">Every tool above is a layer you bolt onto a network/containers/agents you already have. JiMesh provisions the mesh network, the</text>
+  <text x="55" y="560" fill="#e2e8f0" font-family="sans-serif" font-size="10">per-workspace egress firewall, and the containers themselves — the isolation these tools add afterward is how a JiMesh workspace</text>
+  <text x="55" y="580" fill="#e2e8f0" font-family="sans-serif" font-size="10">gets deployed in the first place. The ideas above are worth adopting selectively — see the full research for exactly which two.</text>
+</svg>

@@ -1,0 +1,28 @@
+id: "gmail"
+name: "Gmail Integration"
+version: "1.0.0"
+description: "Google Gmail API integration for email actions and notification widgets"
+icon: "mail"
+surfaces:
+  - "api"
+  - "widget"
+  - "chat"
+authSupported:
+  - "oauth_code_exchange"
+  - "service_account"
+requiredSecretScopes:
+  - "secrets:read:gmail_oauth_token"
+security:
+  egress:
+    - "https://gmail.googleapis.com"
+    - "https://oauth2.googleapis.com"
+  capabilities:
+    - "plugins:read"
+    - "plugins:execute"
+healthCheck:
+  endpoint: "https://gmail.googleapis.com/generate_204"
+  interval: "60s"
+  timeout: "5s"
+i18nKeys:
+  - "plugins.gmail.title"
+  - "plugins.gmail.inbox"
