@@ -1,25 +1,14 @@
 {
   "name": "@jimesh/docs",
   "version": "0.1.0",
-  "description": "Shared API documentation package for JiMesh: audited API docs markdown + OpenAPI specs + Scalar-based static docs site.",
+  "description": "Shared JiMesh development-docs home (development/) + blog article submodule (articles/) \u2014 the former docs site was retired; the API reference lives on the main website, generated from jimesh2.",
   "private": true,
   "type": "module",
   "license": "PolyForm-Noncommercial-1.0.0",
   "exports": {
-    ".": "./package.json",
-    "./api-docs.md": "./content/api/API_DOCS.md",
-    "./content/*": "./content/*",
-    "./spec/*": "./spec/*",
-    "./site/*": "./dist/*",
-    "./dist/*": "./dist/*"
+    ".": "./package.json"
   },
-  "scripts": {
-    "build": "node scripts/build.mjs",
-    "serve": "npm run build && node scripts/serve.mjs"
-  },
-  "devDependencies": {
-    "marked": "^15.0.12"
-  },
+  "devDependencies": {},
   "engines": {
     "node": ">=18"
   }
