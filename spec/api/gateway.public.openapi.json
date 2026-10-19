@@ -1902,13 +1902,20 @@
   "x-scope": "public",
   "x-tagGroups": [
     {
-      "name": "Core",
+      "description": "Everything an LLM client touches: OpenAI-compatible chat completions, the model catalog with pricing and tiers, fallback chains and routing roles, the provider key pool, and model/key discovery. Point Claude Code, Cursor or any OpenAI SDK at `/v1` and go.",
+      "name": "AI Gateway",
       "tags": [
         "AI Gateway",
+        "Settings"
+      ]
+    },
+    {
+      "description": "Platform plumbing: liveness/readiness probes, dashboard session and Keycloak OIDC auth, the consumer-key SDK surface for embedded clients, and admin-only operations (audit log, quotas, metering).",
+      "name": "System",
+      "tags": [
+        "System",
         "Authentication",
-        "SDK",
-        "Settings",
-        "System"
+        "SDK"
       ]
     }
   ]

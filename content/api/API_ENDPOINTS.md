@@ -8,123 +8,7 @@
 
 465 paths · 1193 operations · scope `internal` (superset of the public surface).
 
-## Collaboration — Agents
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/agents/analytics/summary` | Agent Analytics Summary |
-| POST | `/api/agents/logs` | Agent Logs |
-| GET | `/api/agents/logs/stream` | Agent Logs Stream |
-| POST | `/api/agents/logs/stream` | Agent Logs Stream |
-| PUT | `/api/agents/logs/stream` | Agent Logs Stream |
-| PATCH | `/api/agents/logs/stream` | Agent Logs Stream |
-| DELETE | `/api/agents/logs/stream` | Agent Logs Stream |
-| HEAD | `/api/agents/logs/stream` | Agent Logs Stream |
-| OPTIONS | `/api/agents/logs/stream` | Agent Logs Stream |
-| GET | `/api/experts` | Experts |
-| POST | `/api/experts` | Experts |
-| PUT | `/api/experts` | Experts |
-| DELETE | `/api/experts` | Experts |
-| POST | `/api/experts/execute` | Expert Execute |
-| GET | `/api/experts/runs` | Expert Runs |
-| GET | `/api/subagent-sessions` | require Identity |
-| POST | `/api/subagent-sessions` | require Identity |
-| GET | `/api/subagent-sessions/{id}` | require Identity |
-| DELETE | `/api/subagent-sessions/{id}` | require Identity |
-| POST | `/api/subagent-sessions/{id}/approve` | require Identity |
-| GET | `/api/subagents` | Subagents |
-| POST | `/api/subagents` | Subagents |
-| GET | `/api/subagents/guarded` | Guarded |
-| GET | `/api/subagents/{id}` | Subagent |
-| DELETE | `/api/subagents/{id}` | Subagent |
-| GET | `/api/subagents/{id}/events` | Events |
-| POST | `/api/subagents/{id}/events` | Events |
-| PUT | `/api/subagents/{id}/events` | Events |
-| PATCH | `/api/subagents/{id}/events` | Events |
-| DELETE | `/api/subagents/{id}/events` | Events |
-| HEAD | `/api/subagents/{id}/events` | Events |
-| OPTIONS | `/api/subagents/{id}/events` | Events |
-| GET | `/api/subagents/{id}/tool-calls` | Tool Calls |
-| POST | `/api/subagents/{id}/tool-calls` | Tool Calls |
-| POST | `/api/subagents/{id}/tool-calls/{callId}/approve` | Approve |
-| POST | `/api/subagents/{id}/tool-calls/{callId}/deny` | Deny |
-
-## Collaboration — Chat
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/chat/` | Chat Proxy |
-| POST | `/api/chat/` | Chat Proxy |
-| PUT | `/api/chat/` | Chat Proxy |
-| PATCH | `/api/chat/` | Chat Proxy |
-| DELETE | `/api/chat/` | Chat Proxy |
-| HEAD | `/api/chat/` | Chat Proxy |
-| OPTIONS | `/api/chat/` | Chat Proxy |
-| GET | `/api/chat/channels` | Chat Proxy |
-| POST | `/api/chat/channels` | Chat Proxy |
-| GET | `/api/chat/channels/{id}/attachments` | Chat Attachment List |
-| POST | `/api/chat/channels/{id}/attachments` | Chat Attachment Upload |
-| GET | `/api/chat/channels/{id}/attachments/{aid}` | Chat Attachment Download |
-| DELETE | `/api/chat/channels/{id}/attachments/{aid}` | Chat Attachment Delete |
-| POST | `/api/chat/channels/{id}/messages` | Chat Compat Send |
-| GET | `/api/chat/health` | Chat Proxy |
-| POST | `/api/chat/registry/sync` | Chat Registry Sync |
-| GET | `/api/chat/teams` | Chat Proxy |
-| POST | `/api/chat/teams` | Chat Proxy |
-| GET | `/api/chat/teams/` | Chat Proxy |
-| POST | `/api/chat/teams/` | Chat Proxy |
-| PUT | `/api/chat/teams/` | Chat Proxy |
-| PATCH | `/api/chat/teams/` | Chat Proxy |
-| DELETE | `/api/chat/teams/` | Chat Proxy |
-| HEAD | `/api/chat/teams/` | Chat Proxy |
-| OPTIONS | `/api/chat/teams/` | Chat Proxy |
-
-## Collaboration — Email
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/email/gmail/connect` | Gmail Connect |
-| POST | `/api/email/gmail/connect` | Gmail Connect |
-| GET | `/api/mail/accounts` | Mail Accounts |
-| POST | `/api/mail/accounts` | Mail Accounts |
-| PUT | `/api/mail/accounts` | Mail Accounts |
-| PATCH | `/api/mail/accounts` | Mail Accounts |
-| DELETE | `/api/mail/accounts` | Mail Accounts |
-| HEAD | `/api/mail/accounts` | Mail Accounts |
-| OPTIONS | `/api/mail/accounts` | Mail Accounts |
-| GET | `/api/mail/accounts/{id}` | Mail Account |
-| POST | `/api/mail/accounts/{id}` | Mail Account |
-| PUT | `/api/mail/accounts/{id}` | Mail Account |
-| PATCH | `/api/mail/accounts/{id}` | Mail Account |
-| DELETE | `/api/mail/accounts/{id}` | Mail Account |
-| HEAD | `/api/mail/accounts/{id}` | Mail Account |
-| OPTIONS | `/api/mail/accounts/{id}` | Mail Account |
-| POST | `/api/mail/accounts/{id}/probe` | Mail Account Probe |
-| POST | `/api/mail/accounts/{id}/send-test` | Mail Account Send Test |
-| POST | `/api/mail/autodiscover` | Mail Autodiscover |
-| POST | `/api/mail/probe` | Mail Probe |
-| GET | `/api/notifications/email/status` | Email Notification Status |
-| POST | `/api/notifications/email/test` | Email Notification Test |
-
-## Collaboration — Integrations
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/github/callback` | Git Hub Callback |
-| GET | `/api/github/repos` | Git Hub Repos |
-| GET | `/api/github/setup` | Git Hub Setup |
-| GET | `/api/github/status` | Git Hub Status |
-| POST | `/api/integrations/docs-sync/{provider}` | Docs Sync Pull |
-| POST | `/api/integrations/docs-workflow/demo` | Docs Workflow Demo |
-| GET | `/api/or/benchmarks` | OR Benchmarks |
-| POST | `/api/or/benchmarks` | OR Benchmarks |
-| PUT | `/api/or/benchmarks` | OR Benchmarks |
-| PATCH | `/api/or/benchmarks` | OR Benchmarks |
-| DELETE | `/api/or/benchmarks` | OR Benchmarks |
-| HEAD | `/api/or/benchmarks` | OR Benchmarks |
-| OPTIONS | `/api/or/benchmarks` | OR Benchmarks |
-
-## Core — AI Gateway
+## AI Gateway — AI Gateway
 
 | Method | Path | Summary |
 | --- | --- | --- |
@@ -169,75 +53,7 @@
 | HEAD | `/v1/score` | Get Scores |
 | OPTIONS | `/v1/score` | Get Scores |
 
-## Core — Authentication
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/auth/callback` | OIDC Callback |
-| POST | `/api/auth/callback` | OIDC Callback |
-| PUT | `/api/auth/callback` | OIDC Callback |
-| PATCH | `/api/auth/callback` | OIDC Callback |
-| DELETE | `/api/auth/callback` | OIDC Callback |
-| HEAD | `/api/auth/callback` | OIDC Callback |
-| OPTIONS | `/api/auth/callback` | OIDC Callback |
-| POST | `/api/auth/change-email` | Auth Change Email |
-| POST | `/api/auth/change-password` | Auth Change Password |
-| GET | `/api/auth/forgot-password` | Auth Forgot Password |
-| POST | `/api/auth/forgot-password` | Auth Forgot Password |
-| PUT | `/api/auth/forgot-password` | Auth Forgot Password |
-| PATCH | `/api/auth/forgot-password` | Auth Forgot Password |
-| DELETE | `/api/auth/forgot-password` | Auth Forgot Password |
-| HEAD | `/api/auth/forgot-password` | Auth Forgot Password |
-| OPTIONS | `/api/auth/forgot-password` | Auth Forgot Password |
-| POST | `/api/auth/login` | Auth Login |
-| POST | `/api/auth/logout` | Auth Logout |
-| GET | `/api/auth/oidc/login` | OIDC Login |
-| POST | `/api/auth/oidc/login` | OIDC Login |
-| PUT | `/api/auth/oidc/login` | OIDC Login |
-| PATCH | `/api/auth/oidc/login` | OIDC Login |
-| DELETE | `/api/auth/oidc/login` | OIDC Login |
-| HEAD | `/api/auth/oidc/login` | OIDC Login |
-| OPTIONS | `/api/auth/oidc/login` | OIDC Login |
-| GET | `/api/auth/reset-password` | Auth Reset Password |
-| POST | `/api/auth/reset-password` | Auth Reset Password |
-| PUT | `/api/auth/reset-password` | Auth Reset Password |
-| PATCH | `/api/auth/reset-password` | Auth Reset Password |
-| DELETE | `/api/auth/reset-password` | Auth Reset Password |
-| HEAD | `/api/auth/reset-password` | Auth Reset Password |
-| OPTIONS | `/api/auth/reset-password` | Auth Reset Password |
-| GET | `/api/auth/sessions` | Auth Sessions |
-| POST | `/api/auth/sessions/refresh` | Auth Session Refresh |
-| POST | `/api/auth/sessions/revoke` | Auth Session Revoke |
-| POST | `/api/auth/setup` | Auth Setup |
-| GET | `/api/auth/status` | Auth Status |
-| POST | `/api/auth/status` | Auth Status |
-| PUT | `/api/auth/status` | Auth Status |
-| PATCH | `/api/auth/status` | Auth Status |
-| DELETE | `/api/auth/status` | Auth Status |
-| HEAD | `/api/auth/status` | Auth Status |
-| OPTIONS | `/api/auth/status` | Auth Status |
-| POST | `/api/auth/step-up` | Auth Step Up |
-| GET | `/api/identity/cert` | require Posture |
-
-## Core — SDK
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/sdk/dashboards` | SDK Dashboards |
-| POST | `/api/sdk/dashboards` | SDK Dashboards |
-| PUT | `/api/sdk/dashboards` | SDK Dashboards |
-| PATCH | `/api/sdk/dashboards` | SDK Dashboards |
-| DELETE | `/api/sdk/dashboards` | SDK Dashboards |
-| HEAD | `/api/sdk/dashboards` | SDK Dashboards |
-| OPTIONS | `/api/sdk/dashboards` | SDK Dashboards |
-| POST | `/api/sdk/dashboards/{id}/apply-preset` | SDK Apply Preset |
-| GET | `/api/sdk/logs` | SDK Logs |
-| POST | `/api/sdk/logs` | SDK Logs |
-| GET | `/api/sdk/logs/stream` | SDK Logs Stream |
-| GET | `/api/sdk/secrets` | SDK Secrets |
-| POST | `/api/sdk/sessions` | SDK Sessions |
-
-## Core — Settings
+## AI Gateway — Settings
 
 | Method | Path | Summary |
 | --- | --- | --- |
@@ -256,242 +72,7 @@
 | POST | `/api/settings/{key}` | Settings |
 | PUT | `/api/settings/{key}` | Settings |
 
-## Core — System
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/` | Not Found |
-| POST | `/` | Not Found |
-| PUT | `/` | Not Found |
-| PATCH | `/` | Not Found |
-| DELETE | `/` | Not Found |
-| HEAD | `/` | Not Found |
-| OPTIONS | `/` | Not Found |
-| GET | `/api/beta/gate` | Beta Gate |
-| POST | `/api/beta/gate` | Beta Gate |
-| GET | `/api/capabilities` | Capabilities |
-| GET | `/api/compression/preview` | Compression Preview |
-| POST | `/api/compression/preview` | Compression Preview |
-| PUT | `/api/compression/preview` | Compression Preview |
-| PATCH | `/api/compression/preview` | Compression Preview |
-| DELETE | `/api/compression/preview` | Compression Preview |
-| HEAD | `/api/compression/preview` | Compression Preview |
-| OPTIONS | `/api/compression/preview` | Compression Preview |
-| GET | `/api/compression/stats` | Compression Stats |
-| POST | `/api/compression/stats` | Compression Stats |
-| PUT | `/api/compression/stats` | Compression Stats |
-| PATCH | `/api/compression/stats` | Compression Stats |
-| DELETE | `/api/compression/stats` | Compression Stats |
-| HEAD | `/api/compression/stats` | Compression Stats |
-| OPTIONS | `/api/compression/stats` | Compression Stats |
-| GET | `/api/dedup` | Dedup |
-| POST | `/api/dedup` | Dedup |
-| GET | `/api/iana` | IANA |
-| GET | `/api/ontology` | Ontology |
-| POST | `/api/sanitize/string` | Sanitize String |
-| GET | `/health` | Health |
-| POST | `/health` | Health |
-| PUT | `/health` | Health |
-| PATCH | `/health` | Health |
-| DELETE | `/health` | Health |
-| HEAD | `/health` | Health |
-| OPTIONS | `/health` | Health |
-| GET | `/metrics` | Metrics |
-| HEAD | `/metrics` | Metrics |
-| GET | `/openapi.json` | Open API |
-| GET | `/ready` | Ready |
-| POST | `/ready` | Ready |
-| PUT | `/ready` | Ready |
-| PATCH | `/ready` | Ready |
-| DELETE | `/ready` | Ready |
-| HEAD | `/ready` | Ready |
-| OPTIONS | `/ready` | Ready |
-
-## Infrastructure — Bridge
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/bridge/openapi.json` | Bridge Open API |
-| POST | `/api/bridge/provision` | Bridge Provision |
-| GET | `/api/bridge/stream` | Bridge Stream |
-| GET | `/api/bridge/tools` | Bridge Tools |
-
-## Infrastructure — Cloud
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| POST | `/api/cloud/exchange` | Cloud Exchange |
-| GET | `/api/cloud/status` | Cloud Status |
-
-## Infrastructure — Control Planes
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/control-planes` | Control Planes |
-| POST | `/api/control-planes` | Control Planes |
-| GET | `/api/control-planes/{id}` | Control Plane Delete |
-| POST | `/api/control-planes/{id}` | Control Plane Delete |
-| PUT | `/api/control-planes/{id}` | Control Plane Delete |
-| PATCH | `/api/control-planes/{id}` | Control Plane Delete |
-| DELETE | `/api/control-planes/{id}` | Control Plane Delete |
-| HEAD | `/api/control-planes/{id}` | Control Plane Delete |
-| OPTIONS | `/api/control-planes/{id}` | Control Plane Delete |
-| GET | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| POST | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| PUT | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| PATCH | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| DELETE | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| HEAD | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| OPTIONS | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
-| GET | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| POST | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| PUT | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| PATCH | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| DELETE | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| HEAD | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| OPTIONS | `/api/control-planes/{id}/provision` | Control Plane Provision |
-| GET | `/api/control-planes/{id}/status` | Control Plane Status |
-| POST | `/api/control-planes/{id}/status` | Control Plane Status |
-| PUT | `/api/control-planes/{id}/status` | Control Plane Status |
-| PATCH | `/api/control-planes/{id}/status` | Control Plane Status |
-| DELETE | `/api/control-planes/{id}/status` | Control Plane Status |
-| HEAD | `/api/control-planes/{id}/status` | Control Plane Status |
-| OPTIONS | `/api/control-planes/{id}/status` | Control Plane Status |
-| GET | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-| POST | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-| PUT | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-| PATCH | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-| DELETE | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-| HEAD | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-| OPTIONS | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
-
-## Infrastructure — DNS
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/dns/records` | DNS Records |
-| GET | `/api/dns/settings` | DNS Settings |
-| PUT | `/api/dns/settings` | DNS Settings |
-
-## Infrastructure — Data Lake
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/datalake/pipelines` | Datalake Pipelines |
-| GET | `/api/datalake/status` | Datalake Status |
-| GET | `/api/dbs/discovery` | DBS Discovery |
-
-## Infrastructure — Networks
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/networks/nodes` | Networks Nodes |
-| GET | `/api/networks/policy` | Networks Policy |
-| PUT | `/api/networks/policy` | Networks Policy |
-| GET | `/api/networks/preauthkeys` | Networks Pre Auth Keys |
-| POST | `/api/networks/preauthkeys` | Networks Pre Auth Keys |
-| POST | `/api/networks/preauthkeys/expire` | Networks Pre Auth Key Expire |
-| GET | `/api/networks/users` | Networks Users |
-| POST | `/api/tailscale/invite` | Tailscale Invite |
-| GET | `/api/tailscale/status` | Tailscale Status |
-
-## Infrastructure — Sessions
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/sessions` | Sessions |
-| POST | `/api/sessions` | Sessions |
-| POST | `/api/sessions/query` | Sessions Query |
-| GET | `/api/stream/{family}` | Stream Topic |
-| GET | `/api/stream/{family}/{id}` | Stream Topic |
-
-## Infrastructure — Workflows
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/workflows` | List |
-| POST | `/api/workflows` | Create |
-| POST | `/api/workflows/{id}` | Update |
-| DELETE | `/api/workflows/{id}` | Delete |
-| POST | `/api/workflows/{id}/run` | Run |
-
-## Models & Keys — API Keys
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/client-profiles` | client Profile Router |
-| POST | `/api/client-profiles` | client Profile Router |
-| GET | `/api/client-profiles/{id}` | Client Profile Update |
-| POST | `/api/client-profiles/{id}` | Client Profile Update |
-| PUT | `/api/client-profiles/{id}` | Client Profile Update |
-| PATCH | `/api/client-profiles/{id}` | Client Profile Update |
-| DELETE | `/api/client-profiles/{id}` | Client Profile Update |
-| HEAD | `/api/client-profiles/{id}` | Client Profile Update |
-| OPTIONS | `/api/client-profiles/{id}` | Client Profile Update |
-| POST | `/api/client-profiles/{id}/rotate` | Client Profile Rotate |
-| GET | `/api/consumer-keys` | Consumer Keys |
-| POST | `/api/consumer-keys` | Consumer Keys |
-| GET | `/api/consumer-keys/{id}/revoke` | Consumer Keys |
-| POST | `/api/consumer-keys/{id}/revoke` | Consumer Keys |
-| GET | `/api/keys` | Keys |
-| POST | `/api/keys` | Keys |
-| POST | `/api/keys/bulk-delete` | Keys Bulk Delete |
-| POST | `/api/keys/bulk-toggle` | Keys Bulk Toggle |
-| POST | `/api/keys/custom` | Custom Keys |
-| POST | `/api/keys/custom/discover-models` | Custom Discover Models |
-| POST | `/api/keys/custom/probe` | Keys Custom Probe |
-| GET | `/api/keys/endpoints` | Endpoints Info |
-| POST | `/api/keys/import-selected` | Keys Import Selected |
-| POST | `/api/keys/preview` | Keys Preview |
-| GET | `/api/keys/providers` | Keys Providers |
-| POST | `/api/keys/providers` | Keys Providers |
-| PUT | `/api/keys/providers` | Keys Providers |
-| PATCH | `/api/keys/providers` | Keys Providers |
-| DELETE | `/api/keys/providers` | Keys Providers |
-| HEAD | `/api/keys/providers` | Keys Providers |
-| OPTIONS | `/api/keys/providers` | Keys Providers |
-| GET | `/api/keys/{id}` | Key Toggle Or Delete |
-| POST | `/api/keys/{id}` | Key Toggle Or Delete |
-| PUT | `/api/keys/{id}` | Key Toggle Or Delete |
-| PATCH | `/api/keys/{id}` | Key Toggle Or Delete |
-| DELETE | `/api/keys/{id}` | Key Toggle Or Delete |
-| HEAD | `/api/keys/{id}` | Key Toggle Or Delete |
-| OPTIONS | `/api/keys/{id}` | Key Toggle Or Delete |
-| DELETE | `/api/keys/{id}/cooldowns` | Key Cooldowns Delete |
-| POST | `/api/keys/{id}/reveal` | Key Value Reveal |
-| PATCH | `/api/platform-keys/{platform}` | Keys Platform Toggle |
-
-## Models & Keys — Discovery
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/discovery` | Discovery List |
-| GET | `/api/discovery/events` | Discovery Events |
-| POST | `/api/discovery/scan` | Discovery Scan |
-| GET | `/api/discovery/status` | Discovery Status |
-| POST | `/api/discovery/status` | Discovery Status |
-| PUT | `/api/discovery/status` | Discovery Status |
-| PATCH | `/api/discovery/status` | Discovery Status |
-| DELETE | `/api/discovery/status` | Discovery Status |
-| HEAD | `/api/discovery/status` | Discovery Status |
-| OPTIONS | `/api/discovery/status` | Discovery Status |
-| POST | `/api/discovery/sync` | Discovery Sync |
-| POST | `/api/dockerhub/enrich` | Enrich |
-| GET | `/api/dockerhub/repository` | Repository |
-| GET | `/api/dockerhub/search` | Search |
-| GET | `/api/dockerhub/status` | Status |
-| POST | `/api/dockerhub/status` | Status |
-| PUT | `/api/dockerhub/status` | Status |
-| PATCH | `/api/dockerhub/status` | Status |
-| DELETE | `/api/dockerhub/status` | Status |
-| HEAD | `/api/dockerhub/status` | Status |
-| OPTIONS | `/api/dockerhub/status` | Status |
-| POST | `/api/dsh/import` | Dsh Import |
-| POST | `/api/dsh/preview` | Dsh Preview |
-| GET | `/api/dsh/settings` | Dsh Settings |
-| POST | `/api/dsh/test` | Dsh Test |
-
-## Models & Keys — Models
+## AI Gateway — Models
 
 | Method | Path | Summary |
 | --- | --- | --- |
@@ -573,7 +154,53 @@
 | PATCH | `/api/profiles/{id}` | Profiles |
 | DELETE | `/api/profiles/{id}` | Profiles |
 
-## Models & Keys — Routing
+## AI Gateway — API Keys
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/client-profiles` | client Profile Router |
+| POST | `/api/client-profiles` | client Profile Router |
+| GET | `/api/client-profiles/{id}` | Client Profile Update |
+| POST | `/api/client-profiles/{id}` | Client Profile Update |
+| PUT | `/api/client-profiles/{id}` | Client Profile Update |
+| PATCH | `/api/client-profiles/{id}` | Client Profile Update |
+| DELETE | `/api/client-profiles/{id}` | Client Profile Update |
+| HEAD | `/api/client-profiles/{id}` | Client Profile Update |
+| OPTIONS | `/api/client-profiles/{id}` | Client Profile Update |
+| POST | `/api/client-profiles/{id}/rotate` | Client Profile Rotate |
+| GET | `/api/consumer-keys` | Consumer Keys |
+| POST | `/api/consumer-keys` | Consumer Keys |
+| GET | `/api/consumer-keys/{id}/revoke` | Consumer Keys |
+| POST | `/api/consumer-keys/{id}/revoke` | Consumer Keys |
+| GET | `/api/keys` | Keys |
+| POST | `/api/keys` | Keys |
+| POST | `/api/keys/bulk-delete` | Keys Bulk Delete |
+| POST | `/api/keys/bulk-toggle` | Keys Bulk Toggle |
+| POST | `/api/keys/custom` | Custom Keys |
+| POST | `/api/keys/custom/discover-models` | Custom Discover Models |
+| POST | `/api/keys/custom/probe` | Keys Custom Probe |
+| GET | `/api/keys/endpoints` | Endpoints Info |
+| POST | `/api/keys/import-selected` | Keys Import Selected |
+| POST | `/api/keys/preview` | Keys Preview |
+| GET | `/api/keys/providers` | Keys Providers |
+| POST | `/api/keys/providers` | Keys Providers |
+| PUT | `/api/keys/providers` | Keys Providers |
+| PATCH | `/api/keys/providers` | Keys Providers |
+| DELETE | `/api/keys/providers` | Keys Providers |
+| HEAD | `/api/keys/providers` | Keys Providers |
+| OPTIONS | `/api/keys/providers` | Keys Providers |
+| GET | `/api/keys/{id}` | Key Toggle Or Delete |
+| POST | `/api/keys/{id}` | Key Toggle Or Delete |
+| PUT | `/api/keys/{id}` | Key Toggle Or Delete |
+| PATCH | `/api/keys/{id}` | Key Toggle Or Delete |
+| DELETE | `/api/keys/{id}` | Key Toggle Or Delete |
+| HEAD | `/api/keys/{id}` | Key Toggle Or Delete |
+| OPTIONS | `/api/keys/{id}` | Key Toggle Or Delete |
+| DELETE | `/api/keys/{id}/cooldowns` | Key Cooldowns Delete |
+| POST | `/api/keys/{id}/reveal` | Key Value Reveal |
+| PATCH | `/api/platform-keys/{platform}` | Keys Platform Toggle |
+
+## AI Gateway — Routing
 
 | Method | Path | Summary |
 | --- | --- | --- |
@@ -634,6 +261,624 @@
 | GET | `/api/router/config` | Router Config |
 | POST | `/api/router/config` | Router Config |
 | DELETE | `/api/router/config` | Router Config |
+
+## AI Gateway — Discovery
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/discovery` | Discovery List |
+| GET | `/api/discovery/events` | Discovery Events |
+| POST | `/api/discovery/scan` | Discovery Scan |
+| GET | `/api/discovery/status` | Discovery Status |
+| POST | `/api/discovery/status` | Discovery Status |
+| PUT | `/api/discovery/status` | Discovery Status |
+| PATCH | `/api/discovery/status` | Discovery Status |
+| DELETE | `/api/discovery/status` | Discovery Status |
+| HEAD | `/api/discovery/status` | Discovery Status |
+| OPTIONS | `/api/discovery/status` | Discovery Status |
+| POST | `/api/discovery/sync` | Discovery Sync |
+| POST | `/api/dockerhub/enrich` | Enrich |
+| GET | `/api/dockerhub/repository` | Repository |
+| GET | `/api/dockerhub/search` | Search |
+| GET | `/api/dockerhub/status` | Status |
+| POST | `/api/dockerhub/status` | Status |
+| PUT | `/api/dockerhub/status` | Status |
+| PATCH | `/api/dockerhub/status` | Status |
+| DELETE | `/api/dockerhub/status` | Status |
+| HEAD | `/api/dockerhub/status` | Status |
+| OPTIONS | `/api/dockerhub/status` | Status |
+| POST | `/api/dsh/import` | Dsh Import |
+| POST | `/api/dsh/preview` | Dsh Preview |
+| GET | `/api/dsh/settings` | Dsh Settings |
+| POST | `/api/dsh/test` | Dsh Test |
+
+## Self-hosted — Projects
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/project-roles` | Project Roles |
+| POST | `/api/project-roles` | Project Roles |
+| DELETE | `/api/project-roles/{id}` | Project Role Delete |
+| GET | `/api/projects` | Projects List |
+| POST | `/api/projects` | Projects List |
+| POST | `/api/projects/deploy` | K8s Deploy Branch |
+| GET | `/api/projects/discover` | Projects Discover |
+| POST | `/api/projects/discover` | Projects Discover |
+| PUT | `/api/projects/discover` | Projects Discover |
+| PATCH | `/api/projects/discover` | Projects Discover |
+| DELETE | `/api/projects/discover` | Projects Discover |
+| HEAD | `/api/projects/discover` | Projects Discover |
+| OPTIONS | `/api/projects/discover` | Projects Discover |
+| POST | `/api/projects/redeploy` | Project Redeploy |
+| POST | `/api/projects/task/apply` | Task Apply |
+| GET | `/api/projects/task/ci` | Task CI |
+| POST | `/api/projects/task/discard` | Task Discard |
+| GET | `/api/projects/task/git-log` | Task Git Log |
+| POST | `/api/projects/task/start` | Task Start |
+| GET | `/api/projects/task/status` | Task Status |
+| GET | `/api/projects/task/tree` | Task Tree |
+| GET | `/api/projects/task/versions` | Task Versions |
+| POST | `/api/projects/undeploy` | Project Undeploy |
+| DELETE | `/api/projects/{id}` | Project Delete |
+| GET | `/api/projects/{id}/containers` | Project Containers |
+| GET | `/api/projects/{id}/containers/{cid}/logs` | Container Logs |
+| GET | `/api/projects/{id}/dashboards` | Project Dashboards |
+| GET | `/api/projects/{id}/deployments` | Project Deployments |
+| POST | `/api/projects/{id}/deployments` | Project Deployments |
+| GET | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| POST | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| PUT | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| PATCH | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| DELETE | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| HEAD | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| OPTIONS | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
+| GET | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| POST | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| PUT | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| PATCH | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| DELETE | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| HEAD | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| OPTIONS | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
+| GET | `/api/projects/{id}/dns` | Project DNS |
+| POST | `/api/projects/{id}/dns` | Project DNS |
+| PUT | `/api/projects/{id}/dns` | Project DNS |
+| PATCH | `/api/projects/{id}/dns` | Project DNS |
+| DELETE | `/api/projects/{id}/dns` | Project DNS |
+| HEAD | `/api/projects/{id}/dns` | Project DNS |
+| OPTIONS | `/api/projects/{id}/dns` | Project DNS |
+| GET | `/api/projects/{id}/docs` | Docs List |
+| POST | `/api/projects/{id}/docs` | Docs Create |
+| GET | `/api/projects/{id}/docs/filesync` | Docs File Sync |
+| POST | `/api/projects/{id}/docs/fromfile` | Docs From File |
+| GET | `/api/projects/{id}/docs/graph` | Docs Graph |
+| PUT | `/api/projects/{id}/docs/{pageId}` | Docs Update |
+| DELETE | `/api/projects/{id}/docs/{pageId}` | Docs Delete |
+| GET | `/api/projects/{id}/iac-files` | Iac Files List |
+| POST | `/api/projects/{id}/iac-files/scan` | Iac Scan |
+| PATCH | `/api/projects/{id}/internal` | Project Internal Toggle |
+| GET | `/api/projects/{id}/members` | Project Members |
+| GET | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| POST | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| PUT | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| PATCH | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| DELETE | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| HEAD | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| OPTIONS | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
+| GET | `/api/projects/{id}/openreplay/config` | Open Replay Config |
+| GET | `/api/projects/{id}/openreplay/embed/{sessionId}` | Open Replay Embed |
+| POST | `/api/projects/{id}/openreplay/sessions` | Open Replay Sessions |
+| GET | `/api/projects/{id}/openreplay/tracker.js` | Open Replay Tracker |
+| POST | `/api/projects/{id}/opensearch/aggregations` | Open Search Aggregations |
+| GET | `/api/projects/{id}/opensearch/indices` | Open Search Indices |
+| POST | `/api/projects/{id}/opensearch/search` | Open Search Search |
+| GET | `/api/projects/{id}/ports` | Project Ports |
+| POST | `/api/projects/{id}/ports/assign` | Ports Assign |
+| GET | `/api/projects/{id}/ssh-config` | Tunnel SSH Config |
+| POST | `/api/projects/{id}/ssh-config` | Tunnel SSH Config |
+| PUT | `/api/projects/{id}/ssh-config` | Tunnel SSH Config |
+| GET | `/api/projects/{id}/terminal` | Project Terminal |
+| GET | `/api/projects/{id}/traces/network-events` | List Network Events |
+| GET | `/api/projects/{id}/traces/sessions` | List Trace Sessions |
+| GET | `/api/projects/{id}/traces/sessions/` | Get Trace Session |
+| GET | `/api/projects/{id}/traces/spans` | List Trace Spans |
+| GET | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| POST | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| PUT | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| PATCH | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| DELETE | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| HEAD | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| OPTIONS | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
+| GET | `/api/projects/{id}/utility` | Project Utility Get |
+| POST | `/api/projects/{id}/utility` | Project Utility Start |
+| DELETE | `/api/projects/{id}/utility` | Project Utility Stop |
+| POST | `/api/projects/{id}/utility/restart` | Project Utility Restart |
+| GET | `/api/projects/{id}/vlan` | Project VLAN |
+| POST | `/api/projects/{id}/vlan` | Project VLAN |
+| PUT | `/api/projects/{id}/vlan` | Project VLAN |
+| PATCH | `/api/projects/{id}/vlan` | Project VLAN |
+| DELETE | `/api/projects/{id}/vlan` | Project VLAN |
+| HEAD | `/api/projects/{id}/vlan` | Project VLAN |
+| OPTIONS | `/api/projects/{id}/vlan` | Project VLAN |
+
+## Self-hosted — Workspaces
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/workspaces` | Workspaces |
+| POST | `/api/workspaces` | Workspaces |
+| POST | `/api/workspaces/deploy` | K8s Deploy Branch |
+| POST | `/api/workspaces/redeploy` | Project Redeploy |
+| POST | `/api/workspaces/undeploy` | Project Undeploy |
+| GET | `/api/workspaces/{id}` | Workspace Delete |
+| POST | `/api/workspaces/{id}` | Workspace Delete |
+| PUT | `/api/workspaces/{id}` | Workspace Delete |
+| PATCH | `/api/workspaces/{id}` | Workspace Delete |
+| DELETE | `/api/workspaces/{id}` | Workspace Delete |
+| HEAD | `/api/workspaces/{id}` | Workspace Delete |
+| OPTIONS | `/api/workspaces/{id}` | Workspace Delete |
+| GET | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| POST | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| PUT | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| PATCH | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| DELETE | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| HEAD | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| OPTIONS | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
+| GET | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| POST | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| PUT | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| PATCH | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| DELETE | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| HEAD | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| OPTIONS | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
+| GET | `/api/workspaces/{id}/app-dropdown-prefs` | App Dropdown Prefs |
+| PUT | `/api/workspaces/{id}/app-dropdown-prefs` | App Dropdown Prefs |
+| PATCH | `/api/workspaces/{id}/apps/{appId}/category` | Workspace App Category Assignment |
+| GET | `/api/workspaces/{id}/containers/{cid}/logs` | Workspace Container Logs |
+| GET | `/api/workspaces/{id}/files` | Workspace Files List |
+| POST | `/api/workspaces/{id}/files/folder` | Workspace File Folder Create |
+| DELETE | `/api/workspaces/{id}/files/folder/{path...}` | Workspace File Folder Delete |
+| POST | `/api/workspaces/{id}/files/upload` | Workspace File Upload |
+| GET | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| POST | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| PUT | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| PATCH | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| DELETE | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| HEAD | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| OPTIONS | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
+| GET | `/api/workspaces/{id}/llm-providers` | Workspace LLM Providers |
+| PUT | `/api/workspaces/{id}/llm-providers` | Workspace LLM Providers |
+| DELETE | `/api/workspaces/{id}/llm-providers/{providerId}` | Workspace LLM Provider Delete |
+| GET | `/api/workspaces/{id}/members` | Workspace Members |
+| POST | `/api/workspaces/{id}/members` | Workspace Members |
+| DELETE | `/api/workspaces/{id}/members/{userId}` | Workspace Member Remove |
+| POST | `/api/workspaces/{id}/provision` | Workspace Provision |
+| GET | `/api/workspaces/{id}/proxy-keys` | Workspace Proxy Keys |
+| POST | `/api/workspaces/{id}/proxy-keys` | Workspace Proxy Keys |
+| DELETE | `/api/workspaces/{id}/proxy-keys/{name}` | Workspace Proxy Key Delete |
+| POST | `/api/workspaces/{id}/proxy-keys/{name}/reveal` | Workspace Proxy Key Reveal |
+| GET | `/api/workspaces/{id}/quota` | Workspace Quota Self |
+| POST | `/api/workspaces/{id}/repo` | Workspace Bind Repo |
+| GET | `/api/workspaces/{id}/terminal` | Workspace Terminal |
+
+## Self-hosted — Containers
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/containers/{id}/overview` | Container Overview |
+| GET | `/api/containers/{id}/ssh-target` | Container SSH Target |
+
+## Self-hosted — Dashboards
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/dashboard-presets` | Dashboard Presets |
+| POST | `/api/dashboard-presets` | Dashboard Presets |
+| PUT | `/api/dashboard-presets` | Dashboard Presets |
+| PATCH | `/api/dashboard-presets` | Dashboard Presets |
+| DELETE | `/api/dashboard-presets` | Dashboard Presets |
+| HEAD | `/api/dashboard-presets` | Dashboard Presets |
+| OPTIONS | `/api/dashboard-presets` | Dashboard Presets |
+| GET | `/api/dashboard-presets/utility` | Utility Dashboard Presets |
+| DELETE | `/api/dashboard-presets/{id}` | Dashboard Preset Delete |
+| GET | `/api/dashboards` | Dashboards |
+| POST | `/api/dashboards` | Dashboards |
+| PUT | `/api/dashboards` | Dashboards |
+| PATCH | `/api/dashboards` | Dashboards |
+| DELETE | `/api/dashboards` | Dashboards |
+| HEAD | `/api/dashboards` | Dashboards |
+| OPTIONS | `/api/dashboards` | Dashboards |
+| POST | `/api/dashboards/auto-provision` | Dashboards Auto Provision |
+| POST | `/api/dashboards/import-docer` | Import Docer |
+| GET | `/api/dashboards/{id}` | Dashboard By ID |
+| POST | `/api/dashboards/{id}` | Dashboard By ID |
+| PUT | `/api/dashboards/{id}` | Dashboard By ID |
+| PATCH | `/api/dashboards/{id}` | Dashboard By ID |
+| DELETE | `/api/dashboards/{id}` | Dashboard By ID |
+| HEAD | `/api/dashboards/{id}` | Dashboard By ID |
+| OPTIONS | `/api/dashboards/{id}` | Dashboard By ID |
+| POST | `/api/dashboards/{id}/apply-preset` | Dashboard Apply Preset |
+
+## Self-hosted — Apps
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/app-categories` | App Categories |
+| POST | `/api/app-categories` | App Categories |
+| GET | `/api/apps/{appId}/terminal` | App Terminal |
+| POST | `/api/apps/{appId}/webview-session` | App Webview Session |
+| POST | `/api/apps/{id}/deploy` | App Deploy |
+| POST | `/api/browser-runtimes/install` | Browser Runtime Install |
+
+## Self-hosted — Plugins
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/plugin-installations` | Plugin Installations |
+| POST | `/api/plugin-installations` | Plugin Installations |
+| DELETE | `/api/plugin-installations` | Plugin Installations |
+| DELETE | `/api/plugin-installations/{id}` | Plugin Installations |
+| POST | `/api/plugin-renderer/services/stop` | Renderer Scope Service Stop |
+| GET | `/api/plugin-renderer/sessions` | Plugin Renderer Sessions |
+| POST | `/api/plugin-renderer/sessions` | Plugin Renderer Sessions |
+| GET | `/api/plugin-renderer/sessions/{id}` | Plugin Renderer Session |
+| DELETE | `/api/plugin-renderer/sessions/{id}` | Plugin Renderer Session |
+| GET | `/api/plugin-renderer/sessions/{id}/console` | Renderer Console |
+| GET | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| POST | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| PUT | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| PATCH | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| DELETE | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| HEAD | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| OPTIONS | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
+| GET | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| POST | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| PUT | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| PATCH | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| DELETE | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| HEAD | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| OPTIONS | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
+| POST | `/api/plugin-renderer/sessions/{id}/ws-ticket` | Plugin Renderer WS Ticket |
+| GET | `/api/plugins` | Plugins |
+| GET | `/api/plugins/ad1/health` | Ad1Health |
+| DELETE | `/api/plugins/ad1/installations/{id}` | Ad1Uninstall |
+| GET | `/api/plugins/ad1/status` | Ad1Status |
+| GET | `/api/plugins/cloudflare/health` | Cloudflare Health |
+| DELETE | `/api/plugins/cloudflare/installations/{id}` | Cloudflare Uninstall |
+| GET | `/api/plugins/cloudflare/status` | Cloudflare Status |
+| GET | `/api/plugins/jules/activities` | Jules Activities |
+| GET | `/api/plugins/jules/events` | Jules Events Stream |
+| POST | `/api/plugins/jules/events` | Jules Events Stream |
+| PUT | `/api/plugins/jules/events` | Jules Events Stream |
+| PATCH | `/api/plugins/jules/events` | Jules Events Stream |
+| DELETE | `/api/plugins/jules/events` | Jules Events Stream |
+| HEAD | `/api/plugins/jules/events` | Jules Events Stream |
+| OPTIONS | `/api/plugins/jules/events` | Jules Events Stream |
+| GET | `/api/plugins/jules/sessions` | Jules Sessions |
+| POST | `/api/plugins/jules/sessions` | Jules Sessions |
+| PUT | `/api/plugins/jules/sessions` | Jules Sessions |
+| PATCH | `/api/plugins/jules/sessions` | Jules Sessions |
+| DELETE | `/api/plugins/jules/sessions` | Jules Sessions |
+| HEAD | `/api/plugins/jules/sessions` | Jules Sessions |
+| OPTIONS | `/api/plugins/jules/sessions` | Jules Sessions |
+| GET | `/api/plugins/jules/sources` | Jules Sources |
+| GET | `/api/plugins/meshsquad/chat` | Mesh Squad Chat |
+| POST | `/api/plugins/meshsquad/crews` | Mesh Squad Crew Create |
+| GET | `/api/plugins/meshsquad/health` | Mesh Squad Health |
+| DELETE | `/api/plugins/meshsquad/installations/{id}` | Mesh Squad Uninstall |
+| GET | `/api/plugins/meshsquad/logs` | Mesh Squad Logs |
+| GET | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| POST | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| PUT | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| PATCH | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| DELETE | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| HEAD | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| OPTIONS | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
+| GET | `/api/plugins/meshsquad/status` | Mesh Squad Status |
+| GET | `/api/plugins/openreplay/health` | Open Replay Health |
+| DELETE | `/api/plugins/openreplay/installations/{id}` | Open Replay Uninstall |
+| GET | `/api/plugins/openreplay/status` | Open Replay Status |
+| GET | `/api/plugins/opensearch/health` | Open Search Health |
+| DELETE | `/api/plugins/opensearch/installations/{id}` | Open Search Uninstall |
+| GET | `/api/plugins/opensearch/status` | Open Search Status |
+| DELETE | `/api/plugins/tailscale/installations/{id}` | Tailscale Uninstall |
+| GET | `/api/render/cache` | Render Cache |
+
+## Self-hosted — Networks
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/networks/nodes` | Networks Nodes |
+| GET | `/api/networks/policy` | Networks Policy |
+| PUT | `/api/networks/policy` | Networks Policy |
+| GET | `/api/networks/preauthkeys` | Networks Pre Auth Keys |
+| POST | `/api/networks/preauthkeys` | Networks Pre Auth Keys |
+| POST | `/api/networks/preauthkeys/expire` | Networks Pre Auth Key Expire |
+| GET | `/api/networks/users` | Networks Users |
+| POST | `/api/tailscale/invite` | Tailscale Invite |
+| GET | `/api/tailscale/status` | Tailscale Status |
+
+## Self-hosted — Utility
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/utility/llm-providers` | Utility LLM Providers |
+| PUT | `/api/utility/llm-providers` | Utility LLM Providers |
+| GET | `/utility/` | Utility Proxy |
+| POST | `/utility/` | Utility Proxy |
+| PUT | `/utility/` | Utility Proxy |
+| PATCH | `/utility/` | Utility Proxy |
+| DELETE | `/utility/` | Utility Proxy |
+| HEAD | `/utility/` | Utility Proxy |
+| OPTIONS | `/utility/` | Utility Proxy |
+
+## Self-hosted — Embedded Dashboards
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/embed` | Embed |
+| POST | `/embed` | Embed |
+| PUT | `/embed` | Embed |
+| PATCH | `/embed` | Embed |
+| DELETE | `/embed` | Embed |
+| HEAD | `/embed` | Embed |
+| OPTIONS | `/embed` | Embed |
+| GET | `/embed/` | Embed |
+| POST | `/embed/` | Embed |
+| PUT | `/embed/` | Embed |
+| PATCH | `/embed/` | Embed |
+| DELETE | `/embed/` | Embed |
+| HEAD | `/embed/` | Embed |
+| OPTIONS | `/embed/` | Embed |
+| GET | `/embed/opensearch/dashboards/{rest...}` | Open Search Dashboards Embed |
+
+## Self-hosted — Backups
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/backups` | Backups |
+| POST | `/api/backups` | Backups |
+| GET | `/api/backups/schedule` | Backups Schedule |
+| PUT | `/api/backups/schedule` | Backups Schedule |
+| GET | `/api/backups/tables` | Backups Tables |
+| POST | `/api/backups/tables` | Backups Tables |
+| PUT | `/api/backups/tables` | Backups Tables |
+| PATCH | `/api/backups/tables` | Backups Tables |
+| DELETE | `/api/backups/tables` | Backups Tables |
+| HEAD | `/api/backups/tables` | Backups Tables |
+| OPTIONS | `/api/backups/tables` | Backups Tables |
+| DELETE | `/api/backups/{id}` | Backup Delete |
+| GET | `/api/backups/{id}/download` | Backup Download |
+| POST | `/api/backups/{id}/restore` | Backup Restore |
+
+## Deployments — Deployments
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/deployments` | Deployments List |
+| GET | `/api/deployments/{id}/console` | Deploy Console |
+| POST | `/api/iac/{workspace}/compose` | Iac Compose Action |
+| POST | `/api/iac/{workspace}/terraform/{action}` | Iac Terraform Action |
+| POST | `/api/provision/cloud` | Provision Cloud |
+| PUT | `/api/provision/targets/{id}/secrets` | Provision Secret Put |
+| GET | `/api/provision/targets/{id}/secrets/status` | Provision Secret Status |
+| GET | `/api/servers/discover` | Projects Discover |
+| POST | `/api/servers/discover` | Projects Discover |
+| PUT | `/api/servers/discover` | Projects Discover |
+| PATCH | `/api/servers/discover` | Projects Discover |
+| DELETE | `/api/servers/discover` | Projects Discover |
+| HEAD | `/api/servers/discover` | Projects Discover |
+| OPTIONS | `/api/servers/discover` | Projects Discover |
+| POST | `/api/ssh/explore` | SSH Explore |
+
+## Deployments — DNS
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/dns/records` | DNS Records |
+| GET | `/api/dns/settings` | DNS Settings |
+| PUT | `/api/dns/settings` | DNS Settings |
+
+## Deployments — Data Lake
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/datalake/pipelines` | Datalake Pipelines |
+| GET | `/api/datalake/status` | Datalake Status |
+| GET | `/api/dbs/discovery` | DBS Discovery |
+
+## Deployments — Control Planes
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/control-planes` | Control Planes |
+| POST | `/api/control-planes` | Control Planes |
+| GET | `/api/control-planes/{id}` | Control Plane Delete |
+| POST | `/api/control-planes/{id}` | Control Plane Delete |
+| PUT | `/api/control-planes/{id}` | Control Plane Delete |
+| PATCH | `/api/control-planes/{id}` | Control Plane Delete |
+| DELETE | `/api/control-planes/{id}` | Control Plane Delete |
+| HEAD | `/api/control-planes/{id}` | Control Plane Delete |
+| OPTIONS | `/api/control-planes/{id}` | Control Plane Delete |
+| GET | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| POST | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| PUT | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| PATCH | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| DELETE | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| HEAD | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| OPTIONS | `/api/control-planes/{id}/deploy` | Control Plane Deploy |
+| GET | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| POST | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| PUT | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| PATCH | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| DELETE | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| HEAD | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| OPTIONS | `/api/control-planes/{id}/provision` | Control Plane Provision |
+| GET | `/api/control-planes/{id}/status` | Control Plane Status |
+| POST | `/api/control-planes/{id}/status` | Control Plane Status |
+| PUT | `/api/control-planes/{id}/status` | Control Plane Status |
+| PATCH | `/api/control-planes/{id}/status` | Control Plane Status |
+| DELETE | `/api/control-planes/{id}/status` | Control Plane Status |
+| HEAD | `/api/control-planes/{id}/status` | Control Plane Status |
+| OPTIONS | `/api/control-planes/{id}/status` | Control Plane Status |
+| GET | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+| POST | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+| PUT | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+| PATCH | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+| DELETE | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+| HEAD | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+| OPTIONS | `/api/control-planes/{id}/undeploy` | Control Plane Undeploy |
+
+## Deployments — Cloud
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| POST | `/api/cloud/exchange` | Cloud Exchange |
+| GET | `/api/cloud/status` | Cloud Status |
+
+## Deployments — Sessions
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/sessions` | Sessions |
+| POST | `/api/sessions` | Sessions |
+| POST | `/api/sessions/query` | Sessions Query |
+| GET | `/api/stream/{family}` | Stream Topic |
+| GET | `/api/stream/{family}/{id}` | Stream Topic |
+
+## Deployments — Workflows
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/workflows` | List |
+| POST | `/api/workflows` | Create |
+| POST | `/api/workflows/{id}` | Update |
+| DELETE | `/api/workflows/{id}` | Delete |
+| POST | `/api/workflows/{id}/run` | Run |
+
+## Deployments — Bridge
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/bridge/openapi.json` | Bridge Open API |
+| POST | `/api/bridge/provision` | Bridge Provision |
+| GET | `/api/bridge/stream` | Bridge Stream |
+| GET | `/api/bridge/tools` | Bridge Tools |
+
+## Collaboration — Chat
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/chat/` | Chat Proxy |
+| POST | `/api/chat/` | Chat Proxy |
+| PUT | `/api/chat/` | Chat Proxy |
+| PATCH | `/api/chat/` | Chat Proxy |
+| DELETE | `/api/chat/` | Chat Proxy |
+| HEAD | `/api/chat/` | Chat Proxy |
+| OPTIONS | `/api/chat/` | Chat Proxy |
+| GET | `/api/chat/channels` | Chat Proxy |
+| POST | `/api/chat/channels` | Chat Proxy |
+| GET | `/api/chat/channels/{id}/attachments` | Chat Attachment List |
+| POST | `/api/chat/channels/{id}/attachments` | Chat Attachment Upload |
+| GET | `/api/chat/channels/{id}/attachments/{aid}` | Chat Attachment Download |
+| DELETE | `/api/chat/channels/{id}/attachments/{aid}` | Chat Attachment Delete |
+| POST | `/api/chat/channels/{id}/messages` | Chat Compat Send |
+| GET | `/api/chat/health` | Chat Proxy |
+| POST | `/api/chat/registry/sync` | Chat Registry Sync |
+| GET | `/api/chat/teams` | Chat Proxy |
+| POST | `/api/chat/teams` | Chat Proxy |
+| GET | `/api/chat/teams/` | Chat Proxy |
+| POST | `/api/chat/teams/` | Chat Proxy |
+| PUT | `/api/chat/teams/` | Chat Proxy |
+| PATCH | `/api/chat/teams/` | Chat Proxy |
+| DELETE | `/api/chat/teams/` | Chat Proxy |
+| HEAD | `/api/chat/teams/` | Chat Proxy |
+| OPTIONS | `/api/chat/teams/` | Chat Proxy |
+
+## Collaboration — Agents
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/agents/analytics/summary` | Agent Analytics Summary |
+| POST | `/api/agents/logs` | Agent Logs |
+| GET | `/api/agents/logs/stream` | Agent Logs Stream |
+| POST | `/api/agents/logs/stream` | Agent Logs Stream |
+| PUT | `/api/agents/logs/stream` | Agent Logs Stream |
+| PATCH | `/api/agents/logs/stream` | Agent Logs Stream |
+| DELETE | `/api/agents/logs/stream` | Agent Logs Stream |
+| HEAD | `/api/agents/logs/stream` | Agent Logs Stream |
+| OPTIONS | `/api/agents/logs/stream` | Agent Logs Stream |
+| GET | `/api/experts` | Experts |
+| POST | `/api/experts` | Experts |
+| PUT | `/api/experts` | Experts |
+| DELETE | `/api/experts` | Experts |
+| POST | `/api/experts/execute` | Expert Execute |
+| GET | `/api/experts/runs` | Expert Runs |
+| GET | `/api/subagent-sessions` | require Identity |
+| POST | `/api/subagent-sessions` | require Identity |
+| GET | `/api/subagent-sessions/{id}` | require Identity |
+| DELETE | `/api/subagent-sessions/{id}` | require Identity |
+| POST | `/api/subagent-sessions/{id}/approve` | require Identity |
+| GET | `/api/subagents` | Subagents |
+| POST | `/api/subagents` | Subagents |
+| GET | `/api/subagents/guarded` | Guarded |
+| GET | `/api/subagents/{id}` | Subagent |
+| DELETE | `/api/subagents/{id}` | Subagent |
+| GET | `/api/subagents/{id}/events` | Events |
+| POST | `/api/subagents/{id}/events` | Events |
+| PUT | `/api/subagents/{id}/events` | Events |
+| PATCH | `/api/subagents/{id}/events` | Events |
+| DELETE | `/api/subagents/{id}/events` | Events |
+| HEAD | `/api/subagents/{id}/events` | Events |
+| OPTIONS | `/api/subagents/{id}/events` | Events |
+| GET | `/api/subagents/{id}/tool-calls` | Tool Calls |
+| POST | `/api/subagents/{id}/tool-calls` | Tool Calls |
+| POST | `/api/subagents/{id}/tool-calls/{callId}/approve` | Approve |
+| POST | `/api/subagents/{id}/tool-calls/{callId}/deny` | Deny |
+
+## Collaboration — Email
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/email/gmail/connect` | Gmail Connect |
+| POST | `/api/email/gmail/connect` | Gmail Connect |
+| GET | `/api/mail/accounts` | Mail Accounts |
+| POST | `/api/mail/accounts` | Mail Accounts |
+| PUT | `/api/mail/accounts` | Mail Accounts |
+| PATCH | `/api/mail/accounts` | Mail Accounts |
+| DELETE | `/api/mail/accounts` | Mail Accounts |
+| HEAD | `/api/mail/accounts` | Mail Accounts |
+| OPTIONS | `/api/mail/accounts` | Mail Accounts |
+| GET | `/api/mail/accounts/{id}` | Mail Account |
+| POST | `/api/mail/accounts/{id}` | Mail Account |
+| PUT | `/api/mail/accounts/{id}` | Mail Account |
+| PATCH | `/api/mail/accounts/{id}` | Mail Account |
+| DELETE | `/api/mail/accounts/{id}` | Mail Account |
+| HEAD | `/api/mail/accounts/{id}` | Mail Account |
+| OPTIONS | `/api/mail/accounts/{id}` | Mail Account |
+| POST | `/api/mail/accounts/{id}/probe` | Mail Account Probe |
+| POST | `/api/mail/accounts/{id}/send-test` | Mail Account Send Test |
+| POST | `/api/mail/autodiscover` | Mail Autodiscover |
+| POST | `/api/mail/probe` | Mail Probe |
+| GET | `/api/notifications/email/status` | Email Notification Status |
+| POST | `/api/notifications/email/test` | Email Notification Test |
+
+## Collaboration — Integrations
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/github/callback` | Git Hub Callback |
+| GET | `/api/github/repos` | Git Hub Repos |
+| GET | `/api/github/setup` | Git Hub Setup |
+| GET | `/api/github/status` | Git Hub Status |
+| POST | `/api/integrations/docs-sync/{provider}` | Docs Sync Pull |
+| POST | `/api/integrations/docs-workflow/demo` | Docs Workflow Demo |
+| GET | `/api/or/benchmarks` | OR Benchmarks |
+| POST | `/api/or/benchmarks` | OR Benchmarks |
+| PUT | `/api/or/benchmarks` | OR Benchmarks |
+| PATCH | `/api/or/benchmarks` | OR Benchmarks |
+| DELETE | `/api/or/benchmarks` | OR Benchmarks |
+| HEAD | `/api/or/benchmarks` | OR Benchmarks |
+| OPTIONS | `/api/or/benchmarks` | OR Benchmarks |
 
 ## Observability — Analytics
 
@@ -752,52 +997,6 @@
 | HEAD | `/api/sse/traces` | SSE Traces |
 | OPTIONS | `/api/sse/traces` | SSE Traces |
 
-## Observability — Cost & Billing
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/budgets` | Budgets |
-| POST | `/api/budgets` | Budgets |
-| DELETE | `/api/budgets` | Budgets |
-| POST | `/api/budgets/check` | Budget Check |
-| GET | `/api/cost-trackers` | Cost Trackers |
-| GET | `/api/cost/daily` | Cost Daily |
-| POST | `/api/cost/daily` | Cost Daily |
-| PUT | `/api/cost/daily` | Cost Daily |
-| PATCH | `/api/cost/daily` | Cost Daily |
-| DELETE | `/api/cost/daily` | Cost Daily |
-| HEAD | `/api/cost/daily` | Cost Daily |
-| OPTIONS | `/api/cost/daily` | Cost Daily |
-| GET | `/api/cost/monthly` | Cost Monthly |
-| POST | `/api/cost/monthly` | Cost Monthly |
-| PUT | `/api/cost/monthly` | Cost Monthly |
-| PATCH | `/api/cost/monthly` | Cost Monthly |
-| DELETE | `/api/cost/monthly` | Cost Monthly |
-| HEAD | `/api/cost/monthly` | Cost Monthly |
-| OPTIONS | `/api/cost/monthly` | Cost Monthly |
-| GET | `/api/cost/providers` | Cost Providers |
-| POST | `/api/cost/providers` | Cost Providers |
-| PUT | `/api/cost/providers` | Cost Providers |
-| PATCH | `/api/cost/providers` | Cost Providers |
-| DELETE | `/api/cost/providers` | Cost Providers |
-| HEAD | `/api/cost/providers` | Cost Providers |
-| OPTIONS | `/api/cost/providers` | Cost Providers |
-| GET | `/api/cost/savings` | Cost Savings |
-| POST | `/api/cost/savings` | Cost Savings |
-| PUT | `/api/cost/savings` | Cost Savings |
-| PATCH | `/api/cost/savings` | Cost Savings |
-| DELETE | `/api/cost/savings` | Cost Savings |
-| HEAD | `/api/cost/savings` | Cost Savings |
-| OPTIONS | `/api/cost/savings` | Cost Savings |
-| GET | `/api/cost/top` | Cost Top |
-| POST | `/api/cost/top` | Cost Top |
-| PUT | `/api/cost/top` | Cost Top |
-| PATCH | `/api/cost/top` | Cost Top |
-| DELETE | `/api/cost/top` | Cost Top |
-| HEAD | `/api/cost/top` | Cost Top |
-| OPTIONS | `/api/cost/top` | Cost Top |
-| GET | `/api/metering/self` | Self Metering |
-
 ## Observability — Health & Status
 
 | Method | Path | Summary |
@@ -889,326 +1088,81 @@
 | GET | `/api/traces/` | Session Replay |
 | GET | `/api/traces/{traceId}` | Get Trace |
 
-## Platform — Apps
+## Observability — Cost & Billing
 
 | Method | Path | Summary |
 | --- | --- | --- |
-| GET | `/api/app-categories` | App Categories |
-| POST | `/api/app-categories` | App Categories |
-| GET | `/api/apps/{appId}/terminal` | App Terminal |
-| POST | `/api/apps/{appId}/webview-session` | App Webview Session |
-| POST | `/api/apps/{id}/deploy` | App Deploy |
-| POST | `/api/browser-runtimes/install` | Browser Runtime Install |
+| GET | `/api/budgets` | Budgets |
+| POST | `/api/budgets` | Budgets |
+| DELETE | `/api/budgets` | Budgets |
+| POST | `/api/budgets/check` | Budget Check |
+| GET | `/api/cost-trackers` | Cost Trackers |
+| GET | `/api/cost/daily` | Cost Daily |
+| POST | `/api/cost/daily` | Cost Daily |
+| PUT | `/api/cost/daily` | Cost Daily |
+| PATCH | `/api/cost/daily` | Cost Daily |
+| DELETE | `/api/cost/daily` | Cost Daily |
+| HEAD | `/api/cost/daily` | Cost Daily |
+| OPTIONS | `/api/cost/daily` | Cost Daily |
+| GET | `/api/cost/monthly` | Cost Monthly |
+| POST | `/api/cost/monthly` | Cost Monthly |
+| PUT | `/api/cost/monthly` | Cost Monthly |
+| PATCH | `/api/cost/monthly` | Cost Monthly |
+| DELETE | `/api/cost/monthly` | Cost Monthly |
+| HEAD | `/api/cost/monthly` | Cost Monthly |
+| OPTIONS | `/api/cost/monthly` | Cost Monthly |
+| GET | `/api/cost/providers` | Cost Providers |
+| POST | `/api/cost/providers` | Cost Providers |
+| PUT | `/api/cost/providers` | Cost Providers |
+| PATCH | `/api/cost/providers` | Cost Providers |
+| DELETE | `/api/cost/providers` | Cost Providers |
+| HEAD | `/api/cost/providers` | Cost Providers |
+| OPTIONS | `/api/cost/providers` | Cost Providers |
+| GET | `/api/cost/savings` | Cost Savings |
+| POST | `/api/cost/savings` | Cost Savings |
+| PUT | `/api/cost/savings` | Cost Savings |
+| PATCH | `/api/cost/savings` | Cost Savings |
+| DELETE | `/api/cost/savings` | Cost Savings |
+| HEAD | `/api/cost/savings` | Cost Savings |
+| OPTIONS | `/api/cost/savings` | Cost Savings |
+| GET | `/api/cost/top` | Cost Top |
+| POST | `/api/cost/top` | Cost Top |
+| PUT | `/api/cost/top` | Cost Top |
+| PATCH | `/api/cost/top` | Cost Top |
+| DELETE | `/api/cost/top` | Cost Top |
+| HEAD | `/api/cost/top` | Cost Top |
+| OPTIONS | `/api/cost/top` | Cost Top |
+| GET | `/api/metering/self` | Self Metering |
 
-## Platform — Containers
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/containers/{id}/overview` | Container Overview |
-| GET | `/api/containers/{id}/ssh-target` | Container SSH Target |
-
-## Platform — Dashboards
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/dashboard-presets` | Dashboard Presets |
-| POST | `/api/dashboard-presets` | Dashboard Presets |
-| PUT | `/api/dashboard-presets` | Dashboard Presets |
-| PATCH | `/api/dashboard-presets` | Dashboard Presets |
-| DELETE | `/api/dashboard-presets` | Dashboard Presets |
-| HEAD | `/api/dashboard-presets` | Dashboard Presets |
-| OPTIONS | `/api/dashboard-presets` | Dashboard Presets |
-| GET | `/api/dashboard-presets/utility` | Utility Dashboard Presets |
-| DELETE | `/api/dashboard-presets/{id}` | Dashboard Preset Delete |
-| GET | `/api/dashboards` | Dashboards |
-| POST | `/api/dashboards` | Dashboards |
-| PUT | `/api/dashboards` | Dashboards |
-| PATCH | `/api/dashboards` | Dashboards |
-| DELETE | `/api/dashboards` | Dashboards |
-| HEAD | `/api/dashboards` | Dashboards |
-| OPTIONS | `/api/dashboards` | Dashboards |
-| POST | `/api/dashboards/auto-provision` | Dashboards Auto Provision |
-| POST | `/api/dashboards/import-docer` | Import Docer |
-| GET | `/api/dashboards/{id}` | Dashboard By ID |
-| POST | `/api/dashboards/{id}` | Dashboard By ID |
-| PUT | `/api/dashboards/{id}` | Dashboard By ID |
-| PATCH | `/api/dashboards/{id}` | Dashboard By ID |
-| DELETE | `/api/dashboards/{id}` | Dashboard By ID |
-| HEAD | `/api/dashboards/{id}` | Dashboard By ID |
-| OPTIONS | `/api/dashboards/{id}` | Dashboard By ID |
-| POST | `/api/dashboards/{id}/apply-preset` | Dashboard Apply Preset |
-
-## Platform — Deployments
+## Security — Security
 
 | Method | Path | Summary |
 | --- | --- | --- |
-| GET | `/api/deployments` | Deployments List |
-| GET | `/api/deployments/{id}/console` | Deploy Console |
-| POST | `/api/iac/{workspace}/compose` | Iac Compose Action |
-| POST | `/api/iac/{workspace}/terraform/{action}` | Iac Terraform Action |
-| POST | `/api/provision/cloud` | Provision Cloud |
-| PUT | `/api/provision/targets/{id}/secrets` | Provision Secret Put |
-| GET | `/api/provision/targets/{id}/secrets/status` | Provision Secret Status |
-| GET | `/api/servers/discover` | Projects Discover |
-| POST | `/api/servers/discover` | Projects Discover |
-| PUT | `/api/servers/discover` | Projects Discover |
-| PATCH | `/api/servers/discover` | Projects Discover |
-| DELETE | `/api/servers/discover` | Projects Discover |
-| HEAD | `/api/servers/discover` | Projects Discover |
-| OPTIONS | `/api/servers/discover` | Projects Discover |
-| POST | `/api/ssh/explore` | SSH Explore |
-
-## Platform — Plugins
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/plugin-installations` | Plugin Installations |
-| POST | `/api/plugin-installations` | Plugin Installations |
-| DELETE | `/api/plugin-installations` | Plugin Installations |
-| DELETE | `/api/plugin-installations/{id}` | Plugin Installations |
-| POST | `/api/plugin-renderer/services/stop` | Renderer Scope Service Stop |
-| GET | `/api/plugin-renderer/sessions` | Plugin Renderer Sessions |
-| POST | `/api/plugin-renderer/sessions` | Plugin Renderer Sessions |
-| GET | `/api/plugin-renderer/sessions/{id}` | Plugin Renderer Session |
-| DELETE | `/api/plugin-renderer/sessions/{id}` | Plugin Renderer Session |
-| GET | `/api/plugin-renderer/sessions/{id}/console` | Renderer Console |
-| GET | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| POST | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| PUT | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| PATCH | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| DELETE | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| HEAD | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| OPTIONS | `/api/plugin-renderer/sessions/{id}/tunnel/{port}` | Plugin Renderer Tunnel |
-| GET | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| POST | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| PUT | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| PATCH | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| DELETE | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| HEAD | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| OPTIONS | `/api/plugin-renderer/sessions/{id}/tunnel/{port}/` | Plugin Renderer Tunnel |
-| POST | `/api/plugin-renderer/sessions/{id}/ws-ticket` | Plugin Renderer WS Ticket |
-| GET | `/api/plugins` | Plugins |
-| GET | `/api/plugins/ad1/health` | Ad1Health |
-| DELETE | `/api/plugins/ad1/installations/{id}` | Ad1Uninstall |
-| GET | `/api/plugins/ad1/status` | Ad1Status |
-| GET | `/api/plugins/cloudflare/health` | Cloudflare Health |
-| DELETE | `/api/plugins/cloudflare/installations/{id}` | Cloudflare Uninstall |
-| GET | `/api/plugins/cloudflare/status` | Cloudflare Status |
-| GET | `/api/plugins/jules/activities` | Jules Activities |
-| GET | `/api/plugins/jules/events` | Jules Events Stream |
-| POST | `/api/plugins/jules/events` | Jules Events Stream |
-| PUT | `/api/plugins/jules/events` | Jules Events Stream |
-| PATCH | `/api/plugins/jules/events` | Jules Events Stream |
-| DELETE | `/api/plugins/jules/events` | Jules Events Stream |
-| HEAD | `/api/plugins/jules/events` | Jules Events Stream |
-| OPTIONS | `/api/plugins/jules/events` | Jules Events Stream |
-| GET | `/api/plugins/jules/sessions` | Jules Sessions |
-| POST | `/api/plugins/jules/sessions` | Jules Sessions |
-| PUT | `/api/plugins/jules/sessions` | Jules Sessions |
-| PATCH | `/api/plugins/jules/sessions` | Jules Sessions |
-| DELETE | `/api/plugins/jules/sessions` | Jules Sessions |
-| HEAD | `/api/plugins/jules/sessions` | Jules Sessions |
-| OPTIONS | `/api/plugins/jules/sessions` | Jules Sessions |
-| GET | `/api/plugins/jules/sources` | Jules Sources |
-| GET | `/api/plugins/meshsquad/chat` | Mesh Squad Chat |
-| POST | `/api/plugins/meshsquad/crews` | Mesh Squad Crew Create |
-| GET | `/api/plugins/meshsquad/health` | Mesh Squad Health |
-| DELETE | `/api/plugins/meshsquad/installations/{id}` | Mesh Squad Uninstall |
-| GET | `/api/plugins/meshsquad/logs` | Mesh Squad Logs |
-| GET | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| POST | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| PUT | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| PATCH | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| DELETE | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| HEAD | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| OPTIONS | `/api/plugins/meshsquad/proxy/` | Mesh Squad Proxy |
-| GET | `/api/plugins/meshsquad/status` | Mesh Squad Status |
-| GET | `/api/plugins/openreplay/health` | Open Replay Health |
-| DELETE | `/api/plugins/openreplay/installations/{id}` | Open Replay Uninstall |
-| GET | `/api/plugins/openreplay/status` | Open Replay Status |
-| GET | `/api/plugins/opensearch/health` | Open Search Health |
-| DELETE | `/api/plugins/opensearch/installations/{id}` | Open Search Uninstall |
-| GET | `/api/plugins/opensearch/status` | Open Search Status |
-| DELETE | `/api/plugins/tailscale/installations/{id}` | Tailscale Uninstall |
-| GET | `/api/render/cache` | Render Cache |
-
-## Platform — Projects
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/project-roles` | Project Roles |
-| POST | `/api/project-roles` | Project Roles |
-| DELETE | `/api/project-roles/{id}` | Project Role Delete |
-| GET | `/api/projects` | Projects List |
-| POST | `/api/projects` | Projects List |
-| POST | `/api/projects/deploy` | K8s Deploy Branch |
-| GET | `/api/projects/discover` | Projects Discover |
-| POST | `/api/projects/discover` | Projects Discover |
-| PUT | `/api/projects/discover` | Projects Discover |
-| PATCH | `/api/projects/discover` | Projects Discover |
-| DELETE | `/api/projects/discover` | Projects Discover |
-| HEAD | `/api/projects/discover` | Projects Discover |
-| OPTIONS | `/api/projects/discover` | Projects Discover |
-| POST | `/api/projects/redeploy` | Project Redeploy |
-| POST | `/api/projects/task/apply` | Task Apply |
-| GET | `/api/projects/task/ci` | Task CI |
-| POST | `/api/projects/task/discard` | Task Discard |
-| GET | `/api/projects/task/git-log` | Task Git Log |
-| POST | `/api/projects/task/start` | Task Start |
-| GET | `/api/projects/task/status` | Task Status |
-| GET | `/api/projects/task/tree` | Task Tree |
-| GET | `/api/projects/task/versions` | Task Versions |
-| POST | `/api/projects/undeploy` | Project Undeploy |
-| DELETE | `/api/projects/{id}` | Project Delete |
-| GET | `/api/projects/{id}/containers` | Project Containers |
-| GET | `/api/projects/{id}/containers/{cid}/logs` | Container Logs |
-| GET | `/api/projects/{id}/dashboards` | Project Dashboards |
-| GET | `/api/projects/{id}/deployments` | Project Deployments |
-| POST | `/api/projects/{id}/deployments` | Project Deployments |
-| GET | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| POST | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| PUT | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| PATCH | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| DELETE | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| HEAD | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| OPTIONS | `/api/projects/{id}/deployments/{depId}` | Project Deployment |
-| GET | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| POST | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| PUT | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| PATCH | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| DELETE | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| HEAD | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| OPTIONS | `/api/projects/{id}/deployments/{depId}/redeploy` | Project Deployment Redeploy |
-| GET | `/api/projects/{id}/dns` | Project DNS |
-| POST | `/api/projects/{id}/dns` | Project DNS |
-| PUT | `/api/projects/{id}/dns` | Project DNS |
-| PATCH | `/api/projects/{id}/dns` | Project DNS |
-| DELETE | `/api/projects/{id}/dns` | Project DNS |
-| HEAD | `/api/projects/{id}/dns` | Project DNS |
-| OPTIONS | `/api/projects/{id}/dns` | Project DNS |
-| GET | `/api/projects/{id}/docs` | Docs List |
-| POST | `/api/projects/{id}/docs` | Docs Create |
-| GET | `/api/projects/{id}/docs/filesync` | Docs File Sync |
-| POST | `/api/projects/{id}/docs/fromfile` | Docs From File |
-| GET | `/api/projects/{id}/docs/graph` | Docs Graph |
-| PUT | `/api/projects/{id}/docs/{pageId}` | Docs Update |
-| DELETE | `/api/projects/{id}/docs/{pageId}` | Docs Delete |
-| GET | `/api/projects/{id}/iac-files` | Iac Files List |
-| POST | `/api/projects/{id}/iac-files/scan` | Iac Scan |
-| PATCH | `/api/projects/{id}/internal` | Project Internal Toggle |
-| GET | `/api/projects/{id}/members` | Project Members |
-| GET | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| POST | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| PUT | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| PATCH | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| DELETE | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| HEAD | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| OPTIONS | `/api/projects/{id}/monitoring` | Tunnel Monitoring |
-| GET | `/api/projects/{id}/openreplay/config` | Open Replay Config |
-| GET | `/api/projects/{id}/openreplay/embed/{sessionId}` | Open Replay Embed |
-| POST | `/api/projects/{id}/openreplay/sessions` | Open Replay Sessions |
-| GET | `/api/projects/{id}/openreplay/tracker.js` | Open Replay Tracker |
-| POST | `/api/projects/{id}/opensearch/aggregations` | Open Search Aggregations |
-| GET | `/api/projects/{id}/opensearch/indices` | Open Search Indices |
-| POST | `/api/projects/{id}/opensearch/search` | Open Search Search |
-| GET | `/api/projects/{id}/ports` | Project Ports |
-| POST | `/api/projects/{id}/ports/assign` | Ports Assign |
-| GET | `/api/projects/{id}/ssh-config` | Tunnel SSH Config |
-| POST | `/api/projects/{id}/ssh-config` | Tunnel SSH Config |
-| PUT | `/api/projects/{id}/ssh-config` | Tunnel SSH Config |
-| GET | `/api/projects/{id}/terminal` | Project Terminal |
-| GET | `/api/projects/{id}/traces/network-events` | List Network Events |
-| GET | `/api/projects/{id}/traces/sessions` | List Trace Sessions |
-| GET | `/api/projects/{id}/traces/sessions/` | Get Trace Session |
-| GET | `/api/projects/{id}/traces/spans` | List Trace Spans |
-| GET | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| POST | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| PUT | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| PATCH | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| DELETE | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| HEAD | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| OPTIONS | `/api/projects/{id}/tunnel/{port}` | Tunnel Proxy |
-| GET | `/api/projects/{id}/utility` | Project Utility Get |
-| POST | `/api/projects/{id}/utility` | Project Utility Start |
-| DELETE | `/api/projects/{id}/utility` | Project Utility Stop |
-| POST | `/api/projects/{id}/utility/restart` | Project Utility Restart |
-| GET | `/api/projects/{id}/vlan` | Project VLAN |
-| POST | `/api/projects/{id}/vlan` | Project VLAN |
-| PUT | `/api/projects/{id}/vlan` | Project VLAN |
-| PATCH | `/api/projects/{id}/vlan` | Project VLAN |
-| DELETE | `/api/projects/{id}/vlan` | Project VLAN |
-| HEAD | `/api/projects/{id}/vlan` | Project VLAN |
-| OPTIONS | `/api/projects/{id}/vlan` | Project VLAN |
-
-## Platform — Workspaces
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/workspaces` | Workspaces |
-| POST | `/api/workspaces` | Workspaces |
-| POST | `/api/workspaces/deploy` | K8s Deploy Branch |
-| POST | `/api/workspaces/redeploy` | Project Redeploy |
-| POST | `/api/workspaces/undeploy` | Project Undeploy |
-| GET | `/api/workspaces/{id}` | Workspace Delete |
-| POST | `/api/workspaces/{id}` | Workspace Delete |
-| PUT | `/api/workspaces/{id}` | Workspace Delete |
-| PATCH | `/api/workspaces/{id}` | Workspace Delete |
-| DELETE | `/api/workspaces/{id}` | Workspace Delete |
-| HEAD | `/api/workspaces/{id}` | Workspace Delete |
-| OPTIONS | `/api/workspaces/{id}` | Workspace Delete |
-| GET | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| POST | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| PUT | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| PATCH | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| DELETE | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| HEAD | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| OPTIONS | `/api/workspaces/{id}/app-categories` | Workspace App Categories |
-| GET | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| POST | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| PUT | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| PATCH | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| DELETE | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| HEAD | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| OPTIONS | `/api/workspaces/{id}/app-categories/{catId}` | Workspace App Category |
-| GET | `/api/workspaces/{id}/app-dropdown-prefs` | App Dropdown Prefs |
-| PUT | `/api/workspaces/{id}/app-dropdown-prefs` | App Dropdown Prefs |
-| PATCH | `/api/workspaces/{id}/apps/{appId}/category` | Workspace App Category Assignment |
-| GET | `/api/workspaces/{id}/containers/{cid}/logs` | Workspace Container Logs |
-| GET | `/api/workspaces/{id}/files` | Workspace Files List |
-| POST | `/api/workspaces/{id}/files/folder` | Workspace File Folder Create |
-| DELETE | `/api/workspaces/{id}/files/folder/{path...}` | Workspace File Folder Delete |
-| POST | `/api/workspaces/{id}/files/upload` | Workspace File Upload |
-| GET | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| POST | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| PUT | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| PATCH | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| DELETE | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| HEAD | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| OPTIONS | `/api/workspaces/{id}/files/{filename}` | Workspace File Get Or Delete |
-| GET | `/api/workspaces/{id}/llm-providers` | Workspace LLM Providers |
-| PUT | `/api/workspaces/{id}/llm-providers` | Workspace LLM Providers |
-| DELETE | `/api/workspaces/{id}/llm-providers/{providerId}` | Workspace LLM Provider Delete |
-| GET | `/api/workspaces/{id}/members` | Workspace Members |
-| POST | `/api/workspaces/{id}/members` | Workspace Members |
-| DELETE | `/api/workspaces/{id}/members/{userId}` | Workspace Member Remove |
-| POST | `/api/workspaces/{id}/provision` | Workspace Provision |
-| GET | `/api/workspaces/{id}/proxy-keys` | Workspace Proxy Keys |
-| POST | `/api/workspaces/{id}/proxy-keys` | Workspace Proxy Keys |
-| DELETE | `/api/workspaces/{id}/proxy-keys/{name}` | Workspace Proxy Key Delete |
-| POST | `/api/workspaces/{id}/proxy-keys/{name}/reveal` | Workspace Proxy Key Reveal |
-| GET | `/api/workspaces/{id}/quota` | Workspace Quota Self |
-| POST | `/api/workspaces/{id}/repo` | Workspace Bind Repo |
-| GET | `/api/workspaces/{id}/terminal` | Workspace Terminal |
-
-## Security — Guardrails
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/llm/policies` | Guard Policies List |
-| GET | `/api/llm/policies/{project}` | Guard Policy One |
-| POST | `/api/llm/policies/{project}` | Guard Policy One |
-| PUT | `/api/llm/policies/{project}` | Guard Policy One |
-| DELETE | `/api/llm/policies/{project}` | Guard Policy One |
+| GET | `/api/firewall/config` | Firewall Config |
+| POST | `/api/firewall/report` | Firewall Report |
+| GET | `/api/firewall/rules` | Firewall Rules |
+| POST | `/api/firewall/rules` | Firewall Rules |
+| DELETE | `/api/firewall/rules` | Firewall Rules |
+| GET | `/api/firewall/status` | Firewall Status |
+| POST | `/api/security/agent-scan` | Agent Scan |
+| GET | `/api/security/audit` | Security Audit |
+| GET | `/api/security/events` | Security Events |
+| GET | `/api/security/events/stream` | Security Events Stream |
+| GET | `/api/security/exposure` | Security Exposure Route |
+| POST | `/api/security/findings/dismiss` | Finding Dismiss |
+| GET | `/api/security/findings/dismissed` | Finding Dismissed |
+| POST | `/api/security/freeze` | Security Freeze |
+| GET | `/api/security/posture/self` | Posture Self |
+| GET | `/api/security/quarantine` | Security Quarantine |
+| POST | `/api/security/quarantine/release` | Security Quarantine Release |
+| POST | `/api/security/release` | Security Release |
+| GET | `/api/security/report/{eventId}` | Security Report |
+| GET | `/api/security/secrets/findings` | Secrets Findings |
+| POST | `/api/security/secrets/findings/status` | Secrets Finding Status |
+| POST | `/api/security/secrets/scan` | Secrets Scan |
+| GET | `/api/security/threat-correlation` | Threat Correlation |
+| GET | `/api/suricata/status` | Suricata Status |
+| GET | `/api/threat-responder/status` | Threat Responder Status |
 
 ## Security — Secrets & Vault
 
@@ -1260,36 +1214,6 @@
 | HEAD | `/api/vault/tokens/{id}/revoke` | Vault Tokens |
 | OPTIONS | `/api/vault/tokens/{id}/revoke` | Vault Tokens |
 
-## Security — Security
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/firewall/config` | Firewall Config |
-| POST | `/api/firewall/report` | Firewall Report |
-| GET | `/api/firewall/rules` | Firewall Rules |
-| POST | `/api/firewall/rules` | Firewall Rules |
-| DELETE | `/api/firewall/rules` | Firewall Rules |
-| GET | `/api/firewall/status` | Firewall Status |
-| POST | `/api/security/agent-scan` | Agent Scan |
-| GET | `/api/security/audit` | Security Audit |
-| GET | `/api/security/events` | Security Events |
-| GET | `/api/security/events/stream` | Security Events Stream |
-| GET | `/api/security/exposure` | Security Exposure Route |
-| POST | `/api/security/findings/dismiss` | Finding Dismiss |
-| GET | `/api/security/findings/dismissed` | Finding Dismissed |
-| POST | `/api/security/freeze` | Security Freeze |
-| GET | `/api/security/posture/self` | Posture Self |
-| GET | `/api/security/quarantine` | Security Quarantine |
-| POST | `/api/security/quarantine/release` | Security Quarantine Release |
-| POST | `/api/security/release` | Security Release |
-| GET | `/api/security/report/{eventId}` | Security Report |
-| GET | `/api/security/secrets/findings` | Secrets Findings |
-| POST | `/api/security/secrets/findings/status` | Secrets Finding Status |
-| POST | `/api/security/secrets/scan` | Secrets Scan |
-| GET | `/api/security/threat-correlation` | Threat Correlation |
-| GET | `/api/suricata/status` | Suricata Status |
-| GET | `/api/threat-responder/status` | Threat Responder Status |
-
 ## Security — Teams & RBAC
 
 | Method | Path | Summary |
@@ -1321,7 +1245,136 @@
 | POST | `/api/users/{sub}/projects` | User Projects |
 | GET | `/api/users/{sub}/workspaces` | User Workspaces |
 
-## Utilities — Administration
+## Security — Guardrails
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/llm/policies` | Guard Policies List |
+| GET | `/api/llm/policies/{project}` | Guard Policy One |
+| POST | `/api/llm/policies/{project}` | Guard Policy One |
+| PUT | `/api/llm/policies/{project}` | Guard Policy One |
+| DELETE | `/api/llm/policies/{project}` | Guard Policy One |
+
+## System — System
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/` | Not Found |
+| POST | `/` | Not Found |
+| PUT | `/` | Not Found |
+| PATCH | `/` | Not Found |
+| DELETE | `/` | Not Found |
+| HEAD | `/` | Not Found |
+| OPTIONS | `/` | Not Found |
+| GET | `/api/beta/gate` | Beta Gate |
+| POST | `/api/beta/gate` | Beta Gate |
+| GET | `/api/capabilities` | Capabilities |
+| GET | `/api/compression/preview` | Compression Preview |
+| POST | `/api/compression/preview` | Compression Preview |
+| PUT | `/api/compression/preview` | Compression Preview |
+| PATCH | `/api/compression/preview` | Compression Preview |
+| DELETE | `/api/compression/preview` | Compression Preview |
+| HEAD | `/api/compression/preview` | Compression Preview |
+| OPTIONS | `/api/compression/preview` | Compression Preview |
+| GET | `/api/compression/stats` | Compression Stats |
+| POST | `/api/compression/stats` | Compression Stats |
+| PUT | `/api/compression/stats` | Compression Stats |
+| PATCH | `/api/compression/stats` | Compression Stats |
+| DELETE | `/api/compression/stats` | Compression Stats |
+| HEAD | `/api/compression/stats` | Compression Stats |
+| OPTIONS | `/api/compression/stats` | Compression Stats |
+| GET | `/api/dedup` | Dedup |
+| POST | `/api/dedup` | Dedup |
+| GET | `/api/iana` | IANA |
+| GET | `/api/ontology` | Ontology |
+| POST | `/api/sanitize/string` | Sanitize String |
+| GET | `/health` | Health |
+| POST | `/health` | Health |
+| PUT | `/health` | Health |
+| PATCH | `/health` | Health |
+| DELETE | `/health` | Health |
+| HEAD | `/health` | Health |
+| OPTIONS | `/health` | Health |
+| GET | `/metrics` | Metrics |
+| HEAD | `/metrics` | Metrics |
+| GET | `/openapi.json` | Open API |
+| GET | `/ready` | Ready |
+| POST | `/ready` | Ready |
+| PUT | `/ready` | Ready |
+| PATCH | `/ready` | Ready |
+| DELETE | `/ready` | Ready |
+| HEAD | `/ready` | Ready |
+| OPTIONS | `/ready` | Ready |
+
+## System — Authentication
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/auth/callback` | OIDC Callback |
+| POST | `/api/auth/callback` | OIDC Callback |
+| PUT | `/api/auth/callback` | OIDC Callback |
+| PATCH | `/api/auth/callback` | OIDC Callback |
+| DELETE | `/api/auth/callback` | OIDC Callback |
+| HEAD | `/api/auth/callback` | OIDC Callback |
+| OPTIONS | `/api/auth/callback` | OIDC Callback |
+| POST | `/api/auth/change-email` | Auth Change Email |
+| POST | `/api/auth/change-password` | Auth Change Password |
+| GET | `/api/auth/forgot-password` | Auth Forgot Password |
+| POST | `/api/auth/forgot-password` | Auth Forgot Password |
+| PUT | `/api/auth/forgot-password` | Auth Forgot Password |
+| PATCH | `/api/auth/forgot-password` | Auth Forgot Password |
+| DELETE | `/api/auth/forgot-password` | Auth Forgot Password |
+| HEAD | `/api/auth/forgot-password` | Auth Forgot Password |
+| OPTIONS | `/api/auth/forgot-password` | Auth Forgot Password |
+| POST | `/api/auth/login` | Auth Login |
+| POST | `/api/auth/logout` | Auth Logout |
+| GET | `/api/auth/oidc/login` | OIDC Login |
+| POST | `/api/auth/oidc/login` | OIDC Login |
+| PUT | `/api/auth/oidc/login` | OIDC Login |
+| PATCH | `/api/auth/oidc/login` | OIDC Login |
+| DELETE | `/api/auth/oidc/login` | OIDC Login |
+| HEAD | `/api/auth/oidc/login` | OIDC Login |
+| OPTIONS | `/api/auth/oidc/login` | OIDC Login |
+| GET | `/api/auth/reset-password` | Auth Reset Password |
+| POST | `/api/auth/reset-password` | Auth Reset Password |
+| PUT | `/api/auth/reset-password` | Auth Reset Password |
+| PATCH | `/api/auth/reset-password` | Auth Reset Password |
+| DELETE | `/api/auth/reset-password` | Auth Reset Password |
+| HEAD | `/api/auth/reset-password` | Auth Reset Password |
+| OPTIONS | `/api/auth/reset-password` | Auth Reset Password |
+| GET | `/api/auth/sessions` | Auth Sessions |
+| POST | `/api/auth/sessions/refresh` | Auth Session Refresh |
+| POST | `/api/auth/sessions/revoke` | Auth Session Revoke |
+| POST | `/api/auth/setup` | Auth Setup |
+| GET | `/api/auth/status` | Auth Status |
+| POST | `/api/auth/status` | Auth Status |
+| PUT | `/api/auth/status` | Auth Status |
+| PATCH | `/api/auth/status` | Auth Status |
+| DELETE | `/api/auth/status` | Auth Status |
+| HEAD | `/api/auth/status` | Auth Status |
+| OPTIONS | `/api/auth/status` | Auth Status |
+| POST | `/api/auth/step-up` | Auth Step Up |
+| GET | `/api/identity/cert` | require Posture |
+
+## System — SDK
+
+| Method | Path | Summary |
+| --- | --- | --- |
+| GET | `/api/sdk/dashboards` | SDK Dashboards |
+| POST | `/api/sdk/dashboards` | SDK Dashboards |
+| PUT | `/api/sdk/dashboards` | SDK Dashboards |
+| PATCH | `/api/sdk/dashboards` | SDK Dashboards |
+| DELETE | `/api/sdk/dashboards` | SDK Dashboards |
+| HEAD | `/api/sdk/dashboards` | SDK Dashboards |
+| OPTIONS | `/api/sdk/dashboards` | SDK Dashboards |
+| POST | `/api/sdk/dashboards/{id}/apply-preset` | SDK Apply Preset |
+| GET | `/api/sdk/logs` | SDK Logs |
+| POST | `/api/sdk/logs` | SDK Logs |
+| GET | `/api/sdk/logs/stream` | SDK Logs Stream |
+| GET | `/api/sdk/secrets` | SDK Secrets |
+| POST | `/api/sdk/sessions` | SDK Sessions |
+
+## System — Administration
 
 | Method | Path | Summary |
 | --- | --- | --- |
@@ -1341,59 +1394,6 @@
 | POST | `/api/admin/metering/report` | Metering Report |
 | GET | `/api/admin/workspaces/{id}/quota` | Admin Workspace Quota Get |
 | PUT | `/api/admin/workspaces/{id}/quota` | Admin Workspace Quota Put |
-
-## Utilities — Backups
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/backups` | Backups |
-| POST | `/api/backups` | Backups |
-| GET | `/api/backups/schedule` | Backups Schedule |
-| PUT | `/api/backups/schedule` | Backups Schedule |
-| GET | `/api/backups/tables` | Backups Tables |
-| POST | `/api/backups/tables` | Backups Tables |
-| PUT | `/api/backups/tables` | Backups Tables |
-| PATCH | `/api/backups/tables` | Backups Tables |
-| DELETE | `/api/backups/tables` | Backups Tables |
-| HEAD | `/api/backups/tables` | Backups Tables |
-| OPTIONS | `/api/backups/tables` | Backups Tables |
-| DELETE | `/api/backups/{id}` | Backup Delete |
-| GET | `/api/backups/{id}/download` | Backup Download |
-| POST | `/api/backups/{id}/restore` | Backup Restore |
-
-## Utilities — Embedded Dashboards
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/embed` | Embed |
-| POST | `/embed` | Embed |
-| PUT | `/embed` | Embed |
-| PATCH | `/embed` | Embed |
-| DELETE | `/embed` | Embed |
-| HEAD | `/embed` | Embed |
-| OPTIONS | `/embed` | Embed |
-| GET | `/embed/` | Embed |
-| POST | `/embed/` | Embed |
-| PUT | `/embed/` | Embed |
-| PATCH | `/embed/` | Embed |
-| DELETE | `/embed/` | Embed |
-| HEAD | `/embed/` | Embed |
-| OPTIONS | `/embed/` | Embed |
-| GET | `/embed/opensearch/dashboards/{rest...}` | Open Search Dashboards Embed |
-
-## Utilities — Utility
-
-| Method | Path | Summary |
-| --- | --- | --- |
-| GET | `/api/utility/llm-providers` | Utility LLM Providers |
-| PUT | `/api/utility/llm-providers` | Utility LLM Providers |
-| GET | `/utility/` | Utility Proxy |
-| POST | `/utility/` | Utility Proxy |
-| PUT | `/utility/` | Utility Proxy |
-| PATCH | `/utility/` | Utility Proxy |
-| DELETE | `/utility/` | Utility Proxy |
-| HEAD | `/utility/` | Utility Proxy |
-| OPTIONS | `/utility/` | Utility Proxy |
 
 ## Other — Agent Types
 
