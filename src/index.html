@@ -18,8 +18,8 @@ nav.tabs a.active { color: #fff; background: #ffffff1f; border-color: #ffffff35;
 header .links { margin-left: auto; display: flex; gap: .9rem; font-size: .9em; }
 header .links a { color: #8ab4f8; text-decoration: none; }
 header .links a:hover { text-decoration: underline; }
-.gateway-bar { display: none; gap: .6rem; align-items: center; padding: .8rem 1.25rem; border-bottom: 1px solid #ffffff18; font-size: .9em; color: #b8bec9; flex-wrap: wrap; }
-.gateway-bar.visible { display: flex; }
+.gateway-bar { display: flex; gap: .6rem; align-items: center; padding: .8rem 1.25rem; border-bottom: 1px solid #ffffff18; font-size: .9em; color: #b8bec9; flex-wrap: wrap; }
+.gateway-bar label { white-space: nowrap; }
 .gateway-bar input { background: #ffffff0f; border: 1px solid #ffffff2b; color: #e7e9ee; padding: .45em .7em; border-radius: 6px; min-width: 300px; flex: 1; max-width: 480px; font-size: .95em; font-family: ui-monospace, monospace; }
 .gateway-bar button { background: #2f6fed; border: none; color: #fff; padding: .5em 1em; border-radius: 6px; cursor: pointer; font-size: .95em; }
 .gateway-bar button:hover { background: #245bd0; }
@@ -35,12 +35,12 @@ main { display: flex; flex-direction: column; min-height: calc(100vh - 114px); }
 <header>
   <span class="brand"><strong>JiMesh</strong><span style="color:#b8bec9;font-size:.9em">API reference</span></span>
   <nav class="tabs">
-    <a data-spec="gateway">Gateway (live)</a>
-    <a data-spec="auth">Auth API (public)</a>
-    <a data-spec="admin">Admin API (internal)</a>
+    <a data-spec="public">Public API</a>
+    <a data-spec="live">Live gateway</a>
   </nav>
   <span class="links">
     <a href="docs/API_DOCS.html">API reference (rendered)</a>
+    <a href="docs/API_ENDPOINTS.html">Endpoint index</a>
     <a href="docs/overview.html">Docs: Overview</a>
     <a href="docs/getting-started.html">Docs: Getting started</a>
     <a href="docs/architecture.html">Docs: Architecture</a>
@@ -49,26 +49,16 @@ main { display: flex; flex-direction: column; min-height: calc(100vh - 114px); }
 </header>
 
 <div class="gateway-bar" id="gateway-bar">
-  <label for="gateway-base">Gateway base URL:</label>
+  <label for="gateway-base" id="gateway-bar-label">Gateway base URL (try-it requests):</label>
   <input id="gateway-base" placeholder="http://&lt;host&gt;:19091" spellcheck="false">
-  <button id="gateway-load" type="button">Load spec</button>
+  <button id="gateway-load" type="button">Load</button>
   <span id="gateway-status" style="color:#b8bec9"></span>
 </div>
 
 <main>
   <div id="api-reference" style="display:none"></div>
   <div class="scalar-boot" id="boot-msg">
-    <div class="hint" id="boot-text">
-      Select a spec above.<br><br>
-      <strong>Gateway (live)</strong> fetches OpenAPI 3.0.3 directly from the running Go
-      backend — <code>GET http://&lt;host&gt;:19091/openapi.json</code> (unauthenticated,
-      GET only). There is intentionally no bundled fallback copy; if the gateway is
-      unreachable the loader reports the real fetch error.<br><br>
-      <strong>Auth API</strong> and <strong>Admin API</strong> render the bundled
-      enterprise specs from <code>spec/api/*.openapi.json</code>.
-      If pages are served under a sub-path, relative <code>spec/</code> URLs resolve
-      correctly by design.
-    </div>
+    <div class="hint" id="boot-text"></div>
     <div class="hint err" id="boot-err"></div>
   </div>
 </main>
@@ -76,12 +66,12 @@ main { display: flex; flex-direction: column; min-height: calc(100vh - 114px); }
 <script>
 (function () {
   var SCALAR_CDN = "https://cdn.jsdelivr.net/npm/@scalar/api-reference";
-  var SPEC_URLS = {
-    auth: "spec/auth.openapi.json",
-    admin: "spec/admin.openapi.json"
-  };
+  var PUBLIC_SPEC_URL = "spec/gateway.public.openapi.json";
+  var DEFAULT_BASE = "http://localhost:19091";
+  var STORE_BASE = "jimesh.gatewayBase";
+
   var spec = new URLSearchParams(location.search).get("spec");
-  if (!/^(gateway|auth|admin)$/.test(spec)) spec = "gateway";
+  if (!/^(public|live)$/.test(spec)) spec = "public";
 
   var tabs = document.querySelectorAll("nav.tabs a");
   tabs.forEach(function (t) {
@@ -90,39 +80,101 @@ main { display: flex; flex-direction: column; min-height: calc(100vh - 114px); }
   });
 
   var bar = document.getElementById("gateway-bar");
+  var barLabel = document.getElementById("gateway-bar-label");
   var bootMsg = document.getElementById("boot-msg");
+  var bootText = document.getElementById("boot-text");
   var apiRef = document.getElementById("api-reference");
   var statusEl = document.getElementById("gateway-status");
   var errEl = document.getElementById("boot-err");
+  var baseInput = document.getElementById("gateway-base");
 
-  var DEFAULT_BASE = "http://localhost:19091";
+  bootText.innerHTML = spec === "live"
+    ? "<strong>Live gateway</strong> fetches <code>GET &lt;base&gt;/openapi.json</code> straight from a running backend — the doc always matches that deployment. The gateway allows CORS (<code>*</code>), so the fetch works cross-origin; if it fails, the loader reports the real error instead of guessing."
+    : "<strong>Public API</strong> renders the bundled OpenAPI 3.1 spec exported by <code>make openapi-spec</code> (route registry + overlay, reviewed in the backend repo). Try-it requests go to the gateway base URL below — set it to a reachable gateway (CORS is open) and Scalar sends the requests from your browser.";
 
-  function hideBoot() {
+  function readBase() {
+    try { return localStorage.getItem(STORE_BASE) || DEFAULT_BASE; } catch (e) { return DEFAULT_BASE; }
+  }
+  baseInput.value = readBase();
+
+  function saveBase() {
+    var v = baseInput.value.trim();
+    if (v) { try { localStorage.setItem(STORE_BASE, v); } catch (e) {} }
+    return v || DEFAULT_BASE;
+  }
+
+  var scalarPromise = null;
+  function loadScalar() {
+    if (window.Scalar && window.Scalar.createApiReference) return Promise.resolve();
+    if (!scalarPromise) {
+      scalarPromise = new Promise(function (resolve, reject) {
+        var s = document.createElement("script");
+        s.src = SCALAR_CDN;
+        s.onload = resolve;
+        s.onerror = function () { reject(new Error("could not load Scalar from " + SCALAR_CDN)); };
+        document.head.appendChild(s);
+      });
+    }
+    return scalarPromise;
+  }
+
+  function showRef(json, base) {
+    // Rewrite servers so "try it" targets the gateway the user entered; the
+    // bundled spec keeps localhost as a sane default for local Scalar use.
+    if (json && json.servers && json.servers.length && base) {
+      json.servers = [{ url: base, description: "user-selected gateway (try-it)" }].concat(json.servers);
+    }
     bootMsg.style.display = "none";
     apiRef.style.display = "";
-  }
-
-  function bootScalar(url) {
-    hideBoot();
-    apiRef.setAttribute("data-url", url);
-    apiRef.setAttribute("data-configuration", JSON.stringify({
-      theme: "purple",
-      hideModels: false,
-      hideClientButton: false,
-      documentDownloadType: "direct",
-      layout: "modern"
-    }));
-    var s = document.createElement("script");
-    s.src = SCALAR_CDN;
-    document.head.appendChild(s);
-  }
-
-  function loadGateway(base) {
-    base = base.replace(/\/+$/, "");
-    if (!/^https?:\/\//.test(base)) {
-      errEl.textContent = "Base URL must start with http:// or https://";
+    // recreate cleanly when switching tabs / reloading
+    while (apiRef.firstChild) apiRef.removeChild(apiRef.firstChild);
+    loadScalar().then(function () {
+      window.Scalar.createApiReference(apiRef, {
+        spec: { content: json },
+        configuration: {
+          theme: "purple",
+          hideModels: false,
+          hideClientButton: false,
+          documentDownloadType: "direct",
+          layout: "modern"
+        }
+      });
+      statusEl.textContent = "loaded (openapi " + (json.openapi || "?") + ", " + base + ")";
+    }).catch(function (e) {
+      errEl.textContent = e.message;
       bootMsg.style.display = "";
       apiRef.style.display = "none";
+    });
+  }
+
+  function fail(msg) {
+    errEl.textContent = msg;
+    bootMsg.style.display = "";
+    apiRef.style.display = "none";
+    statusEl.textContent = "";
+  }
+
+  function loadPublic() {
+    errEl.textContent = "";
+    var base = saveBase();
+    statusEl.textContent = "fetching " + PUBLIC_SPEC_URL + " ...";
+    fetch(PUBLIC_SPEC_URL)
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status + " from " + PUBLIC_SPEC_URL);
+        return r.json();
+      })
+      .then(function (json) {
+        if (!json || !json.openapi) throw new Error("not an OpenAPI document");
+        showRef(json, base);
+      })
+      .catch(function (e) { fail("Bundled spec fetch failed: " + e.message); });
+  }
+
+  function loadLive() {
+    errEl.textContent = "";
+    var base = saveBase().replace(/\/+$/, "");
+    if (!/^https?:\/\//.test(base)) {
+      fail("Base URL must start with http:// or https://");
       return;
     }
     var url = base + "/openapi.json";
@@ -134,31 +186,23 @@ main { display: flex; flex-direction: column; min-height: calc(100vh - 114px); }
       })
       .then(function (json) {
         if (!json || !json.openapi) throw new Error("not an OpenAPI document");
-        statusEl.textContent = "loaded (openapi " + json.openapi + ")";
-        bootScalar(url);
+        showRef(json, base);
       })
-      .catch(function (e) {
-        hideBoot();
-        errEl.textContent = "Gateway spec fetch failed: " + e.message +
-          " — the loader stays blank instead of guessing. Serve pages from the same host, or enable CORS on the gateway, then retry.";
-      });
+      .catch(function (e) { fail("Gateway spec fetch failed: " + e.message); });
   }
 
-  try { document.getElementById("gateway-base").value = localStorage.getItem("jimesh.gatewayBase") || DEFAULT_BASE; } catch (e) {}
   document.getElementById("gateway-load").addEventListener("click", function () {
-    var base = document.getElementById("gateway-base").value.trim();
-    if (base) { try { localStorage.setItem("jimesh.gatewayBase", base); } catch (e) {} }
-    loadGateway(base || DEFAULT_BASE);
+    if (spec === "live") loadLive(); else loadPublic();
   });
-  document.getElementById("gateway-base").addEventListener("keydown", function (e) {
+  baseInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") document.getElementById("gateway-load").click();
   });
 
-  if (spec === "gateway") {
-    bar.classList.add("visible");
-  } else {
-    bootScalar(SPEC_URLS[spec]);
-  }
+  barLabel.textContent = spec === "live"
+    ? "Gateway base URL (spec source):"
+    : "Gateway base URL (try-it requests):";
+
+  if (spec === "live") loadLive(); else loadPublic();
 })();
 </script>
 </body>

@@ -8,12 +8,12 @@ const dist = join(root, "dist");
 
 const DOCS_DRIFT_NOTE = `
 <div class="meta-banner">
-  <strong>Snapshot copy.</strong> Rendered from <code>content/api/API_DOCS.md</code> in
-  the <code>@jimesh/docs</code> package. Source of truth lives in the JiMesh backend
-  repo (<code>jimesh2/docs/API_DOCS.md</code>). Routes are kept honest by the
-  TASK-017 drift audit: every route here is diffed against the gateway's
-  registered <code>HandleFunc</code> patterns. Do not edit this HTML by hand —
-  edit the markdown and rebuild.
+  <strong>Generated reference.</strong> The endpoint tables below are kept honest by the
+  backend's <code>make openapi-spec</code> pipeline: the Go gateway records its real
+  route registry (method probe included) and merges <code>openapi/overlay.yaml</code>
+  into an OpenAPI 3.1 document; the markdown tables are generated from the same source.
+  Source of truth lives in the JiMesh backend repo (<code>jimesh2</code>). Do not edit
+  this HTML by hand — edit the overlay or the backend routes and regenerate.
 </div>
 `;
 
@@ -65,9 +65,10 @@ a { color: #8ab4f8; }
 const SCALAR_CDN = "https://cdn.jsdelivr.net/npm/@scalar/api-reference";
 
 const SPECS = {
-  auth: { label: "Auth API (public)", url: "/spec/auth.openapi.json" },
-  admin: { label: "Admin API (internal)", url: "/spec/admin.openapi.json" },
+  public: { label: "JiMesh Gateway API (public)", url: "/spec/gateway.public.openapi.json" },
 };
+// gateway.internal.openapi.json is intentionally NOT bundled: it documents every
+// internal control-plane route and must never ship in the public Pages artifact.
 
 async function walk(dir) {
   const out = [];
@@ -126,7 +127,7 @@ async function renderMarkdown(mdPath) {
 ${DOCS_DRIFT_NOTE}
 ${toc}
 ${withIds}
-<footer><hr><p><a href="../openapi/index.html?spec=gateway">Open the Scalar API reference</a></p></footer>
+<footer><hr><p><a href="../index.html?spec=public">Open the Scalar API reference</a></p></footer>
 </body>
 </html>`;
 
@@ -149,10 +150,16 @@ async function main() {
   await rm(dist, { recursive: true, force: true });
   await mkdir(join(dist, "docs"), { recursive: true });
 
-  // 1. copy specs 1:1 (flatten spec/api/*.json -> dist/spec/*.json for site URLs)
+  // 1. copy specs 1:1 (flatten spec/api/*.json -> dist/spec/*.json for site URLs).
+  //    Internal specs stay out of the public artifact even if someone drops one in.
   await mkdir(join(dist, "spec"), { recursive: true });
   for (const f of await readdir(join(root, "spec", "api"))) {
-    if (f.endsWith(".json")) await copyFile(join(root, "spec", "api", f), join(dist, "spec", f));
+    if (!f.endsWith(".json")) continue;
+    if (f.includes("internal")) {
+      console.log("skipping internal spec:", f);
+      continue;
+    }
+    await copyFile(join(root, "spec", "api", f), join(dist, "spec", f));
   }
 
   // 2. render markdown -> html
@@ -211,17 +218,20 @@ function buildGatewayUrlHelper() {
 <header><strong style="font-size:1.05em">JiMesh</strong><span>API docs</span></header>
 <main style="max-width:760px;margin:0 auto;padding:2rem 1.25rem;display:block;height:auto">
 <h1>OpenAPI endpoints</h1>
-<p>The Go gateway serves its own OpenAPI 3.0.3 spec live — there is no bundled copy here.
-Point the reference at a running gateway:</p>
+<p>The public API reference is bundled: the Go gateway's route registry is exported by
+<code>make openapi-spec</code> into <code>spec/api/gateway.public.openapi.json</code>
+(OpenAPI 3.1, try-it enabled — point Scalar's server selector at your gateway).</p>
 <ul>
-<li><code>GET http://&lt;host&gt;:19091/openapi.json</code> (unauthenticated, GET only — 405 otherwise)</li>
-<li><a href="index.html?spec=gateway">Gateway API reference (live fetch)</a></li>
-<li><a href="index.html?spec=auth">Auth API reference</a> — <a href="../spec/auth.openapi.json">raw spec</a></li>
-<li><a href="index.html?spec=admin">Admin API reference</a> — <a href="../spec/admin.openapi.json">raw spec</a></li>
+<li><a href="../index.html?spec=public">Public API reference (bundled spec)</a> — <a href="../spec/gateway.public.openapi.json">raw spec</a></li>
+<li><a href="../index.html?spec=live">Live gateway reference</a> — fetches <code>GET http://&lt;host&gt;:19091/openapi.json</code> from a running backend (unauthenticated, GET only)</li>
 </ul>
+<p>The <em>internal</em> control-plane spec
+(<code>gateway.internal.openapi.json</code>) is generated next to the public one in
+the backend repo but is deliberately not published here.</p>
 <h2>Markdown reference</h2>
 <ul>
 <li><a href="../docs/API_DOCS.html">API_DOCS.html</a></li>
+<li><a href="../docs/API_ENDPOINTS.html">API_ENDPOINTS.html</a> — generated endpoint index (method/path/summary per tag)</li>
 <li><a href="../docs/overview.html">Overview</a></li>
 <li><a href="../docs/getting-started.html">Getting started</a></li>
 <li><a href="../docs/architecture.html">Architecture</a></li>
