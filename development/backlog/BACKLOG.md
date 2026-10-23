@@ -8,6 +8,45 @@ nach dem Motto der bereits gesetzten Stellen (S181 „schau dir den code und
 docs dev und docs an…", S184 „ich will nicht localhost benutzen…",
 S169 „ICH HABE GESAGT DIESE KEYS SOLLEN AUTOMATISCH ERZEUGT WERDEN").
 
+## Sprint-Spiegel S194 (Browser-Session-Recording: Verbosity + Fake-Replay,23.10.2026 — docs/sprints/SPRINT-194-BROWSER-SESSION-RECORDING-REPLAY.md)
+
+**Anlass (verbatim):** „ich weiß man kann browser replay oder session replay nicht für jede xbeliebige website machen weil man das framework auch installieren muss und die traces auch irgendwo hin senden muss aber man kann zumindest aufzeichnen was der agent in der session im browser gemacht hat und ein fake replay machen und einfach nur das script abspielen bzw einfach irgendwelche fotos speichern je nach verbosity level für warnings, auth/login, post/put/delete usw."
+
+| Nr | Task | Status |
+|---|---|---|
+| S194-1 | CDP-Klassifizierer L0–L4 → JSONL `browser_session_actions` | [ ] geplant |
+| S194-2 | Screenshot-Service (captureScreenshot ≥ Level, MinIO/Ozone, TTL=Session) | [ ] geplant |
+| S194-3 | VerbosityProfile + UI-Picker + Recording-Banner | [ ] geplant |
+| S194-4 | ReplayPlayer (Keyframes + Cursor-Reenactment + farbcodeierte Marker) | [ ] geplant |
+| S194-5 | Anbindung Sessions/AgentSessionDetail + JSONL-Export | [ ] geplant |
+| S194-6 | Grenze: OpenReplay=Console-UI, uns=External-Sites, rrweb ausgeschlossen (R47§3) | [ ] geplant |
+
+## Sprint-Spiegel S193 (Shared-Browser-Collab: Multi-User, Sidebar, Chat-Rail,23.10.2026 — docs/sprints/SPRINT-193-SHARED-BROWSER-COLLAB-CHAT.md)
+
+**Anlass (verbatim):** „ich will eigentlich direkt in der idebar bei workspaces so wie email auch eine browser section und bei der browser section will ich eigentlich nur das machen was schon geplant war das man quasi mit seinem team zusammen einen browser zusammen steuern kann und am besten auch direkt die aus sieht aber auch den chat aufmachen kann und da die browser session die man zusammen betrieben will verlinken kann quasi wie google meet und den google chat aber halt ne browser session die man zusammen hat."
+
+| Nr | Task | Status |
+|---|---|---|
+| S193-1 | Sidebar-Section BROWSER + Route /workspaces/browser + BrowserSessionsPage | [ ] geplant |
+| S193-2 | Presence-WS + Cursor-Overlays (Humans grau, Agents violett/cyan) | [ ] geplant |
+| S193-3 | neko-Multi-User + Control-Handover (Request-Queue) | [ ] geplant |
+| S193-4 | Chat-Rail (S153-Raum pro Session, Meeting-Link-Card) | [ ] geplant |
+| S193-5 | AgentSessionDetail: Tab BROWSER mit EINKLINKEN/MITAGEN | [ ] geplant |
+| S193-6 | Responsive (lg: Chat als Sheet) | [ ] geplant |
+
+## Sprint-Spiegel S192 (Shared-Browser-Runtimes: Camoufox + nologin,23.10.2026 — docs/sprints/SPRINT-192-SHARED-BROWSER-RUNTIMES-CAMOUFOX.md)
+
+**Anlass (verbatim):** „also die idee ist quasi dass man sowas wie nologin mit camoufox direkt dazu anbietet aber nicht nur für marketing sondern einfach für alles was man so braucht inklusive frontend debugging und vibe coding aber auch einfach nur agent tasks was auch immer das ist"
+
+| Nr | Task | Status |
+|---|---|---|
+| S192-1 | Runtime-Enum camoufox + BrowserRuntimeModal-Card | [ ] geplant |
+| S192-2 | Backend-Profil (neko-firefox + camoufox + Fingerprint-Volume pro Scope) | [ ] geplant |
+| S192-3 | nologin: kein Auth-Flow am Browser, Scope-RBAC regelt Sichtbarkeit | [ ] geplant |
+| S192-4 | Presets Marketing/Stealth (L4) vs Debug/Agent (L3) | [ ] geplant |
+| S192-5 | Ehrlichkeits-Copy (R47§2) | [ ] geplant |
+| S192-6 | MASTER-PLAN P2-10 + SPRINT-2-Checkboxen nachziehen | [ ] geplant |
+
 ## Sprint-Spiegel S191 (Embedding: Wazuh/Ozone-Recon + S57-Restposten, 7.10.2026 — docs/sprints/SPRINT-191-EMBEDDING-WAZUH-OZONE-WEBVIEW.md)
 
 **Anlass (verbatim):** „alle sprints schreiben und erstmal pr mergen dann alles machen"
