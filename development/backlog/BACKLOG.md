@@ -8,6 +8,80 @@ nach dem Motto der bereits gesetzten Stellen (S181 „schau dir den code und
 docs dev und docs an…", S184 „ich will nicht localhost benutzen…",
 S169 „ICH HABE GESAGT DIESE KEYS SOLLEN AUTOMATISCH ERZEUGT WERDEN").
 
+## Sprint-Spiegel S200 (Multi-Source-Observability: JTSO Event-Bus, OpenReplay NPM, Grafana & OpenSearch Sync, 26.10.2026 — docs/sprints/SPRINT-200-MULTI-SOURCE-OBSERVABILITY-CORRELATION.md)
+
+**Anlass (verbatim):** „das muss auch sein eigenes research doc und sprint werden: wie lösen wir dsa problem von verschiedenen datenquellen, eigene dashboards von uns und sachen wie openreplay npm package? dann bitte alles planen und dann mit subagents machen aber erstmal sprints schrieben nd backlog updaten auch die issues refernzieren und meine prompts. und fix dan auch das was noch von vorhin offen ist“
+
+| Nr | Task | Status |
+|---|---|---|
+| S200-1 | Globaler Timeline Observer Context (`useTimelineSync`) — synchrone Time-Ranges, Cursors und Filter | [ ] geplant |
+| S200-2 | OpenReplay NPM Tracker Integration (`@openreplay/tracker`) — client-seitiges DOM Replay mit DSGVO-Maskierung und Meta-Attribution | [ ] geplant |
+| S200-3 | Iframe Bridge für Grafana & OpenSearch (`postMessage` `JIMESH_TIME_RANGE_CHANGE`) | [ ] geplant |
+| S200-4 | Multi-Tenant DLS/FLS Proxy für OpenSearch basierend auf `X-Workspace-Scope` | [ ] geplant |
+| S200-5 | Integriertes Observability Cockpit (`UnifiedObservabilityPage.tsx`) mit synchronisiertem DOM-Replay, OpenSearch Traces, Grafana Charts | [ ] geplant |
+
+## Sprint-Spiegel S199 (IP-Tracking: Geo-Map, Headscale DNS, User Leases & Adaptive SIEM Tagging, 26.10.2026 — docs/sprints/SPRINT-199-IP-TRACKING-GEOMAP-HEADSCALE-SIEM.md)
+
+**Anlass (verbatim):** „ordentliche integration in networking mit geomap und auch ips die intern auf irgendwas zugreifen oder zugegriffen haben speichern und auch in kombination mit unseren eigenen headscale dns, bei iptracking die user zuweisen, alte ips auch usern zuweisen, auch mit outboudn dlp abgleichen, über ip tracking auch die user flagging und tagging bauen das auch wieder wichtig ist für unser siem, suricata und siem events kombinieren mit ip tracking und geo fencing, ordentliches global acces und outbound dashboard bauen oder grafana dashboards einbauen aber wir müssen dsa uach irgendwie wieder syncen mit unseren eigenen widgets und daten“
+
+| Nr | Task | Status |
+|---|---|---|
+| S199-1 | Schema für IP-Tracking & User-Lease-Historie (`ip_leases`, `user_ip_history`) | [ ] geplant |
+| S199-2 | Headscale DNS Reverse Lookup & MagicDNS Mapping | [ ] geplant |
+| S199-3 | Interaktive GeoMap-Komponente (`GeoAccessMap.tsx`) in Networking | [ ] geplant |
+| S199-4 | Anomaly Engine: Impossible Travel & Risk Scoring mit Keycloak Step-Up MFA | [ ] geplant |
+| S199-5 | User Tagging & Flagging im OpenSearch SIEM (`security_events`) | [ ] geplant |
+| S199-6 | Global Access & Outbound Cockpit Dashboard | [ ] geplant |
+
+## Sprint-Spiegel S198 (Outbound-DLP: MITRE TA0010 Exfiltration, Falco eBPF & AI Egress Defense, 26.10.2026 — docs/sprints/SPRINT-198-OUTBOUND-DLP-TA0010-FALCO.md)
+
+**Anlass (verbatim):** „outbound dlp ist zu mager, /home/superleo/jimeshOps/source/jimesh-docs/development/research/outbound_dlp.md konsultieren, Taktik TA0010 implementieren und acuh die anderen docs von mitre ziehen, gerade auch zu den ki sachen, andere frameowrks anschuen und guken was wir davon klauen können, outbound dlp mit falco und ip tracking kombinieren“
+
+| Nr | Task | Status |
+|---|---|---|
+| S198-1 | MITRE ATT&CK TA0010 Taxonomie- & Alert-Mapper (T1048, T1567, T1052) | [ ] geplant |
+| S198-2 | Presidio & Microsoft SITs PII Pattern Engine (IBAN, Kreditkarten, JWT) | [ ] geplant |
+| S198-3 | OpenSearch k-NN Semantic Vector Matching für Code-Leakage-Prävention | [ ] geplant |
+| S198-4 | Falco eBPF Rule Integration für unberechtigte Repo- & Key-Zugriffe | [ ] geplant |
+| S198-5 | Outbound DLP Dashboard Widget mit Timeline-Alerts und Payload-Blockade | [ ] geplant |
+
+## Sprint-Spiegel S197 (Network-Scoping: Dual View, `scope` Prop & Workspace Overview Card, 26.10.2026 — docs/sprints/SPRINT-197-NETWORK-SCOPING-AND-WORKSPACE-OVERVIEW.md)
+
+**Anlass (verbatim):** „network editing bruacht scope als prop, muss auch in workspace overview angezeigt werden, networks bruachen roject oder workspace scope damit man auch in suricata direkt sieht welches project oder vlan das ist, 2 networking seiten, eine für alle projects/workspace, oder mit selector und eins nur für das single project, project/workspace scoped netowrking seite auch in worspace overview aber den selector verbergen für scope“
+
+| Nr | Task | Status |
+|---|---|---|
+| S197-1 | `scope` als explizite Prop in allen Netzwerk-Views (`NetworksPage`, `NetworkGraphPage`) | [ ] geplant |
+| S197-2 | Selektor-Verbergen im Scoped-Modus (saubere Breadcrumbs statt Dropdown) | [ ] geplant |
+| S197-3 | Scoped Network Card in Workspace Overview (`/workspaces`) | [ ] geplant |
+| S197-4 | Suricata / eBPF Metadaten-Tagging mit `project_id` und VLAN-ID | [ ] geplant |
+| S197-5 | Routen-Split: Global `/infrastructure/networks` vs Scoped `/workspaces/networking` | [ ] geplant |
+
+## Sprint-Spiegel S196 (Deployments: gVisor MicroVM vs K8s Runtime & Pod-Mapping, 26.10.2026 — docs/sprints/SPRINT-196-DEPLOYMENTS-GVISOR-K8S-RUNTIME-SPEC.md)
+
+**Anlass (verbatim):** „dpeloyments unklar was das eigenlich sein soll, bruacht klare definitoin wie ist dsa in gvisor und in k8s und wo läuft der code? läuft er in der microvm oder spawnen wir k8s und gvisor container, wenn user eigene node hat kann er auch namespaces angeben, weil das ja sein cluster ist und das gleiche bräuchte es auch für gvisor, namespaces und networking sind auch untergeordnet, user kann im default netowrk deplyen wo der utility container ist oder ein network erstellen,d as muss für gvisor vlans und k8s funktionieren, problem bei gvisor ist das er ja bei docer compose das auch angeben muss, oder nur im befehl? können wir dsa irgendwie mit pods lösen für gvisor“
+
+| Nr | Task | Status |
+|---|---|---|
+| S196-1 | Deployment Schema & Runtime-Definition (`runsc` Sandbox vs K8s Namespace) | [ ] geplant |
+| S196-2 | Custom Node Namespace Selector in Deployment Form | [ ] geplant |
+| S196-3 | gVisor Pod-Mapping Engine für Multi-Container Compose Services | [ ] geplant |
+| S196-4 | Dual-Network Attachment (Default Utility Network vs 802.1q VLAN Bridges) | [ ] geplant |
+| S196-5 | UI-Refactor Deployments View mit Runtime-Badge (gVisor/K8s) & Namespace-Spalte | [ ] geplant |
+
+## Sprint-Spiegel S195 (Workspace-Hierarchie: Namensbindung, Teams, Owner & Utility Auto-Start, 26.10.2026 — docs/sprints/SPRINT-195-WORKSPACE-HIERARCHY-AND-TEAMS.md)
+
+**Anlass (verbatim):** „erstmal bei der selection verstehe ich 2 sachen nicht, was ist view as admin? und wieso ist die selection nicht von dem namen abhängig? worspaces bruachen immer einen ordentlichen namen, niemals die id anzeigen und immer das dazugehörige projekt als tag oder so anzeigen ode rimmer daneben schreiben wenn es nicht eh selectiert ist und es klar ist dsa ein workpsace zu einem projekt oder user gehört. user ist auch wichtig. ein workspace muss usern zugeordnet sein, rausfinden wie die aktuelle hierarhie ist, es sollte so sein: project -> workspaces -> owner -> team -> team kann entweder empty sein oder default, dann ist das erstmal nur owner -> users, bei der erstellung eines projektes muss der namen des workspaces änderbar sein, der default name ist <project>-workspace, es braucht keine shared workspaces mehr, ein workspace hat immer user oder teams, ein team kann auch einfach nur der user sein, das können wir auch in der beschreibung den docs und marketing seite änderen und da einfach in der section share you workspaces schrieben oder so. wichtig ist auch: agents sind user die man in einen workspace holen kann oder ihn berechtigungen gibt, welche services sie dann erreichen dürfen ist dann noch mal ne andere sache, teams müssen sich in workspace erstellung auch erstellen lassen, ein workspace kann mehrere teams haben, wieso 2 internal projete? bei erstellung eines projektes muss der utility container gestartet werden und das projekt deployed werden.“
+
+| Nr | Task | Status |
+|---|---|---|
+| S195-1 | Schema-Anpassung `workspaces.name`, Pflicht-Owner & Migration von Hash-IDs zu `<project>-workspace` | [ ] geplant |
+| S195-2 | TargetScopeModal: Reines Namen-Display, Projekt- & User-Badges, Entfernen des „View as admin“-Blocks | [ ] geplant |
+| S195-3 | NewProjectDialog: Editierbarer Workspace-Name (Default: `<project>-workspace`), Team-Erstellung Inline | [ ] geplant |
+| S195-4 | Doku & Marketing: Ablösung „Shared Workspaces“ durch „Team Workspaces & Agents“ | [ ] geplant |
+| S195-5 | Interne Projekte Konsolidierung: Nur `platform-internal` ist intern (`is_internal = 1`) | [ ] geplant |
+| S195-6 | Utility-Container Auto-Start & Deployment Trigger bei Projekterstellung | [ ] geplant |
+
 ## Sprint-Spiegel S194 (Browser-Session-Recording: Verbosity + Fake-Replay,23.10.2026 — docs/sprints/SPRINT-194-BROWSER-SESSION-RECORDING-REPLAY.md)
 
 **Anlass (verbatim):** „ich weiß man kann browser replay oder session replay nicht für jede xbeliebige website machen weil man das framework auch installieren muss und die traces auch irgendwo hin senden muss aber man kann zumindest aufzeichnen was der agent in der session im browser gemacht hat und ein fake replay machen und einfach nur das script abspielen bzw einfach irgendwelche fotos speichern je nach verbosity level für warnings, auth/login, post/put/delete usw."
