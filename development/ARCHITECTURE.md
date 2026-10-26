@@ -265,6 +265,55 @@ flowchart TB
 - **Real gap 4:** no client-join `make` target exists yet for attaching a
   node/desktop to the Headscale tailnet once Headscale itself is deployed.
 
+### 7.6 Sandbox isolation lanes — gVisor vs. Kata on AKS (2026-10-20)
+
+Every workspace runs **exactly one** sandbox lane (`gvisor | k8s`, default
+gvisor — KD-10). The runtime and network isolation story differs between the
+lanes, and must not be conflated:
+
+**Azure has NO managed gVisor.** Azure Kubernetes Service offers no managed
+or native gVisor support. Options on the k8s lane:
+
+1. **Kata Containers (Pod Sandboxing)** — the Azure-native alternative:
+   each pod runs in a lightweight MicroVM (Hyper-V + Cloud Hypervisor) with a
+   dedicated kernel, enabled per node pool on Azure Linux, selected via
+   `runtimeClass: kata-vm-isolation` (the `jimesh-agent` Helm chart already
+   models `runtimeClass.runsc|kata` flags — but no managed Kata RuntimeClass
+   is provisioned by us on AKS yet).
+2. **gVisor self-managed on BYO nodes** — runsc installed and maintained by
+   us/user on own cluster nodes (full operational burden, image pulled onto
+   every node).
+
+**Network isolation per lane (the important asymmetry):**
+
+- **gVisor lane (Docker, default):** network isolation is a *side effect of
+  the runtime* — Sentry's userspace **Netstack** means the workload never
+  sees the host kernel's network interfaces. Plus explicit egress allowlist
+  (default-deny) and VLAN overlays.
+- **Kata/AKS lane:** the pod has its own kernel but uses standard AKS
+  networking (Azure CNI / veth). Runtime isolation does **not** isolate the
+  network — a compromised sandboxed pod could scan the VNet. Network
+  isolation is therefore **Kubernetes NetworkPolicy** (already shipped:
+  AG-4 `jimesh-ws-netpol` default-deny ingress + egress allowlist
+  DNS→kube-dns, 443/TCP→`egress-office` AzureCloud service-tag hop;
+  AG-5 host-isolation policies flag-armed, default off). **IMDS
+  (169.254.169.254) must be explicitly blocked** in sandbox egress rules.
+
+**Implementation status (honest):** workspace creation on the k8s lane
+provisions namespace + ResourceQuota/LimitRange + NetworkPolicies (KD-10,
+test-locked). What is **NOT fully implemented yet**: guaranteed sandbox
+runtime isolation (Kata/gVisor RuntimeClass) for every newly created
+workspace on the AKS lane end-to-end — the Helm chart models the flags, but
+there is no managed Kata node-pool provisioning or enforcement gate that
+refuses to start a workspace pod without a sandbox RuntimeClass on AKS.
+Tracked as open work; until then, on AKS the network layer (NetPol) is the
+enforced boundary, the runtime layer is best-effort per node pool config.
+
+**Marketing consequence:** the website must not claim "gVisor on Azure
+managed AKS". Correct claim: gVisor in the self-hosted/Docker lane; on the
+managed AKS lane, sandboxed runtimes (Kata) with network isolation enforced
+by NetworkPolicies.
+
 ## 8. Workspace / Project / User domain model
 
 This is the answer to the standing, repeatedly-asked question: *"what
