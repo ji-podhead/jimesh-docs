@@ -8,6 +8,52 @@ nach dem Motto der bereits gesetzten Stellen (S181 „schau dir den code und
 docs dev und docs an…", S184 „ich will nicht localhost benutzen…",
 S169 „ICH HABE GESAGT DIESE KEYS SOLLEN AUTOMATISCH ERZEUGT WERDEN").
 
+## Sprint-Spiegel S204 (Marketing-Overhaul: Cloud / Azure Fleet, Self-Hosted, Unified Demo & Blog SVGs, 26.10.2026 — docs/sprints/SPRINT-204-MARKETING-CLOUD-SELFHOSTED-AND-SVGS.md)
+
+**Anlass (verbatim):** „für die blogs bessere titelbilder mit unseren neuen svgs und cube bauen, auch in den svgs unsere agents und andere icons/svgs wiederverwenden wie bad agents und servers etc. ich mag besonders den ninja agent / - außedem was mich nervt die alte demo mit den laten designs ist imernoch in dem anderen teil der website und die hat nen komplet anderen style diese navbar etc bitte den selben style von der landing page übernehmen / - auch das haupt canvas breit machen / - ordentliche resize observer und responsiveness, das fehlt sowieso auch für die tour, es bruach mindestens 3 sizes. desktop tbalet phone / - demo aus der navbar entfernen und mit Cloud ersetzen. Hier müssen wir einen Artikel schrieben wie wir auf azure für den kunden die workspaces bereitstellen und sein eigenes k8s workspace bereitstellen. Hier erklären wie wir das sicher machen und vorallem wie der kunde dann einfach mit der client app zugriff auf sein isolierten worspace bekommt auf den wir ihn dann weiterleiten nachdem wir sein Account iengerichtet haben. Hier erklären wir auch wie wir mit azure fleet die workspaces für die user verwalten und wie wir alles verschlüßeln. dazu müssen wir eventuell auch noch svgs erstellen mit den assets die wir bereits haben. / - In der navbar auch ein selfhosted reiter und wie bei cloud auch hier erklären wie alles funktioniert und am besten auch noch ein svg erstellen“
+
+| Nr | Task | Status |
+|---|---|---|
+| S204-1 | Navbar-Update: `Demo` durch `Cloud` (`/cloud`) ersetzen und `Self-Hosted` (`/self-hosted`) ergänzen | [ ] in Arbeit |
+| S204-2 | `/cloud`-Seite & Artikel: Azure Dedicated K8s Workspaces, Azure Fleet Management, E2E-Encryption, Client-App Auto-Redirect + Custom SVG | [ ] in Arbeit |
+| S204-3 | `/self-hosted`-Seite & Artikel: Bare-Metal / K8s Self-Hosted Architektur, gVisor, Headscale + Custom SVG | [ ] in Arbeit |
+| S204-4 | Demo & Tour: Einheitlicher Landing-Page-Style, breites Haupt-Canvas & `ResizeObserver` für Desktop, Tablet, Phone | [ ] in Arbeit |
+| S204-5 | Blog-Titelbilder (`titel.svg`) mit Cube, Ninja-Agent, Bad-Agents und Server-SVGs | [ ] in Arbeit |
+
+## Sprint-Spiegel S203 (OpenSearch Dashboards, OpenReplay Session Correlation & Security/Tracing UX, 26.10.2026 — docs/sprints/SPRINT-203-OPENSEARCH-OPENREPLAY-CORRELATION.md)
+
+**Anlass (verbatim):** „was ist mit openreplay hier und dem tracing, also das man wenn man jetzt ne app debugged und irgendwas nicht funktioniert quasi alles hat network requests, suricata edungen, aber auch die openreplay frontend internen sachen...die frage ist wie das bei zero trust agents uns das was bringt / jedenfalls ist der text hier scheisse und haben wir überhaupt was zu openreplay? außerdem opensearch haben wir auch noch null implementiert, also man kann immernoch null irgendwie nach logs oder traces zu sachen da bruachen wir auch mal ne richtige page für und die frage ist wie man opensearch mit openreplay kombiniert ... -> /home/superleo/jimeshOps/source/jimesh-docs/development/research/openreplay_opensearch.md / opensearch dashboards integrieren https://github.com/opensearch-project/opensearch-dashboards“
+
+| Nr | Task | Status |
+|---|---|---|
+| S203-1 | OpenSearch Log- & Trace-Explorer mit `session_id`- und `trace_id`-Korrelation | [x] erledigt |
+| S203-2 | Session-Replay-Cockpit mit synchronisierten Tabs für Replay, OpenSearch Logs, Suricata IDS & Falco eBPF | [x] erledigt |
+| S203-3 | OpenSearch Dashboards Embed-Target & Proxy-Anbindung (`/api/embed/opensearch`) | [ ] geplant |
+| S203-4 | SAST/DAST/Secrets Scanner UI mit echten Findings und Beispiel-Einträgen | [x] erledigt |
+
+## Sprint-Spiegel S202 (Dashboard Null-Safety, Sidebar & Workspace Overview Code Integration, 26.10.2026 — docs/sprints/SPRINT-202-DASHBOARD-NULL-SAFETY-AND-WORKSPACE-CODE.md)
+
+**Anlass (verbatim):** „can't access property "length", t is null / firewall: t.map is not a function / cod efhelt imemr noch in workspac eoverview seite / ICH WILL DIESEN ACTIVE aPP SCHCEISS DA NCIHT ICH HAB GESGAT ICH WILL RECHTS SETTINGS BUTTON UND EINFACH LISTEN ZUM AUSKLAPPEN WENN MAN DAS NESTED DING AUFKLAPPT“
+
+| Nr | Task | Status |
+|---|---|---|
+| S202-1 | Null-Safety für `.ports` und `.kinds` in `ServiceIntegrationsCard.tsx`, `CodeAppsOverview.tsx`, `SecurityExposurePage.tsx`, `WafMatrixPage.tsx`, `servicePluginKinds.ts` | [x] erledigt |
+| S202-2 | Array-Guards für `.map(` in allen Firewall-Komponenten (`firewall-rules.tsx`, `FirewallRulesPage.tsx`, `FirewallProviderSetupPage.tsx`, `FirewallTrafficLogPage.tsx`) | [x] erledigt |
+| S202-3 | `CodeCard` in `compositeCards.tsx` und `Code`-Tab in `WorkspaceDetailPage.tsx` | [x] erledigt |
+| S202-4 | `HierarchySidebar.tsx`: Entfernen von `ActiveAppsDropdown`, direkte App-Liste + rechtsbündiger Settings-Button | [x] erledigt |
+
+## Sprint-Spiegel S201 (Singleton Browser Container, Persistent WebRTC & Proxy Default, 26.10.2026 — docs/sprints/SPRINT-201-SINGLETON-BROWSER-AND-PROXY-DEFAULT.md)
+
+**Anlass (verbatim):** „ICH SEHE DA IMMERNUR NOCH GRÜTZE IN DEM BROWSER TASK UND NICHTS IST SO WI ICH ES HABEN WOLLTE das verbraucht auch sehr viel traffic, wieviele webrtc streams bauen wr da auf? können wir für browser immer nur einen neko container benutzen und die sachen einen zu spawnen können wir gerne für später benutzen aber für sachen wie grafana ist es erstmal quatsch. zumindest solange bis iwr rausfinden wie es unktioneirt benutzen wir da erstmal proxy. das problem ist wir spawnene tausend conaner und es hat noch ne funktioneirt dsa die webrc connection aurecht erhalten wurde“
+
+| Nr | Task | Status |
+|---|---|---|
+| S201-1 | Singleton-Reuse & Orphan-Cleanup in `src/backend/internal/deploy/plugin_renderer.go` (`createPluginRendererSession`) | [x] erledigt |
+| S201-2 | Singleton-Adoption in `src/frontend/src/lib/plugin-renderer.ts` (`rendererSessionMatches`) | [x] erledigt |
+| S201-3 | Stabile Keepalive-WebRTC-Stage in `src/frontend/src/views/BrowserSessionsPage.tsx` ohne Re-Mount bei State-/Tab-Wechsel | [x] erledigt |
+| S201-4 | Proxy-Default (`useDashOpenTransportEnforced`) in `EmbedAnchorPane` und `RealtimeMonitor` statt automatischem Neko-Container-Spawn | [x] erledigt |
+| S201-5 | Entfernen von SponsorBlock aus `jimesh-renderer` und persistente Profile in `jimesh-renderer-camoufox` | [x] erledigt |
+
 ## Sprint-Spiegel S200 (Multi-Source-Observability: JTSO Event-Bus, OpenReplay NPM, Grafana & OpenSearch Sync, 26.10.2026 — docs/sprints/SPRINT-200-MULTI-SOURCE-OBSERVABILITY-CORRELATION.md)
 
 **Anlass (verbatim):** „das muss auch sein eigenes research doc und sprint werden: wie lösen wir dsa problem von verschiedenen datenquellen, eigene dashboards von uns und sachen wie openreplay npm package? dann bitte alles planen und dann mit subagents machen aber erstmal sprints schrieben nd backlog updaten auch die issues refernzieren und meine prompts. und fix dan auch das was noch von vorhin offen ist“
